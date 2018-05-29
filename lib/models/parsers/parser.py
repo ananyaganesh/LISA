@@ -173,9 +173,10 @@ class Parser(BaseParser):
         transition_params = None
     self.print_once("using transition params: ", transition_params)
 
-    assert (self.cnn_layers != 0 and self.n_recur != 0) or self.num_blocks == 1, "num_blocks should be 1 if cnn_layers or n_recur is 0"
+    #assert (self.cnn_layers != 0 and self.n_recur != 0) or self.num_blocks == 1, "num_blocks should be 1 if cnn_layers or n_recur is 0"
     assert self.dist_model == 'bilstm' or self.dist_model == 'transformer', 'Model must be either "transformer" or "bilstm"'
 
+    print('Number of blocks: ', self.num_blocks)
     for b in range(self.num_blocks):
       with tf.variable_scope("block%d" % b, reuse=reuse):  # to share parameters, change scope here
         # Project for CNN input
@@ -185,13 +186,17 @@ class Parser(BaseParser):
 
         ####### 1D CNN ########
         with tf.variable_scope('CNN', reuse=reuse):
+	  dil_width = 1
           for i in xrange(self.cnn_layers):
-            with tf.variable_scope('layer%d' % i, reuse=reuse):
+	    if i == self.cnn_layers - 1:
+		dil_width = 1
+            with tf.variable_scope('layer%d' % i, reuse=reuse):		
               if self.cnn_residual:
-                top_recur += self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func)
+                top_recur += self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func, dil_width, i)
                 top_recur = nn.layer_norm(top_recur, reuse)
               else:
-                top_recur = self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func)
+                top_recur = self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func, dil_width, i)
+	    dil_width = dil_width * 2
           if self.cnn_residual and self.n_recur > 0:
             top_recur = nn.layer_norm(top_recur, reuse)
 
@@ -199,6 +204,8 @@ class Parser(BaseParser):
         pos_pred_inputs = top_recur
         aux_trigger_inputs = top_recur
         trigger_inputs = top_recur
+	# CHECK
+	parse_pred_inputs = top_recur
 
         # Project for Tranformer / residual LSTM input
         if self.n_recur > 0:

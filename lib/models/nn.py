@@ -554,7 +554,7 @@ class NN(Configurable):
     return top_recur, end_recur
 
   # =============================================================
-  def CNN(self, inputs, kernel1, kernel2, output_size, dropout_keep_rate, nonlinearity):
+  def CNN(self, inputs, kernel1, kernel2, output_size, dropout_keep_rate, nonlinearity, dil_width, layer_count):
     """"""
     input_size = inputs.get_shape().as_list()[-1]
 
@@ -568,7 +568,8 @@ class NN(Configurable):
     params = tf.get_variable('CNN', [kernel1, kernel2, input_size, output_size], initializer=initializer)
     if kernel1 == 1:
       inputs = tf.expand_dims(inputs, 1)
-    conv_out = tf.nn.conv2d(inputs, params, [1, 1, 1, 1], 'SAME')
+    print('Layer: ', layer_count, 'Input size: ', input_size, 'Output size: ', output_size, 'Dilation width: ', dil_width)
+    conv_out = tf.nn.conv2d(inputs, params, [1, 1, 1, 1], 'SAME', dilations=[1,1,dil_width,1])
     if kernel1 == 1:
       conv_out = tf.squeeze(conv_out, 1)
     conv_out = nonlinearity(conv_out)

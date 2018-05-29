@@ -309,9 +309,11 @@ class Vocab(Configurable):
     """"""
     
     if self.use_pretrained:
+      print('Using flawed one')
       initializer = tf.zeros_initializer()
       embed_size = self.pretrained_embeddings.shape[1]
     else:
+      print('Using other one')
       initializer = tf.random_normal_initializer()
       embed_size = self._embed_size
     

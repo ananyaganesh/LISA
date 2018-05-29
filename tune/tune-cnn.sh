@@ -1,14 +1,14 @@
 #!/bin/bash
-
+set -exu
 debug="false"
 
+
 timestamp=`date +%Y-%m-%d-%H-%M-%S`
-ROOT_DIR=$DOZAT_ROOT
+ROOT_DIR="/home/aganesh/LISA"
 
 OUT_LOG=$ROOT_DIR/hyperparams/tune-$timestamp
-if [[ "$debug" == "false" ]]; then
-    mkdir -p $OUT_LOG
-fi
+
+mkdir -p $OUT_LOG
 
 echo "Writing to $OUT_LOG"
 
@@ -22,16 +22,16 @@ epsilons="1e-12"
 warmup_steps="8000"
 batch_sizes="5000"
 
-trans_layers="1 2 4" # 3
-num_heads="8" #4 8"
-head_sizes="64"
+trans_layers="0" # 3
+num_heads="4" #4 8"
+head_sizes="128"
 relu_hidden_sizes="256"
 
 cnn2d_layers="0"
 cnn_dim_2ds="0"
 
-cnn_layers="1 2 4"
-cnn_dims="384 512 768 1024"
+cnn_layers="2 4 8"
+cnn_dims="512 768 1024"
 #cnn_layers="4 6 8 10"
 #cnn_dims="384 512 784 1024"
 
@@ -68,9 +68,9 @@ for lr in ${lrs[@]}; do
                                                                     for num_block in ${num_blocks[@]}; do
                                                                         for rep in `seq $reps`; do
                                                                             fname_append="$rep-$lr-$mu-$nu-$epsilon-$warmup_steps-$batch_size-$num_block-$cnn_layer-$cnn_dim-$trans_layer-$num_head-$head_size-$relu_hidden_size-$cnn2d_layer-$cnn_dim_2d"
-                                                                            commands+=("srun --gres=gpu:1 --partition=m40-short,m40-long --time=04:00:00 python network.py \
-                                                                            --config_file config/myconf.cfg \
-                                                                            --save_dir $OUT_LOG/scores-$fname_append \
+                                                                            commands+=("srun --gres=gpu:1 --partition=titanx-short --time=04:00:00 python network.py \
+                                                                            --config_file config/lstm-conll05-parse.cfg \
+                                                                            --save_dir saves/tuned-model \
                                                                             --save_every 500 \
                                                                             --train_iters 100000 \
                                                                             --train_batch_size $batch_size \

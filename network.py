@@ -26,6 +26,9 @@ import pickle as pkl
 
 import numpy as np
 import tensorflow as tf
+print(tf.__version__)
+import keras
+from keras.models import Sequential, Model
 
 from lib import models
 from lib import optimizers
@@ -68,6 +71,9 @@ class Network(Configurable):
     # todo what is this??
     # self._model = model(self._config, global_step=self.global_step)
     self._model = model(self._config)
+    
+    #kmodel = Model.from_config(self._config)
+    #kmodel.summary()
 
     self._vocabs = []
 
@@ -180,6 +186,11 @@ class Network(Configurable):
       valid_time = 0
       valid_loss = 0
       valid_accuracy = 0
+      print('Total train iters: ', total_train_iters)
+      print('Train iters: ', train_iters)
+      avg_train_time = 0
+      avg_val_time = 0
+      div_count = 0	
       while total_train_iters < train_iters:
         for j, (feed_dict, _) in enumerate(self.train_minibatches()):
           # train_inputs = feed_dict[self._trainset.inputs]
@@ -267,6 +278,10 @@ class Network(Configurable):
               multitask_losses_str += '\t%s loss: %f' % (n, train_mul_loss[n])
             print(multitask_losses_str)
             sys.stdout.flush()
+
+	    avg_train_time += train_time
+	    avg_val_time += valid_time
+	    div_count += 1
             train_time = 0
             train_loss = 0
             n_train_sents = 0
@@ -313,6 +328,8 @@ class Network(Configurable):
             #   pkl.dump(self.history, f)
             # self.test(sess, validate=True)
         sess.run(self._global_epoch.assign_add(1.))
+	print('Average train per sec: ', avg_train_time/div_count)
+	print('Average validation per sec: ', avg_val_time/div_count)
     except KeyboardInterrupt:
       try:
         raw_input('\nPress <Enter> to save or <Ctrl-C> to exit.')
@@ -948,6 +965,7 @@ if __name__ == '__main__':
   
   print('*** '+args.model+' ***')
   model = getattr(models, args.model)
+  print(model)
 
   profile = args.profile
   
@@ -974,6 +992,7 @@ if __name__ == '__main__':
                                         trace_steps=[],
                                         dump_steps=[]) if profile else dummy_context_mgr() as pctx:
     with tf.Session(config=config_proto) as sess:
+      writer = tf.summary.FileWriter('./graphstb', sess.graph)
       sess.run(tf.global_variables_initializer())
       if not (args.test or args.matrix):
         if args.load:
@@ -1018,3 +1037,5 @@ if __name__ == '__main__':
           start_time = time.time()
           network.test(sess, network.viterbi_decode, validate=False)
           print('Parsing took %f seconds' % (time.time() - start_time))
+    writer.close()
+
