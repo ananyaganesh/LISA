@@ -186,19 +186,20 @@ class Parser(BaseParser):
 
         ####### 1D CNN ########
         with tf.variable_scope('CNN', reuse=reuse):
-	  dil_width = 1
-          for i in xrange(self.cnn_layers):
-	    if i == self.cnn_layers - 1:
-		dil_width = 1
-            with tf.variable_scope('layer%d' % i, reuse=reuse):		
-              if self.cnn_residual:
-                top_recur += self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func, dil_width, i)
-                top_recur = nn.layer_norm(top_recur, reuse)
-              else:
-                top_recur = self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func, dil_width, i)
-	    dil_width = dil_width * 2
-          if self.cnn_residual and self.n_recur > 0:
-            top_recur = nn.layer_norm(top_recur, reuse)
+			dil_width = 1
+			for i in xrange(self.cnn_layers):
+				if i == self.cnn_layers - 1:
+					dil_width = 1
+				with tf.variable_scope('layer%d' % i, reuse=reuse):
+					print('CNN Residual: ', self.cnn_residual)
+					if self.cnn_residual:
+						top_recur += self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func, dil_width, i)
+						top_recur = nn.layer_norm(top_recur, reuse)
+					else:
+						top_recur = self.CNN(top_recur, 1, kernel, self.cnn_dim, self.recur_keep_prob, self.info_func, dil_width, i)
+			dil_width = dil_width * 2
+			if self.cnn_residual and self.n_recur > 0:
+				top_recur = nn.layer_norm(top_recur, reuse)
 
         # if layer is set to -2, these are used
         pos_pred_inputs = top_recur

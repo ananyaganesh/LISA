@@ -1414,6 +1414,7 @@ class NN(Configurable):
              tf.reshape(probabilities2D, original_shape), tf.reshape(predictions1D, flat_shape), \
              correct1D * tokens_to_keep1D,
 
+    print('Rank: ', tf.rank(logits3D))
     log_loss, roots_loss, pairs_log_loss, svd_loss, n_cycles, len_2_cycles, probabilities, predictions, correct = tf.cond(
       tf.greater(tf.rank(logits3D), 1),
       lambda: compute_loss(logits3D, tokens_to_keep1D),

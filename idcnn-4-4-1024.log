@@ -1,0 +1,223 @@
+1.5.1
+*** Parser ***
+<class 'lib.models.parsers.parser.Parser'>
+Loading vocabs
+Using flawed one
+Using other one
+Using other one
+Using other one
+Using other one
+Using other one
+Predicates vocab: 
+PAD: 0
+False: 1
+predicate_true_start_idx 1
+Loading data
+Loading training data from domains: all
+Loaded 39832 sentences with 950028 tokens (Trainset)
+running k means
+Bucket Sents-0 is 947 x 5
+Bucket Sents-1 is 943 x 7
+Bucket Sents-2 is 1400 x 9
+Bucket Sents-3 is 781 x 10
+Bucket Sents-4 is 928 x 11
+Bucket Sents-5 is 1047 x 12
+Bucket Sents-6 is 1231 x 13
+Bucket Sents-7 is 1206 x 14
+Bucket Sents-8 is 1270 x 15
+Bucket Sents-9 is 1307 x 16
+Bucket Sents-10 is 1345 x 17
+Bucket Sents-11 is 1388 x 18
+Bucket Sents-12 is 1408 x 19
+Bucket Sents-13 is 1466 x 20
+Bucket Sents-14 is 1456 x 21
+Bucket Sents-15 is 1292 x 22
+Bucket Sents-16 is 1470 x 23
+Bucket Sents-17 is 1396 x 24
+Bucket Sents-18 is 1316 x 25
+Bucket Sents-19 is 1312 x 26
+Bucket Sents-20 is 1278 x 27
+Bucket Sents-21 is 1215 x 28
+Bucket Sents-22 is 1161 x 29
+Bucket Sents-23 is 1084 x 30
+Bucket Sents-24 is 1045 x 31
+Bucket Sents-25 is 996 x 32
+Bucket Sents-26 is 896 x 33
+Bucket Sents-27 is 819 x 34
+Bucket Sents-28 is 735 x 35
+Bucket Sents-29 is 647 x 36
+Bucket Sents-30 is 590 x 37
+Bucket Sents-31 is 494 x 38
+Bucket Sents-32 is 466 x 39
+Bucket Sents-33 is 823 x 41
+Bucket Sents-34 is 930 x 44
+Bucket Sents-35 is 633 x 47
+Bucket Sents-36 is 574 x 52
+Bucket Sents-37 is 322 x 59
+Bucket Sents-38 is 169 x 72
+Bucket Sents-39 is 46 x 141
+Loading training data from domains: all
+Loaded 1700 sentences with 40117 tokens (Validset)
+running k means
+Bucket Sents-0 is 110 x 8
+Bucket Sents-1 is 146 x 12
+Bucket Sents-2 is 165 x 15
+Bucket Sents-3 is 246 x 19
+Bucket Sents-4 is 234 x 23
+Bucket Sents-5 is 244 x 27
+Bucket Sents-6 is 228 x 32
+Bucket Sents-7 is 192 x 39
+Bucket Sents-8 is 124 x 54
+Bucket Sents-9 is 11 x 118
+Loading training data from domains: all
+Loaded 2416 sentences with 56684 tokens (Testset)
+running k means
+Bucket Sents-0 is 187 x 8
+Bucket Sents-1 is 288 x 13
+Bucket Sents-2 is 209 x 16
+Bucket Sents-3 is 266 x 19
+Bucket Sents-4 is 252 x 22
+Bucket Sents-5 is 262 x 25
+Bucket Sents-6 is 281 x 29
+Bucket Sents-7 is 291 x 34
+Bucket Sents-8 is 284 x 44
+Bucket Sents-9 is 96 x 67
+n_recur:  0
+num heads:  4
+cnn dim:  1024
+relu hidden size:  256
+head size:  128
+cnn2d_layers:  0
+cnn_dim_2d:  128
+multitask penalties:  {}
+multitask layers:  {}
+parse update proportion:  1.0
+using transition params:  None
+Number of blocks:  4
+block0/proj0/Linear
+Orthogonal pretrainer loss: 7.89e+04
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+block1/proj0/Linear
+Orthogonal pretrainer loss: 7.61e-02
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+block2/proj0/Linear
+Orthogonal pretrainer loss: 6.46e-09
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+block3/proj0/Linear
+Orthogonal pretrainer loss: 3.94e-03
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+MLP/Linear
+Orthogonal pretrainer loss: 1.25e-29
+Rank:  Tensor("Rank:0", shape=(), dtype=int32)
+SRL-Triggers/Linear
+Orthogonal pretrainer loss: 1.72e-30
+SRL-Triggers/SRL-Triggers-Classifier/Linear
+Orthogonal pretrainer loss: 2.94e+01
+Number of blocks:  4
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+Rank:  Tensor("Rank_6:0", shape=(), dtype=int32)
+Number of blocks:  4
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  0 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  1 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  2 Input size:  1024 Output size:  1024 Dilation width:  1
+CNN Residual:  True
+Layer:  3 Input size:  1024 Output size:  1024 Dilation width:  1
+Rank:  Tensor("Rank_12:0", shape=(), dtype=int32)
+[u'Variable:0', u'Variable_1:0', u'Words/Trainable:0', u'Tags/Trainable:0', u'Rels/Trainable:0', u'SRLs/Trainable:0', u'Trigs/Trainable:0', u'Domains/Trainable:0', u'Variable_2:0', u'block0/proj0/Linear/Weights:0', u'block0/proj0/Linear/Biases:0', u'block0/CNN/layer0/CNN:0', u'block0/CNN/layer1/CNN:0', u'block0/CNN/layer2/CNN:0', u'block0/CNN/layer3/CNN:0', u'block1/proj0/Linear/Weights:0', u'block1/proj0/Linear/Biases:0', u'block1/CNN/layer0/CNN:0', u'block1/CNN/layer1/CNN:0', u'block1/CNN/layer2/CNN:0', u'block1/CNN/layer3/CNN:0', u'block2/proj0/Linear/Weights:0', u'block2/proj0/Linear/Biases:0', u'block2/CNN/layer0/CNN:0', u'block2/CNN/layer1/CNN:0', u'block2/CNN/layer2/CNN:0', u'block2/CNN/layer3/CNN:0', u'block3/proj0/Linear/Weights:0', u'block3/proj0/Linear/Biases:0', u'block3/CNN/layer0/CNN:0', u'block3/CNN/layer1/CNN:0', u'block3/CNN/layer2/CNN:0', u'block3/CNN/layer3/CNN:0', u'MLP/Linear/Weights:0', u'MLP/Linear/Biases:0', u'Arcs/Bilinear/Weights:0', u'Rels/Bilinear/Weights:0', u'SRL-Triggers/Linear/Weights:0', u'SRL-Triggers/Linear/Biases:0', u'SRL-Triggers/SRL-Triggers-Classifier/Linear/Weights:0', u'SRL-Triggers/SRL-Triggers-Classifier/Linear/Biases:0']
+Training
+Total train iters:  0
+Train iters:  200000
+   100) Train loss: 6.6885    Train acc:  0.46%    Train rate:  295.2 sents/sec    Learning rate: 0.001994
+	Valid loss: 6.2652    Valid acc:  0.96%    Valid rate:  829.4 sents/sec
+	log loss: 3.436177	rel loss: 3.252357	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+   200) Train loss: 6.3791    Train acc:  0.55%    Train rate:  311.1 sents/sec    Learning rate: 0.001989
+	Valid loss: 6.2996    Valid acc:  0.73%    Valid rate: 1111.8 sents/sec
+	log loss: 3.349791	rel loss: 3.029313	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+

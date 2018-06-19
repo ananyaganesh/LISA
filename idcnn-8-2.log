@@ -1,0 +1,2903 @@
+1.5.1
+*** Parser ***
+<class 'lib.models.parsers.parser.Parser'>
+Loading vocabs
+Using flawed one
+Using other one
+Using other one
+Using other one
+Using other one
+Using other one
+Predicates vocab: 
+PAD: 0
+False: 1
+predicate_true_start_idx 1
+Loading data
+Loading training data from domains: all
+Loaded 39832 sentences with 950028 tokens (Trainset)
+running k means
+Bucket Sents-0 is 947 x 5
+Bucket Sents-1 is 943 x 7
+Bucket Sents-2 is 1400 x 9
+Bucket Sents-3 is 781 x 10
+Bucket Sents-4 is 928 x 11
+Bucket Sents-5 is 1047 x 12
+Bucket Sents-6 is 1231 x 13
+Bucket Sents-7 is 1206 x 14
+Bucket Sents-8 is 1270 x 15
+Bucket Sents-9 is 1307 x 16
+Bucket Sents-10 is 1345 x 17
+Bucket Sents-11 is 1388 x 18
+Bucket Sents-12 is 1408 x 19
+Bucket Sents-13 is 1466 x 20
+Bucket Sents-14 is 1456 x 21
+Bucket Sents-15 is 1292 x 22
+Bucket Sents-16 is 1470 x 23
+Bucket Sents-17 is 1396 x 24
+Bucket Sents-18 is 1316 x 25
+Bucket Sents-19 is 1312 x 26
+Bucket Sents-20 is 1278 x 27
+Bucket Sents-21 is 1215 x 28
+Bucket Sents-22 is 1161 x 29
+Bucket Sents-23 is 1084 x 30
+Bucket Sents-24 is 1045 x 31
+Bucket Sents-25 is 996 x 32
+Bucket Sents-26 is 896 x 33
+Bucket Sents-27 is 819 x 34
+Bucket Sents-28 is 735 x 35
+Bucket Sents-29 is 647 x 36
+Bucket Sents-30 is 590 x 37
+Bucket Sents-31 is 494 x 38
+Bucket Sents-32 is 466 x 39
+Bucket Sents-33 is 823 x 41
+Bucket Sents-34 is 930 x 44
+Bucket Sents-35 is 633 x 47
+Bucket Sents-36 is 574 x 52
+Bucket Sents-37 is 322 x 59
+Bucket Sents-38 is 169 x 72
+Bucket Sents-39 is 46 x 141
+Loading training data from domains: all
+Loaded 1700 sentences with 40117 tokens (Validset)
+running k means
+Bucket Sents-0 is 110 x 8
+Bucket Sents-1 is 146 x 12
+Bucket Sents-2 is 165 x 15
+Bucket Sents-3 is 246 x 19
+Bucket Sents-4 is 234 x 23
+Bucket Sents-5 is 244 x 27
+Bucket Sents-6 is 228 x 32
+Bucket Sents-7 is 192 x 39
+Bucket Sents-8 is 124 x 54
+Bucket Sents-9 is 11 x 118
+Loading training data from domains: all
+Loaded 2416 sentences with 56684 tokens (Testset)
+running k means
+Bucket Sents-0 is 187 x 8
+Bucket Sents-1 is 288 x 13
+Bucket Sents-2 is 209 x 16
+Bucket Sents-3 is 266 x 19
+Bucket Sents-4 is 252 x 22
+Bucket Sents-5 is 262 x 25
+Bucket Sents-6 is 281 x 29
+Bucket Sents-7 is 291 x 34
+Bucket Sents-8 is 284 x 44
+Bucket Sents-9 is 96 x 67
+n_recur:  0
+num heads:  4
+cnn dim:  768
+relu hidden size:  256
+head size:  128
+cnn2d_layers:  0
+cnn_dim_2d:  128
+multitask penalties:  {}
+multitask layers:  {}
+parse update proportion:  1.0
+using transition params:  None
+Number of blocks:  2
+block0/proj0/Linear
+Orthogonal pretrainer loss: 2.84e+02
+Layer:  0 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  1 Input size:  768 Output size:  768 Dilation width:  2
+Layer:  2 Input size:  768 Output size:  768 Dilation width:  4
+Layer:  3 Input size:  768 Output size:  768 Dilation width:  8
+Layer:  4 Input size:  768 Output size:  768 Dilation width:  16
+Layer:  5 Input size:  768 Output size:  768 Dilation width:  32
+Layer:  6 Input size:  768 Output size:  768 Dilation width:  64
+Layer:  7 Input size:  768 Output size:  768 Dilation width:  1
+block1/proj0/Linear
+Orthogonal pretrainer loss: 3.58e-09
+Layer:  0 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  1 Input size:  768 Output size:  768 Dilation width:  2
+Layer:  2 Input size:  768 Output size:  768 Dilation width:  4
+Layer:  3 Input size:  768 Output size:  768 Dilation width:  8
+Layer:  4 Input size:  768 Output size:  768 Dilation width:  16
+Layer:  5 Input size:  768 Output size:  768 Dilation width:  32
+Layer:  6 Input size:  768 Output size:  768 Dilation width:  64
+Layer:  7 Input size:  768 Output size:  768 Dilation width:  1
+MLP/Linear
+Orthogonal pretrainer loss: 7.75e-22
+SRL-Triggers/Linear
+Orthogonal pretrainer loss: 1.51e-30
+SRL-Triggers/SRL-Triggers-Classifier/Linear
+Orthogonal pretrainer loss: 3.11e-02
+Number of blocks:  2
+Layer:  0 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  1 Input size:  768 Output size:  768 Dilation width:  2
+Layer:  2 Input size:  768 Output size:  768 Dilation width:  4
+Layer:  3 Input size:  768 Output size:  768 Dilation width:  8
+Layer:  4 Input size:  768 Output size:  768 Dilation width:  16
+Layer:  5 Input size:  768 Output size:  768 Dilation width:  32
+Layer:  6 Input size:  768 Output size:  768 Dilation width:  64
+Layer:  7 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  0 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  1 Input size:  768 Output size:  768 Dilation width:  2
+Layer:  2 Input size:  768 Output size:  768 Dilation width:  4
+Layer:  3 Input size:  768 Output size:  768 Dilation width:  8
+Layer:  4 Input size:  768 Output size:  768 Dilation width:  16
+Layer:  5 Input size:  768 Output size:  768 Dilation width:  32
+Layer:  6 Input size:  768 Output size:  768 Dilation width:  64
+Layer:  7 Input size:  768 Output size:  768 Dilation width:  1
+Number of blocks:  2
+Layer:  0 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  1 Input size:  768 Output size:  768 Dilation width:  2
+Layer:  2 Input size:  768 Output size:  768 Dilation width:  4
+Layer:  3 Input size:  768 Output size:  768 Dilation width:  8
+Layer:  4 Input size:  768 Output size:  768 Dilation width:  16
+Layer:  5 Input size:  768 Output size:  768 Dilation width:  32
+Layer:  6 Input size:  768 Output size:  768 Dilation width:  64
+Layer:  7 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  0 Input size:  768 Output size:  768 Dilation width:  1
+Layer:  1 Input size:  768 Output size:  768 Dilation width:  2
+Layer:  2 Input size:  768 Output size:  768 Dilation width:  4
+Layer:  3 Input size:  768 Output size:  768 Dilation width:  8
+Layer:  4 Input size:  768 Output size:  768 Dilation width:  16
+Layer:  5 Input size:  768 Output size:  768 Dilation width:  32
+Layer:  6 Input size:  768 Output size:  768 Dilation width:  64
+Layer:  7 Input size:  768 Output size:  768 Dilation width:  1
+[u'Variable:0', u'Variable_1:0', u'Words/Trainable:0', u'Tags/Trainable:0', u'Rels/Trainable:0', u'SRLs/Trainable:0', u'Trigs/Trainable:0', u'Domains/Trainable:0', u'Variable_2:0', u'block0/proj0/Linear/Weights:0', u'block0/proj0/Linear/Biases:0', u'block0/CNN/layer0/CNN:0', u'block0/CNN/layer1/CNN:0', u'block0/CNN/layer2/CNN:0', u'block0/CNN/layer3/CNN:0', u'block0/CNN/layer4/CNN:0', u'block0/CNN/layer5/CNN:0', u'block0/CNN/layer6/CNN:0', u'block0/CNN/layer7/CNN:0', u'block1/proj0/Linear/Weights:0', u'block1/proj0/Linear/Biases:0', u'block1/CNN/layer0/CNN:0', u'block1/CNN/layer1/CNN:0', u'block1/CNN/layer2/CNN:0', u'block1/CNN/layer3/CNN:0', u'block1/CNN/layer4/CNN:0', u'block1/CNN/layer5/CNN:0', u'block1/CNN/layer6/CNN:0', u'block1/CNN/layer7/CNN:0', u'MLP/Linear/Weights:0', u'MLP/Linear/Biases:0', u'Arcs/Bilinear/Weights:0', u'Rels/Bilinear/Weights:0', u'SRL-Triggers/Linear/Weights:0', u'SRL-Triggers/Linear/Biases:0', u'SRL-Triggers/SRL-Triggers-Classifier/Linear/Weights:0', u'SRL-Triggers/SRL-Triggers-Classifier/Linear/Biases:0']
+Training
+Total train iters:  0
+Train iters:  500000
+   100) Train loss: 6.6996    Train acc:  0.45%    Train rate:  282.1 sents/sec    Learning rate: 0.001994
+	Valid loss: 6.2877    Valid acc:  0.81%    Valid rate:  886.4 sents/sec
+	log loss: 3.440885	rel loss: 3.258762	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+   200) Train loss: 6.3417    Train acc:  0.71%    Train rate:  350.6 sents/sec    Learning rate: 0.001989
+	Valid loss: 7.4037    Valid acc:  0.29%    Valid rate: 1484.0 sents/sec
+	log loss: 3.311686	rel loss: 3.030010	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+   300) Train loss: 6.3207    Train acc:  0.60%    Train rate:  319.9 sents/sec    Learning rate: 0.001983
+	Valid loss: 6.2732    Valid acc:  0.55%    Valid rate: 1466.3 sents/sec
+	log loss: 3.316562	rel loss: 3.004126	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  317.545775755
+Average validation per sec:  1278.89236098
+   400) Train loss: 6.2297    Train acc:  0.72%    Train rate:  394.6 sents/sec    Learning rate: 0.001977
+	Valid loss: 6.1319    Valid acc:  0.96%    Valid rate: 1476.9 sents/sec
+	log loss: 3.240794	rel loss: 2.988952	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+   500) Train loss: 5.9080    Train acc:  1.36%    Train rate:  452.5 sents/sec    Learning rate: 0.001972
+	Valid loss: 5.8945    Valid acc:  1.68%    Valid rate: 1454.6 sents/sec
+	log loss: 2.967368	rel loss: 2.940591	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:03:07
+Total time in prob_argmax: 2.819884
+Total time in forward: 1.398296
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 566; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 499 / 35446 * 100 = 1.41 %
+  Unlabeled attachment score: 2327 / 35446 * 100 = 6.56 %
+  Label accuracy score:       3859 / 35446 * 100 = 10.89 %
+
+
+UAS: 6.56    LAS: 1.41
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Writing model to saves/id-cnn-8-2/parser-trained
+   600) Train loss: 5.6813    Train acc:  1.84%    Train rate:  406.9 sents/sec    Learning rate: 0.001966
+	Valid loss: 5.9124    Valid acc:  2.08%    Valid rate: 1455.7 sents/sec
+	log loss: 2.828175	rel loss: 2.853116	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  367.758502406
+Average validation per sec:  1370.65492837
+   700) Train loss: 5.4751    Train acc:  2.58%    Train rate:  416.7 sents/sec    Learning rate: 0.001960
+	Valid loss: 5.8790    Valid acc:  2.54%    Valid rate: 1464.3 sents/sec
+	log loss: 2.693425	rel loss: 2.781714	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+   800) Train loss: 5.3549    Train acc:  2.98%    Train rate:  417.6 sents/sec    Learning rate: 0.001955
+	Valid loss: 6.0581    Valid acc:  3.08%    Valid rate: 1446.7 sents/sec
+	log loss: 2.658316	rel loss: 2.696622	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+   900) Train loss: 5.3287    Train acc:  3.05%    Train rate:  440.6 sents/sec    Learning rate: 0.001949
+	Valid loss: 5.9145    Valid acc:  3.13%    Valid rate: 1446.8 sents/sec
+	log loss: 2.633663	rel loss: 2.695017	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  1000) Train loss: 5.2414    Train acc:  3.68%    Train rate:  388.3 sents/sec    Learning rate: 0.001943
+	Valid loss: 5.9836    Valid acc:  3.45%    Valid rate: 1455.3 sents/sec
+	log loss: 2.636070	rel loss: 2.605372	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:05:58
+Total time in prob_argmax: 2.918271
+Total time in forward: 1.090219
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1684; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 1347 / 35446 * 100 = 3.80 %
+  Unlabeled attachment score: 5450 / 35446 * 100 = 15.38 %
+  Label accuracy score:       3447 / 35446 * 100 = 9.72 %
+
+
+UAS: 15.38    LAS: 3.80
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  386.973549509
+Average validation per sec:  1403.70338868
+  1100) Train loss: 5.0997    Train acc:  4.15%    Train rate:  479.1 sents/sec    Learning rate: 0.001938
+	Valid loss: 5.9057    Valid acc:  3.24%    Valid rate: 1468.5 sents/sec
+	log loss: 2.542347	rel loss: 2.557356	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  1200) Train loss: 5.1455    Train acc:  4.11%    Train rate:  391.2 sents/sec    Learning rate: 0.001932
+	Valid loss: 6.1160    Valid acc:  3.77%    Valid rate: 1447.1 sents/sec
+	log loss: 2.587951	rel loss: 2.557580	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  1300) Train loss: 5.0431    Train acc:  4.57%    Train rate:  415.6 sents/sec    Learning rate: 0.001927
+	Valid loss: 6.1207    Valid acc:  4.76%    Valid rate: 1461.5 sents/sec
+	log loss: 2.536748	rel loss: 2.506389	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  396.587568189
+Average validation per sec:  1416.46991689
+  1400) Train loss: 5.0868    Train acc:  4.55%    Train rate:  429.0 sents/sec    Learning rate: 0.001921
+	Valid loss: 6.0245    Valid acc:  3.25%    Valid rate: 1446.2 sents/sec
+	log loss: 2.573387	rel loss: 2.513377	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  1500) Train loss: 4.9866    Train acc:  4.83%    Train rate:  436.0 sents/sec    Learning rate: 0.001916
+	Valid loss: 6.2644    Valid acc:  4.08%    Valid rate: 1461.7 sents/sec
+	log loss: 2.515941	rel loss: 2.470653	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:08:46
+Total time in prob_argmax: 2.851027
+Total time in forward: 1.075596
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1677; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 1569 / 35446 * 100 = 4.43 %
+  Unlabeled attachment score: 7537 / 35446 * 100 = 21.26 %
+  Label accuracy score:       3314 / 35446 * 100 = 9.35 %
+
+
+UAS: 21.26    LAS: 4.43
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  1600) Train loss: 4.9265    Train acc:  5.31%    Train rate:  402.5 sents/sec    Learning rate: 0.001910
+	Valid loss: 6.3118    Valid acc:  3.48%    Valid rate: 1471.1 sents/sec
+	log loss: 2.502801	rel loss: 2.423723	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  1700) Train loss: 4.8888    Train acc:  5.61%    Train rate:  406.9 sents/sec    Learning rate: 0.001905
+	Valid loss: 6.2580    Valid acc:  4.66%    Valid rate: 1478.0 sents/sec
+	log loss: 2.491362	rel loss: 2.397410	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  401.75806769
+Average validation per sec:  1427.71850873
+  1800) Train loss: 4.9488    Train acc:  5.43%    Train rate:  382.2 sents/sec    Learning rate: 0.001899
+	Valid loss: 6.7970    Valid acc:  4.76%    Valid rate: 1440.8 sents/sec
+	log loss: 2.545370	rel loss: 2.403428	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  1900) Train loss: 4.8449    Train acc:  5.84%    Train rate:  403.8 sents/sec    Learning rate: 0.001894
+	Valid loss: 6.6395    Valid acc:  4.37%    Valid rate: 1484.4 sents/sec
+	log loss: 2.482150	rel loss: 2.362795	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  2000) Train loss: 4.7661    Train acc:  6.30%    Train rate:  437.4 sents/sec    Learning rate: 0.001888
+	Valid loss: 6.7776    Valid acc:  4.18%    Valid rate: 1453.3 sents/sec
+	log loss: 2.437698	rel loss: 2.328366	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:11:30
+Total time in prob_argmax: 2.796757
+Total time in forward: 1.079415
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1636; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2097 / 35446 * 100 = 5.92 %
+  Unlabeled attachment score: 7752 / 35446 * 100 = 21.87 %
+  Label accuracy score:       3685 / 35446 * 100 = 10.40 %
+
+
+UAS: 21.87    LAS: 5.92
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  402.661305091
+Average validation per sec:  1432.48004872
+  2100) Train loss: 4.6572    Train acc:  6.65%    Train rate:  498.1 sents/sec    Learning rate: 0.001883
+	Valid loss: 178.1980    Valid acc:  5.01%    Valid rate: 1460.0 sents/sec
+	log loss: 2.373165	rel loss: 2.284053	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  2200) Train loss: 4.9923    Train acc:  5.32%    Train rate:  370.6 sents/sec    Learning rate: 0.001877
+	Valid loss: 7.0591    Valid acc:  5.32%    Valid rate: 1462.4 sents/sec
+	log loss: 2.603799	rel loss: 2.388476	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  2300) Train loss: 4.7943    Train acc:  6.01%    Train rate:  411.9 sents/sec    Learning rate: 0.001872
+	Valid loss: 6.9882    Valid acc:  4.95%    Valid rate: 1459.9 sents/sec
+	log loss: 2.467146	rel loss: 2.327154	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  405.816669025
+Average validation per sec:  1436.17343878
+  2400) Train loss: 4.6612    Train acc:  6.65%    Train rate:  474.0 sents/sec    Learning rate: 0.001867
+	Valid loss: 6.8555    Valid acc:  4.82%    Valid rate: 1477.9 sents/sec
+	log loss: 2.386275	rel loss: 2.274964	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  2500) Train loss: 4.6938    Train acc:  6.61%    Train rate:  458.9 sents/sec    Learning rate: 0.001861
+	Valid loss: 7.1387    Valid acc:  5.00%    Valid rate: 1472.8 sents/sec
+	log loss: 2.408236	rel loss: 2.285521	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:14:18
+Total time in prob_argmax: 2.820470
+Total time in forward: 1.073896
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1677; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2117 / 35446 * 100 = 5.97 %
+  Unlabeled attachment score: 7687 / 35446 * 100 = 21.69 %
+  Label accuracy score:       3753 / 35446 * 100 = 10.59 %
+
+
+UAS: 21.69    LAS: 5.97
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  2600) Train loss: 4.8298    Train acc:  5.99%    Train rate:  393.7 sents/sec    Learning rate: 0.001856
+	Valid loss: 7.1313    Valid acc:  4.87%    Valid rate: 1470.6 sents/sec
+	log loss: 2.505239	rel loss: 2.324527	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  2700) Train loss: 4.8049    Train acc:  6.05%    Train rate:  381.3 sents/sec    Learning rate: 0.001851
+	Valid loss: 7.0786    Valid acc:  4.78%    Valid rate: 1467.5 sents/sec
+	log loss: 2.489909	rel loss: 2.314957	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  408.953485844
+Average validation per sec:  1441.51144087
+  2800) Train loss: 4.7440    Train acc:  6.20%    Train rate:  406.2 sents/sec    Learning rate: 0.001845
+	Valid loss: 7.0886    Valid acc:  4.17%    Valid rate: 1462.4 sents/sec
+	log loss: 2.453752	rel loss: 2.290243	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  2900) Train loss: 4.7236    Train acc:  6.47%    Train rate:  428.6 sents/sec    Learning rate: 0.001840
+	Valid loss: 7.1148    Valid acc:  4.68%    Valid rate: 1452.8 sents/sec
+	log loss: 2.447930	rel loss: 2.275707	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  3000) Train loss: 4.6947    Train acc:  6.62%    Train rate:  443.3 sents/sec    Learning rate: 0.001835
+	Valid loss: 7.6591    Valid acc:  4.85%    Valid rate: 1446.0 sents/sec
+	log loss: 2.423110	rel loss: 2.271575	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:17:03
+Total time in prob_argmax: 3.090031
+Total time in forward: 1.089482
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1665; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 1979 / 35446 * 100 = 5.58 %
+  Unlabeled attachment score: 8481 / 35446 * 100 = 23.93 %
+  Label accuracy score:       3510 / 35446 * 100 = 9.90 %
+
+
+UAS: 23.93    LAS: 5.58
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  410.660801109
+Average validation per sec:  1442.73008141
+  3100) Train loss: 4.7299    Train acc:  6.42%    Train rate:  421.2 sents/sec    Learning rate: 0.001829
+	Valid loss: 7.4254    Valid acc:  4.71%    Valid rate: 1452.1 sents/sec
+	log loss: 2.448735	rel loss: 2.281122	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  3200) Train loss: 4.7415    Train acc:  6.38%    Train rate:  402.6 sents/sec    Learning rate: 0.001824
+	Valid loss: 7.5664    Valid acc:  4.77%    Valid rate: 1448.7 sents/sec
+	log loss: 2.456670	rel loss: 2.284806	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  3300) Train loss: 4.7948    Train acc:  6.11%    Train rate:  378.2 sents/sec    Learning rate: 0.001819
+	Valid loss: 7.5399    Valid acc:  4.87%    Valid rate: 1455.3 sents/sec
+	log loss: 2.489648	rel loss: 2.305149	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  3400) Train loss: 4.5887    Train acc:  6.97%    Train rate:  469.8 sents/sec    Learning rate: 0.001814
+	Valid loss: 7.9409    Valid acc:  4.74%    Valid rate: 1459.1 sents/sec
+	log loss: 2.367675	rel loss: 2.221052	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  411.517727846
+Average validation per sec:  1444.03154932
+  3500) Train loss: 4.7748    Train acc:  6.34%    Train rate:  387.7 sents/sec    Learning rate: 0.001809
+	Valid loss: 7.7508    Valid acc:  5.41%    Valid rate: 1464.4 sents/sec
+	log loss: 2.482892	rel loss: 2.291895	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:19:50
+Total time in prob_argmax: 2.816300
+Total time in forward: 1.078802
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1665; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2219 / 35446 * 100 = 6.26 %
+  Unlabeled attachment score: 7647 / 35446 * 100 = 21.57 %
+  Label accuracy score:       3799 / 35446 * 100 = 10.72 %
+
+
+UAS: 21.57    LAS: 6.26
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  3600) Train loss: 4.6868    Train acc:  6.61%    Train rate:  426.5 sents/sec    Learning rate: 0.001803
+	Valid loss: 8.2808    Valid acc:  5.00%    Valid rate: 1452.0 sents/sec
+	log loss: 2.430799	rel loss: 2.256005	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  3700) Train loss: 4.6489    Train acc:  6.72%    Train rate:  437.4 sents/sec    Learning rate: 0.001798
+	Valid loss: 7.9271    Valid acc:  4.59%    Valid rate: 1468.5 sents/sec
+	log loss: 2.406941	rel loss: 2.241956	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  411.980670475
+Average validation per sec:  1445.45755569
+  3800) Train loss: 4.6553    Train acc:  6.61%    Train rate:  428.3 sents/sec    Learning rate: 0.001793
+	Valid loss: 8.0984    Valid acc:  4.63%    Valid rate: 1475.4 sents/sec
+	log loss: 2.410811	rel loss: 2.244515	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  3900) Train loss: 4.7137    Train acc:  6.54%    Train rate:  395.7 sents/sec    Learning rate: 0.001788
+	Valid loss: 7.8810    Valid acc:  5.15%    Valid rate: 1476.7 sents/sec
+	log loss: 2.451241	rel loss: 2.262426	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  4000) Train loss: 4.5993    Train acc:  6.89%    Train rate:  449.2 sents/sec    Learning rate: 0.001783
+	Valid loss: 8.0758    Valid acc:  4.46%    Valid rate: 1465.3 sents/sec
+	log loss: 2.383432	rel loss: 2.215915	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:22:36
+Total time in prob_argmax: 2.918191
+Total time in forward: 1.074893
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1606; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 1977 / 35446 * 100 = 5.58 %
+  Unlabeled attachment score: 8148 / 35446 * 100 = 22.99 %
+  Label accuracy score:       3706 / 35446 * 100 = 10.46 %
+
+
+UAS: 22.99    LAS: 5.58
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  412.911660608
+Average validation per sec:  1447.48452732
+  4100) Train loss: 4.6763    Train acc:  6.61%    Train rate:  433.6 sents/sec    Learning rate: 0.001778
+	Valid loss: 8.1815    Valid acc:  4.51%    Valid rate: 1478.9 sents/sec
+	log loss: 2.425497	rel loss: 2.250827	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  4200) Train loss: 4.7388    Train acc:  6.34%    Train rate:  396.8 sents/sec    Learning rate: 0.001772
+	Valid loss: 8.0528    Valid acc:  4.38%    Valid rate: 1456.2 sents/sec
+	log loss: 2.459760	rel loss: 2.279046	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  4300) Train loss: 4.6456    Train acc:  6.77%    Train rate:  430.0 sents/sec    Learning rate: 0.001767
+	Valid loss: 8.1234    Valid acc:  4.38%    Valid rate: 1472.4 sents/sec
+	log loss: 2.418792	rel loss: 2.226772	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  4400) Train loss: 4.6148    Train acc:  6.86%    Train rate:  419.8 sents/sec    Learning rate: 0.001762
+	Valid loss: 8.8779    Valid acc:  4.58%    Valid rate: 1475.3 sents/sec
+	log loss: 2.396440	rel loss: 2.218319	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  413.559471403
+Average validation per sec:  1449.59463009
+  4500) Train loss: 4.6769    Train acc:  6.71%    Train rate:  443.0 sents/sec    Learning rate: 0.001757
+	Valid loss: 7.9832    Valid acc:  4.44%    Valid rate: 1453.5 sents/sec
+	log loss: 2.433430	rel loss: 2.243492	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:25:24
+Total time in prob_argmax: 3.112630
+Total time in forward: 1.083037
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1652; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 1972 / 35446 * 100 = 5.56 %
+  Unlabeled attachment score: 8489 / 35446 * 100 = 23.95 %
+  Label accuracy score:       3448 / 35446 * 100 = 9.73 %
+
+
+UAS: 23.95    LAS: 5.56
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  4600) Train loss: 4.6837    Train acc:  6.63%    Train rate:  438.0 sents/sec    Learning rate: 0.001752
+	Valid loss: 8.2110    Valid acc:  4.36%    Valid rate: 1458.3 sents/sec
+	log loss: 2.435408	rel loss: 2.248270	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  4700) Train loss: 4.6155    Train acc:  6.78%    Train rate:  412.4 sents/sec    Learning rate: 0.001747
+	Valid loss: 8.4128    Valid acc:  4.38%    Valid rate: 1449.2 sents/sec
+	log loss: 2.397768	rel loss: 2.217762	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  414.679757835
+Average validation per sec:  1449.85510352
+  4800) Train loss: 4.6953    Train acc:  6.48%    Train rate:  387.4 sents/sec    Learning rate: 0.001742
+	Valid loss: 8.1589    Valid acc:  4.93%    Valid rate: 1443.8 sents/sec
+	log loss: 2.445099	rel loss: 2.250161	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  4900) Train loss: 4.5480    Train acc:  7.16%    Train rate:  480.5 sents/sec    Learning rate: 0.001737
+	Valid loss: 8.2188    Valid acc:  4.32%    Valid rate: 1440.9 sents/sec
+	log loss: 2.352667	rel loss: 2.195365	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  5000) Train loss: 4.6972    Train acc:  6.62%    Train rate:  387.6 sents/sec    Learning rate: 0.001732
+	Valid loss: 8.6868    Valid acc:  4.23%    Valid rate: 1459.2 sents/sec
+	log loss: 2.455846	rel loss: 2.241349	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:28:11
+Total time in prob_argmax: 2.924814
+Total time in forward: 1.075557
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1590; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 1953 / 35446 * 100 = 5.51 %
+  Unlabeled attachment score: 8801 / 35446 * 100 = 24.83 %
+  Label accuracy score:       3142 / 35446 * 100 = 8.86 %
+
+
+UAS: 24.83    LAS: 5.51
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  5100) Train loss: 4.6521    Train acc:  6.60%    Train rate:  417.1 sents/sec    Learning rate: 0.001727
+	Valid loss: 8.2357    Valid acc:  4.51%    Valid rate: 1460.3 sents/sec
+	log loss: 2.422967	rel loss: 2.229168	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  414.950537068
+Average validation per sec:  1449.94637521
+  5200) Train loss: 4.5877    Train acc:  6.95%    Train rate:  438.0 sents/sec    Learning rate: 0.001722
+	Valid loss: 8.7584    Valid acc:  4.24%    Valid rate: 1423.4 sents/sec
+	log loss: 2.384681	rel loss: 2.203045	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  5300) Train loss: 4.6524    Train acc:  6.62%    Train rate:  410.5 sents/sec    Learning rate: 0.001717
+	Valid loss: 8.6831    Valid acc:  4.36%    Valid rate: 1431.3 sents/sec
+	log loss: 2.420424	rel loss: 2.231926	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  5400) Train loss: 4.6155    Train acc:  6.97%    Train rate:  426.7 sents/sec    Learning rate: 0.001712
+	Valid loss: 8.3978    Valid acc:  4.50%    Valid rate: 1440.9 sents/sec
+	log loss: 2.405941	rel loss: 2.209608	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  415.513090104
+Average validation per sec:  1448.9410747
+  5500) Train loss: 4.6880    Train acc:  6.52%    Train rate:  394.1 sents/sec    Learning rate: 0.001707
+	Valid loss: 8.4795    Valid acc:  4.33%    Valid rate: 1467.0 sents/sec
+	log loss: 2.444480	rel loss: 2.243478	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:30:59
+Total time in prob_argmax: 3.064228
+Total time in forward: 1.078342
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1606; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2141 / 35446 * 100 = 6.04 %
+  Unlabeled attachment score: 9163 / 35446 * 100 = 25.85 %
+  Label accuracy score:       3356 / 35446 * 100 = 9.47 %
+
+
+UAS: 25.85    LAS: 6.04
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  5600) Train loss: 4.6145    Train acc:  6.79%    Train rate:  447.8 sents/sec    Learning rate: 0.001703
+	Valid loss: 8.6894    Valid acc:  4.66%    Valid rate: 1441.0 sents/sec
+	log loss: 2.399261	rel loss: 2.215286	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  5700) Train loss: 4.6074    Train acc:  6.91%    Train rate:  425.1 sents/sec    Learning rate: 0.001698
+	Valid loss: 8.1253    Valid acc:  4.93%    Valid rate: 1440.4 sents/sec
+	log loss: 2.399582	rel loss: 2.207841	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  415.872293558
+Average validation per sec:  1448.96923974
+  5800) Train loss: 4.6325    Train acc:  6.72%    Train rate:  410.4 sents/sec    Learning rate: 0.001693
+	Valid loss: 8.5813    Valid acc:  4.46%    Valid rate: 1445.5 sents/sec
+	log loss: 2.416274	rel loss: 2.216254	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  5900) Train loss: 4.6258    Train acc:  6.85%    Train rate:  402.4 sents/sec    Learning rate: 0.001688
+	Valid loss: 9.3381    Valid acc:  5.02%    Valid rate: 1445.1 sents/sec
+	log loss: 2.411507	rel loss: 2.214268	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  6000) Train loss: 4.5786    Train acc:  6.97%    Train rate:  437.7 sents/sec    Learning rate: 0.001683
+	Valid loss: 8.7403    Valid acc:  4.47%    Valid rate: 1448.7 sents/sec
+	log loss: 2.380851	rel loss: 2.197699	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:33:47
+Total time in prob_argmax: 2.972429
+Total time in forward: 1.087083
+Not tree: 1700
+Roots < 1: 62; Roots > 1: 1590; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2270 / 35446 * 100 = 6.40 %
+  Unlabeled attachment score: 9265 / 35446 * 100 = 26.14 %
+  Label accuracy score:       3748 / 35446 * 100 = 10.57 %
+
+
+UAS: 26.14    LAS: 6.40
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  6100) Train loss: 4.6355    Train acc:  6.78%    Train rate:  420.8 sents/sec    Learning rate: 0.001678
+	Valid loss: 8.7565    Valid acc:  4.54%    Valid rate: 1458.1 sents/sec
+	log loss: 2.418624	rel loss: 2.216848	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  416.001200661
+Average validation per sec:  1448.99545969
+  6200) Train loss: 4.6276    Train acc:  6.93%    Train rate:  422.7 sents/sec    Learning rate: 0.001673
+	Valid loss: 9.0757    Valid acc:  4.55%    Valid rate: 1450.5 sents/sec
+	log loss: 2.414685	rel loss: 2.212964	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  6300) Train loss: 4.5726    Train acc:  7.01%    Train rate:  435.0 sents/sec    Learning rate: 0.001669
+	Valid loss: 9.0737    Valid acc:  4.61%    Valid rate: 1441.4 sents/sec
+	log loss: 2.381470	rel loss: 2.191144	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  6400) Train loss: 4.6173    Train acc:  6.82%    Train rate:  407.2 sents/sec    Learning rate: 0.001664
+	Valid loss: 8.8204    Valid acc:  4.57%    Valid rate: 1449.2 sents/sec
+	log loss: 2.407595	rel loss: 2.209713	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  416.264923055
+Average validation per sec:  1448.90219464
+  6500) Train loss: 4.6260    Train acc:  6.86%    Train rate:  413.9 sents/sec    Learning rate: 0.001659
+	Valid loss: 8.9633    Valid acc:  4.75%    Valid rate: 1467.2 sents/sec
+	log loss: 2.417369	rel loss: 2.208591	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:36:36
+Total time in prob_argmax: 3.042100
+Total time in forward: 1.075189
+Not tree: 1700
+Roots < 1: 258; Roots > 1: 1295; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2098 / 35446 * 100 = 5.92 %
+  Unlabeled attachment score: 8975 / 35446 * 100 = 25.32 %
+  Label accuracy score:       3338 / 35446 * 100 = 9.42 %
+
+
+UAS: 25.32    LAS: 5.92
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  6600) Train loss: 4.5875    Train acc:  6.93%    Train rate:  418.2 sents/sec    Learning rate: 0.001654
+	Valid loss: 9.3805    Valid acc:  4.71%    Valid rate: 1459.6 sents/sec
+	log loss: 2.391126	rel loss: 2.196386	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  6700) Train loss: 4.7251    Train acc:  6.50%    Train rate:  360.8 sents/sec    Learning rate: 0.001649
+	Valid loss: 9.0319    Valid acc:  4.49%    Valid rate: 1437.8 sents/sec
+	log loss: 2.477442	rel loss: 2.247670	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  6800) Train loss: 4.4948    Train acc:  7.44%    Train rate:  484.3 sents/sec    Learning rate: 0.001645
+	Valid loss: 8.8817    Valid acc:  4.35%    Valid rate: 1427.3 sents/sec
+	log loss: 2.332732	rel loss: 2.162066	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  416.442672611
+Average validation per sec:  1448.84800398
+  6900) Train loss: 4.5544    Train acc:  7.24%    Train rate:  440.0 sents/sec    Learning rate: 0.001640
+	Valid loss: 9.2054    Valid acc:  4.44%    Valid rate: 1453.3 sents/sec
+	log loss: 2.374798	rel loss: 2.179645	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  7000) Train loss: 4.6268    Train acc:  6.78%    Train rate:  400.5 sents/sec    Learning rate: 0.001635
+	Valid loss: 8.9539    Valid acc:  4.43%    Valid rate: 1475.5 sents/sec
+	log loss: 2.421156	rel loss: 2.205626	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:39:23
+Total time in prob_argmax: 2.914365
+Total time in forward: 1.084046
+Not tree: 1700
+Roots < 1: 192; Roots > 1: 1279; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2093 / 35446 * 100 = 5.90 %
+  Unlabeled attachment score: 9162 / 35446 * 100 = 25.85 %
+  Label accuracy score:       3331 / 35446 * 100 = 9.40 %
+
+
+UAS: 25.85    LAS: 5.90
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  7100) Train loss: 4.6212    Train acc:  6.88%    Train rate:  434.2 sents/sec    Learning rate: 0.001631
+	Valid loss: 9.1897    Valid acc:  4.43%    Valid rate: 1456.3 sents/sec
+	log loss: 2.409127	rel loss: 2.212061	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  416.799128515
+Average validation per sec:  1449.39099141
+  7200) Train loss: 4.5724    Train acc:  6.98%    Train rate:  415.7 sents/sec    Learning rate: 0.001626
+	Valid loss: 9.2202    Valid acc:  4.37%    Valid rate: 1422.4 sents/sec
+	log loss: 2.384276	rel loss: 2.188115	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  7300) Train loss: 4.5353    Train acc:  7.09%    Train rate:  444.9 sents/sec    Learning rate: 0.001621
+	Valid loss: 8.9779    Valid acc:  4.49%    Valid rate: 1441.5 sents/sec
+	log loss: 2.361875	rel loss: 2.173385	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  7400) Train loss: 4.6322    Train acc:  6.91%    Train rate:  411.2 sents/sec    Learning rate: 0.001617
+	Valid loss: 9.0723    Valid acc:  4.71%    Valid rate: 1463.5 sents/sec
+	log loss: 2.422531	rel loss: 2.209704	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  417.087995578
+Average validation per sec:  1449.10986656
+  7500) Train loss: 4.6100    Train acc:  6.93%    Train rate:  395.1 sents/sec    Learning rate: 0.001612
+	Valid loss: 9.5237    Valid acc:  4.45%    Valid rate: 1451.2 sents/sec
+	log loss: 2.408819	rel loss: 2.201192	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:42:13
+Total time in prob_argmax: 3.190679
+Total time in forward: 1.082150
+Not tree: 1700
+Roots < 1: 0; Roots > 1: 1279; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2120 / 35446 * 100 = 5.98 %
+  Unlabeled attachment score: 8911 / 35446 * 100 = 25.14 %
+  Label accuracy score:       3388 / 35446 * 100 = 9.56 %
+
+
+UAS: 25.14    LAS: 5.98
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  7600) Train loss: 4.5861    Train acc:  7.00%    Train rate:  411.1 sents/sec    Learning rate: 0.001607
+	Valid loss: 9.3553    Valid acc:  4.60%    Valid rate: 1435.7 sents/sec
+	log loss: 2.397141	rel loss: 2.188971	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  7700) Train loss: 4.5225    Train acc:  7.22%    Train rate:  466.3 sents/sec    Learning rate: 0.001603
+	Valid loss: 9.1097    Valid acc:  4.73%    Valid rate: 1426.0 sents/sec
+	log loss: 2.355827	rel loss: 2.166655	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  7800) Train loss: 4.6785    Train acc:  6.67%    Train rate:  369.9 sents/sec    Learning rate: 0.001598
+	Valid loss: 9.2395    Valid acc:  4.82%    Valid rate: 1461.0 sents/sec
+	log loss: 2.451417	rel loss: 2.227050	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  416.756535199
+Average validation per sec:  1448.82000191
+  7900) Train loss: 4.6055    Train acc:  6.95%    Train rate:  428.0 sents/sec    Learning rate: 0.001594
+	Valid loss: 9.5157    Valid acc:  4.60%    Valid rate: 1456.7 sents/sec
+	log loss: 2.411509	rel loss: 2.194020	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  8000) Train loss: 4.5903    Train acc:  6.86%    Train rate:  408.4 sents/sec    Learning rate: 0.001589
+	Valid loss: 9.1301    Valid acc:  4.76%    Valid rate: 1477.2 sents/sec
+	log loss: 2.398137	rel loss: 2.192196	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:45:05
+Total time in prob_argmax: 2.911963
+Total time in forward: 1.074426
+Not tree: 1700
+Roots < 1: 165; Roots > 1: 1279; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2134 / 35446 * 100 = 6.02 %
+  Unlabeled attachment score: 8964 / 35446 * 100 = 25.29 %
+  Label accuracy score:       3318 / 35446 * 100 = 9.36 %
+
+
+UAS: 25.29    LAS: 6.02
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  8100) Train loss: 4.5148    Train acc:  7.32%    Train rate:  456.2 sents/sec    Learning rate: 0.001584
+	Valid loss: 9.5615    Valid acc:  4.64%    Valid rate: 1451.4 sents/sec
+	log loss: 2.353461	rel loss: 2.161353	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  417.280201209
+Average validation per sec:  1449.29863787
+  8200) Train loss: 4.5295    Train acc:  7.17%    Train rate:  452.2 sents/sec    Learning rate: 0.001580
+	Valid loss: 9.3752    Valid acc:  4.82%    Valid rate: 1458.4 sents/sec
+	log loss: 2.363300	rel loss: 2.166245	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  8300) Train loss: 4.5509    Train acc:  7.15%    Train rate:  417.5 sents/sec    Learning rate: 0.001575
+	Valid loss: 9.4045    Valid acc:  4.65%    Valid rate: 1434.2 sents/sec
+	log loss: 2.375732	rel loss: 2.175178	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  8400) Train loss: 4.5759    Train acc:  7.00%    Train rate:  418.2 sents/sec    Learning rate: 0.001571
+	Valid loss: 9.5658    Valid acc:  4.60%    Valid rate: 1456.6 sents/sec
+	log loss: 2.397058	rel loss: 2.178813	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  8500) Train loss: 4.6360    Train acc:  6.72%    Train rate:  385.0 sents/sec    Learning rate: 0.001566
+	Valid loss: 9.3819    Valid acc:  4.69%    Valid rate: 1477.5 sents/sec
+	log loss: 2.427539	rel loss: 2.208475	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:47:53
+Total time in prob_argmax: 3.047987
+Total time in forward: 1.071353
+Not tree: 1700
+Roots < 1: 557; Roots > 1: 1033; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2129 / 35446 * 100 = 6.01 %
+  Unlabeled attachment score: 9363 / 35446 * 100 = 26.41 %
+  Label accuracy score:       3453 / 35446 * 100 = 9.74 %
+
+
+UAS: 26.41    LAS: 6.01
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  417.324258316
+Average validation per sec:  1449.64568034
+  8600) Train loss: 4.6401    Train acc:  6.98%    Train rate:  408.4 sents/sec    Learning rate: 0.001562
+	Valid loss: 9.5593    Valid acc:  5.01%    Valid rate: 1429.9 sents/sec
+	log loss: 2.431597	rel loss: 2.208498	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  8700) Train loss: 4.4959    Train acc:  7.28%    Train rate:  446.8 sents/sec    Learning rate: 0.001557
+	Valid loss: 9.2914    Valid acc:  4.82%    Valid rate: 1423.7 sents/sec
+	log loss: 2.345065	rel loss: 2.150847	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  8800) Train loss: 4.5425    Train acc:  7.16%    Train rate:  432.3 sents/sec    Learning rate: 0.001553
+	Valid loss: 9.1687    Valid acc:  4.91%    Valid rate: 1439.7 sents/sec
+	log loss: 2.372496	rel loss: 2.170034	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  417.728479409
+Average validation per sec:  1449.01218777
+  8900) Train loss: 4.5876    Train acc:  6.98%    Train rate:  413.7 sents/sec    Learning rate: 0.001548
+	Valid loss: 9.3528    Valid acc:  4.77%    Valid rate: 1445.4 sents/sec
+	log loss: 2.403251	rel loss: 2.184361	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  9000) Train loss: 4.6152    Train acc:  6.99%    Train rate:  400.5 sents/sec    Learning rate: 0.001544
+	Valid loss: 10.0262    Valid acc:  5.05%    Valid rate: 1469.8 sents/sec
+	log loss: 2.415580	rel loss: 2.199591	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:50:44
+Total time in prob_argmax: 3.070059
+Total time in forward: 1.078623
+Not tree: 1700
+Roots < 1: 557; Roots > 1: 1120; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2115 / 35446 * 100 = 5.97 %
+  Unlabeled attachment score: 9434 / 35446 * 100 = 26.62 %
+  Label accuracy score:       3397 / 35446 * 100 = 9.58 %
+
+
+UAS: 26.62    LAS: 5.97
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+  9100) Train loss: 4.5006    Train acc:  7.29%    Train rate:  456.1 sents/sec    Learning rate: 0.001539
+	Valid loss: 9.4479    Valid acc:  4.90%    Valid rate: 1446.7 sents/sec
+	log loss: 2.352056	rel loss: 2.148542	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  417.916675005
+Average validation per sec:  1449.17519869
+  9200) Train loss: 4.6167    Train acc:  6.76%    Train rate:  396.9 sents/sec    Learning rate: 0.001535
+	Valid loss: 9.7491    Valid acc:  4.76%    Valid rate: 1441.8 sents/sec
+	log loss: 2.416091	rel loss: 2.200642	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  9300) Train loss: 4.5644    Train acc:  7.01%    Train rate:  399.8 sents/sec    Learning rate: 0.001531
+	Valid loss: 9.6407    Valid acc:  4.68%    Valid rate: 1430.7 sents/sec
+	log loss: 2.386169	rel loss: 2.178188	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  9400) Train loss: 4.4987    Train acc:  7.40%    Train rate:  456.1 sents/sec    Learning rate: 0.001526
+	Valid loss: 9.6178    Valid acc:  4.86%    Valid rate: 1445.6 sents/sec
+	log loss: 2.350191	rel loss: 2.148488	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  9500) Train loss: 4.6106    Train acc:  6.92%    Train rate:  400.0 sents/sec    Learning rate: 0.001522
+	Valid loss: 9.8656    Valid acc:  5.11%    Valid rate: 1454.9 sents/sec
+	log loss: 2.418374	rel loss: 2.192223	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:53:33
+Total time in prob_argmax: 2.833797
+Total time in forward: 1.078189
+Not tree: 1700
+Roots < 1: 619; Roots > 1: 1033; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2145 / 35446 * 100 = 6.05 %
+  Unlabeled attachment score: 9333 / 35446 * 100 = 26.33 %
+  Label accuracy score:       3316 / 35446 * 100 = 9.36 %
+
+
+UAS: 26.33    LAS: 6.05
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  417.718729477
+Average validation per sec:  1448.92542169
+  9600) Train loss: 4.5201    Train acc:  7.22%    Train rate:  439.2 sents/sec    Learning rate: 0.001517
+	Valid loss: 9.5591    Valid acc:  5.04%    Valid rate: 1449.0 sents/sec
+	log loss: 2.361222	rel loss: 2.158882	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  9700) Train loss: 4.4979    Train acc:  7.33%    Train rate:  464.4 sents/sec    Learning rate: 0.001513
+	Valid loss: 9.8392    Valid acc:  5.17%    Valid rate: 1437.6 sents/sec
+	log loss: 2.347674	rel loss: 2.150207	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+  9800) Train loss: 4.5832    Train acc:  6.91%    Train rate:  393.3 sents/sec    Learning rate: 0.001509
+	Valid loss: 9.8515    Valid acc:  5.00%    Valid rate: 1435.0 sents/sec
+	log loss: 2.402672	rel loss: 2.180513	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.164892239
+Average validation per sec:  1448.66885825
+  9900) Train loss: 4.6111    Train acc:  6.89%    Train rate:  401.6 sents/sec    Learning rate: 0.001504
+	Valid loss: 9.6694    Valid acc:  5.08%    Valid rate: 1440.2 sents/sec
+	log loss: 2.413674	rel loss: 2.197453	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 10000) Train loss: 4.6115    Train acc:  6.89%    Train rate:  389.6 sents/sec    Learning rate: 0.001500
+	Valid loss: 9.8322    Valid acc:  5.03%    Valid rate: 1481.0 sents/sec
+	log loss: 2.418830	rel loss: 2.192700	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:56:22
+Total time in prob_argmax: 2.890623
+Total time in forward: 1.075145
+Not tree: 1700
+Roots < 1: 557; Roots > 1: 1033; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2066 / 35446 * 100 = 5.83 %
+  Unlabeled attachment score: 9343 / 35446 * 100 = 26.36 %
+  Label accuracy score:       3431 / 35446 * 100 = 9.68 %
+
+
+UAS: 26.36    LAS: 5.83
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 10100) Train loss: 4.5203    Train acc:  7.23%    Train rate:  450.6 sents/sec    Learning rate: 0.001496
+	Valid loss: 9.4537    Valid acc:  5.03%    Valid rate: 1441.9 sents/sec
+	log loss: 2.364837	rel loss: 2.155504	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 10200) Train loss: 4.5174    Train acc:  7.21%    Train rate:  424.4 sents/sec    Learning rate: 0.001491
+	Valid loss: 9.3723    Valid acc:  5.24%    Valid rate: 1444.6 sents/sec
+	log loss: 2.359665	rel loss: 2.157749	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.101121595
+Average validation per sec:  1448.795717
+ 10300) Train loss: 4.5547    Train acc:  7.13%    Train rate:  408.8 sents/sec    Learning rate: 0.001487
+	Valid loss: 10.0600    Valid acc:  5.03%    Valid rate: 1432.9 sents/sec
+	log loss: 2.386343	rel loss: 2.168338	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 10400) Train loss: 4.5519    Train acc:  7.03%    Train rate:  408.1 sents/sec    Learning rate: 0.001483
+	Valid loss: 9.7621    Valid acc:  5.25%    Valid rate: 1443.0 sents/sec
+	log loss: 2.383600	rel loss: 2.168327	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 10500) Train loss: 4.5180    Train acc:  7.22%    Train rate:  441.8 sents/sec    Learning rate: 0.001479
+	Valid loss: 9.6858    Valid acc:  4.93%    Valid rate: 1444.0 sents/sec
+	log loss: 2.361740	rel loss: 2.156235	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:00:59:09
+Total time in prob_argmax: 2.887263
+Total time in forward: 1.084275
+Not tree: 1700
+Roots < 1: 557; Roots > 1: 799; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2077 / 35446 * 100 = 5.86 %
+  Unlabeled attachment score: 8998 / 35446 * 100 = 25.39 %
+  Label accuracy score:       3206 / 35446 * 100 = 9.04 %
+
+
+UAS: 25.39    LAS: 5.86
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  418.14284795
+Average validation per sec:  1448.5423743
+ 10600) Train loss: 4.6217    Train acc:  6.91%    Train rate:  416.6 sents/sec    Learning rate: 0.001474
+	Valid loss: 9.4254    Valid acc:  4.96%    Valid rate: 1446.2 sents/sec
+	log loss: 2.428560	rel loss: 2.193152	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 10700) Train loss: 4.5929    Train acc:  6.98%    Train rate:  395.3 sents/sec    Learning rate: 0.001470
+	Valid loss: 9.7799    Valid acc:  5.12%    Valid rate: 1435.5 sents/sec
+	log loss: 2.407886	rel loss: 2.184981	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 10800) Train loss: 4.5132    Train acc:  7.31%    Train rate:  426.8 sents/sec    Learning rate: 0.001466
+	Valid loss: 9.8656    Valid acc:  5.03%    Valid rate: 1435.8 sents/sec
+	log loss: 2.360082	rel loss: 2.153103	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  417.997912433
+Average validation per sec:  1448.28192588
+ 10900) Train loss: 4.4553    Train acc:  7.51%    Train rate:  461.4 sents/sec    Learning rate: 0.001462
+	Valid loss: 9.8955    Valid acc:  4.85%    Valid rate: 1447.4 sents/sec
+	log loss: 2.326163	rel loss: 2.129116	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11000) Train loss: 4.5512    Train acc:  7.19%    Train rate:  412.7 sents/sec    Learning rate: 0.001458
+	Valid loss: 9.6885    Valid acc:  5.22%    Valid rate: 1463.0 sents/sec
+	log loss: 2.388038	rel loss: 2.163194	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:01:58
+Total time in prob_argmax: 2.803890
+Total time in forward: 1.089964
+Not tree: 1700
+Roots < 1: 791; Roots > 1: 799; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2195 / 35446 * 100 = 6.19 %
+  Unlabeled attachment score: 9716 / 35446 * 100 = 27.41 %
+  Label accuracy score:       3397 / 35446 * 100 = 9.58 %
+
+
+UAS: 27.41    LAS: 6.19
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 11100) Train loss: 4.5955    Train acc:  6.89%    Train rate:  414.5 sents/sec    Learning rate: 0.001453
+	Valid loss: 9.8610    Valid acc:  5.10%    Valid rate: 1442.0 sents/sec
+	log loss: 2.404756	rel loss: 2.190766	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11200) Train loss: 4.5109    Train acc:  7.20%    Train rate:  429.2 sents/sec    Learning rate: 0.001449
+	Valid loss: 10.0124    Valid acc:  5.09%    Valid rate: 1420.8 sents/sec
+	log loss: 2.360427	rel loss: 2.150506	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.4075445
+Average validation per sec:  1448.10413042
+ 11300) Train loss: 4.4211    Train acc:  7.69%    Train rate:  468.1 sents/sec    Learning rate: 0.001445
+	Valid loss: 9.8851    Valid acc:  5.13%    Valid rate: 1442.8 sents/sec
+	log loss: 2.306136	rel loss: 2.114984	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11400) Train loss: 4.5823    Train acc:  7.02%    Train rate:  393.9 sents/sec    Learning rate: 0.001441
+	Valid loss: 9.8032    Valid acc:  5.07%    Valid rate: 1449.7 sents/sec
+	log loss: 2.406287	rel loss: 2.175996	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11500) Train loss: 4.5538    Train acc:  7.06%    Train rate:  411.1 sents/sec    Learning rate: 0.001437
+	Valid loss: 10.2812    Valid acc:  4.90%    Valid rate: 1462.4 sents/sec
+	log loss: 2.387310	rel loss: 2.166500	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:04:49
+Total time in prob_argmax: 3.030961
+Total time in forward: 1.073457
+Not tree: 1700
+Roots < 1: 853; Roots > 1: 799; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2093 / 35446 * 100 = 5.90 %
+  Unlabeled attachment score: 9437 / 35446 * 100 = 26.62 %
+  Label accuracy score:       3175 / 35446 * 100 = 8.96 %
+
+
+UAS: 26.62    LAS: 5.90
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  418.562483332
+Average validation per sec:  1448.1959892
+ 11600) Train loss: 4.6080    Train acc:  6.94%    Train rate:  406.0 sents/sec    Learning rate: 0.001433
+	Valid loss: 9.4741    Valid acc:  5.37%    Valid rate: 1441.3 sents/sec
+	log loss: 2.414089	rel loss: 2.193944	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11700) Train loss: 4.4867    Train acc:  7.40%    Train rate:  445.1 sents/sec    Learning rate: 0.001428
+	Valid loss: 10.0088    Valid acc:  4.77%    Valid rate: 1427.9 sents/sec
+	log loss: 2.345803	rel loss: 2.140870	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11800) Train loss: 4.5869    Train acc:  6.92%    Train rate:  382.8 sents/sec    Learning rate: 0.001424
+	Valid loss: 10.2070    Valid acc:  5.15%    Valid rate: 1452.8 sents/sec
+	log loss: 2.405547	rel loss: 2.181350	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 11900) Train loss: 4.5252    Train acc:  7.32%    Train rate:  428.2 sents/sec    Learning rate: 0.001420
+	Valid loss: 10.4207    Valid acc:  5.10%    Valid rate: 1456.3 sents/sec
+	log loss: 2.372899	rel loss: 2.152307	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.460161007
+Average validation per sec:  1448.07438672
+ 12000) Train loss: 4.4948    Train acc:  7.37%    Train rate:  447.4 sents/sec    Learning rate: 0.001416
+	Valid loss: 10.0579    Valid acc:  5.16%    Valid rate: 1462.8 sents/sec
+	log loss: 2.350959	rel loss: 2.143865	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:07:38
+Total time in prob_argmax: 2.866242
+Total time in forward: 1.076757
+Not tree: 1700
+Roots < 1: 791; Roots > 1: 886; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2139 / 35446 * 100 = 6.03 %
+  Unlabeled attachment score: 9577 / 35446 * 100 = 27.02 %
+  Label accuracy score:       3236 / 35446 * 100 = 9.13 %
+
+
+UAS: 27.02    LAS: 6.03
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 12100) Train loss: 4.5670    Train acc:  7.11%    Train rate:  407.9 sents/sec    Learning rate: 0.001412
+	Valid loss: 9.9908    Valid acc:  5.18%    Valid rate: 1440.9 sents/sec
+	log loss: 2.395867	rel loss: 2.171102	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 12200) Train loss: 4.5236    Train acc:  7.16%    Train rate:  420.6 sents/sec    Learning rate: 0.001408
+	Valid loss: 9.7607    Valid acc:  5.16%    Valid rate: 1426.3 sents/sec
+	log loss: 2.368879	rel loss: 2.154715	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.627591861
+Average validation per sec:  1447.95745581
+ 12300) Train loss: 4.5587    Train acc:  7.07%    Train rate:  406.6 sents/sec    Learning rate: 0.001404
+	Valid loss: 10.0802    Valid acc:  5.44%    Valid rate: 1446.0 sents/sec
+	log loss: 2.389628	rel loss: 2.169052	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 12400) Train loss: 4.5626    Train acc:  7.11%    Train rate:  393.1 sents/sec    Learning rate: 0.001400
+	Valid loss: 10.3478    Valid acc:  5.29%    Valid rate: 1454.4 sents/sec
+	log loss: 2.394555	rel loss: 2.168006	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 12500) Train loss: 4.4955    Train acc:  7.26%    Train rate:  443.3 sents/sec    Learning rate: 0.001396
+	Valid loss: 10.2135    Valid acc:  5.31%    Valid rate: 1448.9 sents/sec
+	log loss: 2.350995	rel loss: 2.144496	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:10:27
+Total time in prob_argmax: 2.889433
+Total time in forward: 1.082148
+Not tree: 1700
+Roots < 1: 791; Roots > 1: 799; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2199 / 35446 * 100 = 6.20 %
+  Unlabeled attachment score: 9485 / 35446 * 100 = 26.76 %
+  Label accuracy score:       3387 / 35446 * 100 = 9.56 %
+
+
+UAS: 26.76    LAS: 6.20
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  418.524672911
+Average validation per sec:  1448.00018478
+ 12600) Train loss: 4.5532    Train acc:  7.24%    Train rate:  428.6 sents/sec    Learning rate: 0.001392
+	Valid loss: 10.0051    Valid acc:  5.23%    Valid rate: 1449.5 sents/sec
+	log loss: 2.388990	rel loss: 2.164163	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 12700) Train loss: 4.4690    Train acc:  7.53%    Train rate:  453.7 sents/sec    Learning rate: 0.001388
+	Valid loss: 10.1034    Valid acc:  5.54%    Valid rate: 1427.7 sents/sec
+	log loss: 2.341537	rel loss: 2.127440	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 12800) Train loss: 4.5518    Train acc:  7.13%    Train rate:  401.1 sents/sec    Learning rate: 0.001384
+	Valid loss: 10.0630    Valid acc:  5.51%    Valid rate: 1430.1 sents/sec
+	log loss: 2.387692	rel loss: 2.164136	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 12900) Train loss: 4.5379    Train acc:  7.23%    Train rate:  400.3 sents/sec    Learning rate: 0.001380
+	Valid loss: 10.1796    Valid acc:  5.28%    Valid rate: 1462.4 sents/sec
+	log loss: 2.377664	rel loss: 2.160263	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.598535741
+Average validation per sec:  1447.82823819
+ 13000) Train loss: 4.5048    Train acc:  7.23%    Train rate:  423.6 sents/sec    Learning rate: 0.001376
+	Valid loss: 9.6710    Valid acc:  5.44%    Valid rate: 1464.7 sents/sec
+	log loss: 2.360746	rel loss: 2.144018	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:13:17
+Total time in prob_argmax: 2.964740
+Total time in forward: 1.082155
+Not tree: 1700
+Roots < 1: 853; Roots > 1: 799; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2159 / 35446 * 100 = 6.09 %
+  Unlabeled attachment score: 9523 / 35446 * 100 = 26.87 %
+  Label accuracy score:       3421 / 35446 * 100 = 9.65 %
+
+
+UAS: 26.87    LAS: 6.09
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 13100) Train loss: 4.5339    Train acc:  7.15%    Train rate:  429.7 sents/sec    Learning rate: 0.001372
+	Valid loss: 10.0348    Valid acc:  5.23%    Valid rate: 1467.2 sents/sec
+	log loss: 2.378378	rel loss: 2.155491	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 13200) Train loss: 4.5802    Train acc:  7.09%    Train rate:  388.2 sents/sec    Learning rate: 0.001368
+	Valid loss: 10.1996    Valid acc:  5.43%    Valid rate: 1432.0 sents/sec
+	log loss: 2.406170	rel loss: 2.174032	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.490614546
+Average validation per sec:  1447.98329651
+ 13300) Train loss: 4.4498    Train acc:  7.61%    Train rate:  456.6 sents/sec    Learning rate: 0.001364
+	Valid loss: 10.3539    Valid acc:  5.67%    Valid rate: 1416.7 sents/sec
+	log loss: 2.324954	rel loss: 2.124885	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 13400) Train loss: 4.5150    Train acc:  7.21%    Train rate:  414.1 sents/sec    Learning rate: 0.001360
+	Valid loss: 10.3287    Valid acc:  5.70%    Valid rate: 1440.4 sents/sec
+	log loss: 2.366942	rel loss: 2.148086	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 13500) Train loss: 4.5405    Train acc:  7.19%    Train rate:  423.8 sents/sec    Learning rate: 0.001356
+	Valid loss: 10.3354    Valid acc:  5.54%    Valid rate: 1465.4 sents/sec
+	log loss: 2.382048	rel loss: 2.158405	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:16:06
+Total time in prob_argmax: 2.836638
+Total time in forward: 1.075862
+Not tree: 1700
+Roots < 1: 1325; Roots > 1: 327; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2064 / 35446 * 100 = 5.82 %
+  Unlabeled attachment score: 9680 / 35446 * 100 = 27.31 %
+  Label accuracy score:       3140 / 35446 * 100 = 8.86 %
+
+
+UAS: 27.31    LAS: 5.82
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 13600) Train loss: 4.5236    Train acc:  7.22%    Train rate:  430.5 sents/sec    Learning rate: 0.001353
+	Valid loss: 9.9897    Valid acc:  5.71%    Valid rate: 1447.4 sents/sec
+	log loss: 2.371962	rel loss: 2.151664	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.865421532
+Average validation per sec:  1447.82100556
+ 13700) Train loss: 4.4667    Train acc:  7.44%    Train rate:  452.2 sents/sec    Learning rate: 0.001349
+	Valid loss: 10.3059    Valid acc:  5.70%    Valid rate: 1425.0 sents/sec
+	log loss: 2.340062	rel loss: 2.126589	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 13800) Train loss: 4.5450    Train acc:  7.15%    Train rate:  394.4 sents/sec    Learning rate: 0.001345
+	Valid loss: 10.4040    Valid acc:  5.50%    Valid rate: 1436.7 sents/sec
+	log loss: 2.386112	rel loss: 2.158897	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 13900) Train loss: 4.5274    Train acc:  7.27%    Train rate:  415.5 sents/sec    Learning rate: 0.001341
+	Valid loss: 10.2094    Valid acc:  5.57%    Valid rate: 1445.1 sents/sec
+	log loss: 2.373567	rel loss: 2.153847	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.904687747
+Average validation per sec:  1447.55751418
+ 14000) Train loss: 4.6060    Train acc:  6.96%    Train rate:  368.3 sents/sec    Learning rate: 0.001337
+	Valid loss: 10.4917    Valid acc:  5.67%    Valid rate: 1474.6 sents/sec
+	log loss: 2.425026	rel loss: 2.180964	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:18:56
+Total time in prob_argmax: 2.859391
+Total time in forward: 1.077156
+Not tree: 1700
+Roots < 1: 791; Roots > 1: 555; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2206 / 35446 * 100 = 6.22 %
+  Unlabeled attachment score: 9714 / 35446 * 100 = 27.41 %
+  Label accuracy score:       3428 / 35446 * 100 = 9.67 %
+
+
+UAS: 27.41    LAS: 6.22
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 14100) Train loss: 4.4698    Train acc:  7.37%    Train rate:  447.6 sents/sec    Learning rate: 0.001333
+	Valid loss: 10.0903    Valid acc:  5.75%    Valid rate: 1451.3 sents/sec
+	log loss: 2.342759	rel loss: 2.127026	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 14200) Train loss: 4.4992    Train acc:  7.29%    Train rate:  416.2 sents/sec    Learning rate: 0.001329
+	Valid loss: 10.4484    Valid acc:  5.72%    Valid rate: 1433.2 sents/sec
+	log loss: 2.358023	rel loss: 2.141185	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.730596007
+Average validation per sec:  1447.67385631
+ 14300) Train loss: 4.5028    Train acc:  7.36%    Train rate:  432.9 sents/sec    Learning rate: 0.001326
+	Valid loss: 10.2167    Valid acc:  5.78%    Valid rate: 1446.7 sents/sec
+	log loss: 2.356822	rel loss: 2.146000	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 14400) Train loss: 4.4881    Train acc:  7.49%    Train rate:  439.1 sents/sec    Learning rate: 0.001322
+	Valid loss: 10.1841    Valid acc:  5.88%    Valid rate: 1442.1 sents/sec
+	log loss: 2.353744	rel loss: 2.134389	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 14500) Train loss: 4.5123    Train acc:  7.20%    Train rate:  412.1 sents/sec    Learning rate: 0.001318
+	Valid loss: 10.3105    Valid acc:  5.82%    Valid rate: 1448.3 sents/sec
+	log loss: 2.365637	rel loss: 2.146647	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:21:45
+Total time in prob_argmax: 2.878450
+Total time in forward: 1.086344
+Not tree: 1700
+Roots < 1: 1517; Roots > 1: 135; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2167 / 35446 * 100 = 6.11 %
+  Unlabeled attachment score: 9714 / 35446 * 100 = 27.41 %
+  Label accuracy score:       3288 / 35446 * 100 = 9.28 %
+
+
+UAS: 27.41    LAS: 6.11
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 14600) Train loss: 4.5235    Train acc:  7.25%    Train rate:  426.3 sents/sec    Learning rate: 0.001314
+	Valid loss: 9.9115    Valid acc:  6.03%    Valid rate: 1437.7 sents/sec
+	log loss: 2.374801	rel loss: 2.148655	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.973662737
+Average validation per sec:  1447.5653322
+ 14700) Train loss: 4.4261    Train acc:  7.66%    Train rate:  453.1 sents/sec    Learning rate: 0.001310
+	Valid loss: 10.0593    Valid acc:  5.87%    Valid rate: 1426.1 sents/sec
+	log loss: 2.317067	rel loss: 2.109050	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 14800) Train loss: 4.4919    Train acc:  7.36%    Train rate:  413.6 sents/sec    Learning rate: 0.001307
+	Valid loss: 10.6693    Valid acc:  5.57%    Valid rate: 1432.0 sents/sec
+	log loss: 2.359836	rel loss: 2.132099	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 14900) Train loss: 4.5670    Train acc:  7.08%    Train rate:  387.0 sents/sec    Learning rate: 0.001303
+	Valid loss: 10.3137    Valid acc:  5.98%    Valid rate: 1441.0 sents/sec
+	log loss: 2.399056	rel loss: 2.167901	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  418.952738732
+Average validation per sec:  1447.27317768
+ 15000) Train loss: 4.5100    Train acc:  7.31%    Train rate:  429.6 sents/sec    Learning rate: 0.001299
+	Valid loss: 10.2090    Valid acc:  5.98%    Valid rate: 1474.2 sents/sec
+	log loss: 2.364843	rel loss: 2.145198	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:24:36
+Total time in prob_argmax: 3.255868
+Total time in forward: 1.074955
+Not tree: 1700
+Roots < 1: 1530; Roots > 1: 135; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2205 / 35446 * 100 = 6.22 %
+  Unlabeled attachment score: 10026 / 35446 * 100 = 28.29 %
+  Label accuracy score:       3420 / 35446 * 100 = 9.65 %
+
+
+UAS: 28.29    LAS: 6.22
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 15100) Train loss: 4.5393    Train acc:  7.16%    Train rate:  407.7 sents/sec    Learning rate: 0.001295
+	Valid loss: 9.9286    Valid acc:  5.88%    Valid rate: 1427.1 sents/sec
+	log loss: 2.384211	rel loss: 2.155106	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 15200) Train loss: 4.5577    Train acc:  7.11%    Train rate:  373.8 sents/sec    Learning rate: 0.001292
+	Valid loss: 10.5021    Valid acc:  5.93%    Valid rate: 1424.3 sents/sec
+	log loss: 2.397215	rel loss: 2.160457	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 15300) Train loss: 4.4167    Train acc:  7.82%    Train rate:  476.5 sents/sec    Learning rate: 0.001288
+	Valid loss: 10.4603    Valid acc:  5.93%    Valid rate: 1425.7 sents/sec
+	log loss: 2.310483	rel loss: 2.106246	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.030169175
+Average validation per sec:  1447.02644883
+ 15400) Train loss: 4.5003    Train acc:  7.30%    Train rate:  414.6 sents/sec    Learning rate: 0.001284
+	Valid loss: 10.2754    Valid acc:  5.84%    Valid rate: 1442.9 sents/sec
+	log loss: 2.363272	rel loss: 2.137058	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 15500) Train loss: 4.5030    Train acc:  7.44%    Train rate:  423.2 sents/sec    Learning rate: 0.001281
+	Valid loss: 9.8735    Valid acc:  5.82%    Valid rate: 1454.7 sents/sec
+	log loss: 2.365784	rel loss: 2.137250	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:27:30
+Total time in prob_argmax: 2.912738
+Total time in forward: 1.086084
+Not tree: 1700
+Roots < 1: 1517; Roots > 1: 135; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2113 / 35446 * 100 = 5.96 %
+  Unlabeled attachment score: 9829 / 35446 * 100 = 27.73 %
+  Label accuracy score:       3169 / 35446 * 100 = 8.94 %
+
+
+UAS: 27.73    LAS: 5.96
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 15600) Train loss: 4.4992    Train acc:  7.33%    Train rate:  420.5 sents/sec    Learning rate: 0.001277
+	Valid loss: 10.3529    Valid acc:  5.87%    Valid rate: 1430.1 sents/sec
+	log loss: 2.359385	rel loss: 2.139819	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.037945349
+Average validation per sec:  1446.94105157
+ 15700) Train loss: 4.4329    Train acc:  7.62%    Train rate:  457.0 sents/sec    Learning rate: 0.001273
+	Valid loss: 10.2472    Valid acc:  5.86%    Valid rate: 1425.9 sents/sec
+	log loss: 2.318914	rel loss: 2.113964	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 15800) Train loss: 4.5074    Train acc:  7.38%    Train rate:  405.5 sents/sec    Learning rate: 0.001270
+	Valid loss: 10.9388    Valid acc:  5.88%    Valid rate: 1434.8 sents/sec
+	log loss: 2.365523	rel loss: 2.141861	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 15900) Train loss: 4.4699    Train acc:  7.47%    Train rate:  433.5 sents/sec    Learning rate: 0.001266
+	Valid loss: 10.8044    Valid acc:  5.98%    Valid rate: 1463.2 sents/sec
+	log loss: 2.346632	rel loss: 2.123220	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.282311015
+Average validation per sec:  1446.83393556
+ 16000) Train loss: 4.5669    Train acc:  7.16%    Train rate:  390.0 sents/sec    Learning rate: 0.001262
+	Valid loss: 10.2329    Valid acc:  5.94%    Valid rate: 1478.9 sents/sec
+	log loss: 2.407983	rel loss: 2.158905	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:30:22
+Total time in prob_argmax: 3.030935
+Total time in forward: 1.083617
+Not tree: 1700
+Roots < 1: 1621; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2223 / 35446 * 100 = 6.27 %
+  Unlabeled attachment score: 9877 / 35446 * 100 = 27.86 %
+  Label accuracy score:       3386 / 35446 * 100 = 9.55 %
+
+
+UAS: 27.86    LAS: 6.27
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 16100) Train loss: 4.4765    Train acc:  7.40%    Train rate:  444.8 sents/sec    Learning rate: 0.001259
+	Valid loss: 10.4867    Valid acc:  6.08%    Valid rate: 1424.6 sents/sec
+	log loss: 2.344707	rel loss: 2.131811	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 16200) Train loss: 4.4859    Train acc:  7.39%    Train rate:  413.1 sents/sec    Learning rate: 0.001255
+	Valid loss: 10.3267    Valid acc:  5.91%    Valid rate: 1415.1 sents/sec
+	log loss: 2.356192	rel loss: 2.129703	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 16300) Train loss: 4.4868    Train acc:  7.38%    Train rate:  413.8 sents/sec    Learning rate: 0.001251
+	Valid loss: 10.5386    Valid acc:  6.02%    Valid rate: 1429.1 sents/sec
+	log loss: 2.354000	rel loss: 2.132817	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.187631337
+Average validation per sec:  1446.59107912
+ 16400) Train loss: 4.5135    Train acc:  7.22%    Train rate:  404.7 sents/sec    Learning rate: 0.001248
+	Valid loss: 10.8750    Valid acc:  5.94%    Valid rate: 1455.1 sents/sec
+	log loss: 2.370857	rel loss: 2.142685	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 16500) Train loss: 4.5264    Train acc:  7.35%    Train rate:  414.3 sents/sec    Learning rate: 0.001244
+	Valid loss: 10.7621    Valid acc:  5.91%    Valid rate: 1461.6 sents/sec
+	log loss: 2.376711	rel loss: 2.149644	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:33:14
+Total time in prob_argmax: 2.869560
+Total time in forward: 1.084494
+Not tree: 1700
+Roots < 1: 1559; Roots > 1: 18; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2215 / 35446 * 100 = 6.25 %
+  Unlabeled attachment score: 10052 / 35446 * 100 = 28.36 %
+  Label accuracy score:       3361 / 35446 * 100 = 9.48 %
+
+
+UAS: 28.36    LAS: 6.25
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 16600) Train loss: 4.4720    Train acc:  7.52%    Train rate:  439.9 sents/sec    Learning rate: 0.001241
+	Valid loss: 10.8541    Valid acc:  5.92%    Valid rate: 1422.4 sents/sec
+	log loss: 2.348722	rel loss: 2.123309	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.19558713
+Average validation per sec:  1446.58704104
+ 16700) Train loss: 4.4184    Train acc:  7.43%    Train rate:  445.6 sents/sec    Learning rate: 0.001237
+	Valid loss: 10.5712    Valid acc:  5.73%    Valid rate: 1420.2 sents/sec
+	log loss: 2.312906	rel loss: 2.105463	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 16800) Train loss: 4.4791    Train acc:  7.58%    Train rate:  433.7 sents/sec    Learning rate: 0.001234
+	Valid loss: 10.6574    Valid acc:  5.95%    Valid rate: 1445.7 sents/sec
+	log loss: 2.349371	rel loss: 2.129749	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 16900) Train loss: 4.5521    Train acc:  7.21%    Train rate:  388.3 sents/sec    Learning rate: 0.001230
+	Valid loss: 10.5680    Valid acc:  5.78%    Valid rate: 1437.1 sents/sec
+	log loss: 2.400087	rel loss: 2.152055	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 17000) Train loss: 4.4810    Train acc:  7.42%    Train rate:  409.2 sents/sec    Learning rate: 0.001226
+	Valid loss: 11.0140    Valid acc:  6.03%    Valid rate: 1448.6 sents/sec
+	log loss: 2.351975	rel loss: 2.129007	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:36:06
+Total time in prob_argmax: 2.835336
+Total time in forward: 1.079519
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2259 / 35446 * 100 = 6.37 %
+  Unlabeled attachment score: 10097 / 35446 * 100 = 28.49 %
+  Label accuracy score:       3433 / 35446 * 100 = 9.69 %
+
+
+UAS: 28.49    LAS: 6.37
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  419.195260687
+Average validation per sec:  1446.38263372
+ 17100) Train loss: 4.4810    Train acc:  7.41%    Train rate:  441.9 sents/sec    Learning rate: 0.001223
+	Valid loss: 10.5731    Valid acc:  6.00%    Valid rate: 1432.1 sents/sec
+	log loss: 2.351674	rel loss: 2.129309	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 17200) Train loss: 4.4876    Train acc:  7.52%    Train rate:  411.1 sents/sec    Learning rate: 0.001219
+	Valid loss: 11.3223    Valid acc:  5.81%    Valid rate: 1429.1 sents/sec
+	log loss: 2.357594	rel loss: 2.130033	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 17300) Train loss: 4.4878    Train acc:  7.38%    Train rate:  415.6 sents/sec    Learning rate: 0.001216
+	Valid loss: 10.9084    Valid acc:  6.01%    Valid rate: 1447.8 sents/sec
+	log loss: 2.358372	rel loss: 2.129462	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.258391153
+Average validation per sec:  1446.20889626
+ 17400) Train loss: 4.4135    Train acc:  7.76%    Train rate:  457.5 sents/sec    Learning rate: 0.001212
+	Valid loss: 10.7740    Valid acc:  5.57%    Valid rate: 1458.6 sents/sec
+	log loss: 2.311807	rel loss: 2.101743	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 17500) Train loss: 4.4736    Train acc:  7.47%    Train rate:  428.4 sents/sec    Learning rate: 0.001209
+	Valid loss: 11.0366    Valid acc:  5.80%    Valid rate: 1451.0 sents/sec
+	log loss: 2.349335	rel loss: 2.124218	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:38:59
+Total time in prob_argmax: 2.677573
+Total time in forward: 1.083317
+Not tree: 1700
+Roots < 1: 1621; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2183 / 35446 * 100 = 6.16 %
+  Unlabeled attachment score: 10076 / 35446 * 100 = 28.43 %
+  Label accuracy score:       3223 / 35446 * 100 = 9.09 %
+
+
+UAS: 28.43    LAS: 6.16
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 17600) Train loss: 4.4988    Train acc:  7.43%    Train rate:  420.6 sents/sec    Learning rate: 0.001205
+	Valid loss: 10.4645    Valid acc:  5.91%    Valid rate: 1430.4 sents/sec
+	log loss: 2.364829	rel loss: 2.133992	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.535087607
+Average validation per sec:  1446.2168397
+ 17700) Train loss: 4.5548    Train acc:  7.14%    Train rate:  381.9 sents/sec    Learning rate: 0.001202
+	Valid loss: 10.8692    Valid acc:  5.96%    Valid rate: 1447.8 sents/sec
+	log loss: 2.397651	rel loss: 2.157147	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 17800) Train loss: 4.5478    Train acc:  7.07%    Train rate:  375.5 sents/sec    Learning rate: 0.001199
+	Valid loss: 10.8416    Valid acc:  5.99%    Valid rate: 1439.8 sents/sec
+	log loss: 2.395645	rel loss: 2.152180	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 17900) Train loss: 4.4094    Train acc:  7.76%    Train rate:  463.6 sents/sec    Learning rate: 0.001195
+	Valid loss: 10.3299    Valid acc:  5.85%    Valid rate: 1439.3 sents/sec
+	log loss: 2.308531	rel loss: 2.100831	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 18000) Train loss: 4.4914    Train acc:  7.36%    Train rate:  402.1 sents/sec    Learning rate: 0.001192
+	Valid loss: 11.1887    Valid acc:  5.97%    Valid rate: 1448.2 sents/sec
+	log loss: 2.358733	rel loss: 2.132655	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:41:49
+Total time in prob_argmax: 2.854065
+Total time in forward: 1.085937
+Not tree: 1700
+Roots < 1: 1621; Roots > 1: 26; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2230 / 35446 * 100 = 6.29 %
+  Unlabeled attachment score: 10167 / 35446 * 100 = 28.68 %
+  Label accuracy score:       3343 / 35446 * 100 = 9.43 %
+
+
+UAS: 28.68    LAS: 6.29
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  419.228882518
+Average validation per sec:  1446.16246935
+ 18100) Train loss: 4.4119    Train acc:  7.69%    Train rate:  470.8 sents/sec    Learning rate: 0.001188
+	Valid loss: 10.7610    Valid acc:  5.96%    Valid rate: 1432.6 sents/sec
+	log loss: 2.314154	rel loss: 2.097786	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 18200) Train loss: 4.4926    Train acc:  7.45%    Train rate:  414.4 sents/sec    Learning rate: 0.001185
+	Valid loss: 11.3805    Valid acc:  5.79%    Valid rate: 1423.7 sents/sec
+	log loss: 2.361076	rel loss: 2.131501	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 18300) Train loss: 4.5058    Train acc:  7.29%    Train rate:  406.0 sents/sec    Learning rate: 0.001181
+	Valid loss: 10.9055    Valid acc:  5.93%    Valid rate: 1456.1 sents/sec
+	log loss: 2.365975	rel loss: 2.139855	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.412453524
+Average validation per sec:  1446.01938111
+ 18400) Train loss: 4.4836    Train acc:  7.39%    Train rate:  411.3 sents/sec    Learning rate: 0.001178
+	Valid loss: 10.7491    Valid acc:  5.73%    Valid rate: 1459.4 sents/sec
+	log loss: 2.356615	rel loss: 2.126962	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 18500) Train loss: 4.5401    Train acc:  7.13%    Train rate:  375.5 sents/sec    Learning rate: 0.001175
+	Valid loss: 11.2702    Valid acc:  5.84%    Valid rate: 1478.4 sents/sec
+	log loss: 2.390942	rel loss: 2.149167	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:44:39
+Total time in prob_argmax: 3.050960
+Total time in forward: 1.076475
+Not tree: 1700
+Roots < 1: 1621; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2178 / 35446 * 100 = 6.14 %
+  Unlabeled attachment score: 10174 / 35446 * 100 = 28.70 %
+  Label accuracy score:       3219 / 35446 * 100 = 9.08 %
+
+
+UAS: 28.70    LAS: 6.14
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 18600) Train loss: 4.4223    Train acc:  7.70%    Train rate:  468.3 sents/sec    Learning rate: 0.001171
+	Valid loss: 10.8720    Valid acc:  5.97%    Valid rate: 1409.7 sents/sec
+	log loss: 2.315519	rel loss: 2.106765	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 18700) Train loss: 4.4758    Train acc:  7.59%    Train rate:  427.8 sents/sec    Learning rate: 0.001168
+	Valid loss: 10.9865    Valid acc:  5.88%    Valid rate: 1433.3 sents/sec
+	log loss: 2.353128	rel loss: 2.122697	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.440231418
+Average validation per sec:  1446.00184447
+ 18800) Train loss: 4.4786    Train acc:  7.56%    Train rate:  424.8 sents/sec    Learning rate: 0.001165
+	Valid loss: 10.6594    Valid acc:  5.68%    Valid rate: 1442.0 sents/sec
+	log loss: 2.356753	rel loss: 2.121864	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 18900) Train loss: 4.4742    Train acc:  7.44%    Train rate:  419.6 sents/sec    Learning rate: 0.001161
+	Valid loss: 10.9233    Valid acc:  5.98%    Valid rate: 1451.2 sents/sec
+	log loss: 2.348001	rel loss: 2.126222	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 19000) Train loss: 4.4578    Train acc:  7.48%    Train rate:  419.1 sents/sec    Learning rate: 0.001158
+	Valid loss: 10.8417    Valid acc:  5.81%    Valid rate: 1466.4 sents/sec
+	log loss: 2.340198	rel loss: 2.117649	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:47:32
+Total time in prob_argmax: 2.869287
+Total time in forward: 1.084505
+Not tree: 1700
+Roots < 1: 1621; Roots > 1: 26; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2161 / 35446 * 100 = 6.10 %
+  Unlabeled attachment score: 9978 / 35446 * 100 = 28.15 %
+  Label accuracy score:       3239 / 35446 * 100 = 9.14 %
+
+
+UAS: 28.15    LAS: 6.10
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  419.467998488
+Average validation per sec:  1446.11528725
+ 19100) Train loss: 4.4788    Train acc:  7.39%    Train rate:  427.1 sents/sec    Learning rate: 0.001155
+	Valid loss: 11.0369    Valid acc:  5.76%    Valid rate: 1421.3 sents/sec
+	log loss: 2.353123	rel loss: 2.125634	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 19200) Train loss: 4.4158    Train acc:  7.67%    Train rate:  456.9 sents/sec    Learning rate: 0.001151
+	Valid loss: 11.4002    Valid acc:  5.83%    Valid rate: 1416.6 sents/sec
+	log loss: 2.312396	rel loss: 2.103357	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 19300) Train loss: 4.4859    Train acc:  7.35%    Train rate:  408.8 sents/sec    Learning rate: 0.001148
+	Valid loss: 10.9196    Valid acc:  5.86%    Valid rate: 1437.4 sents/sec
+	log loss: 2.357923	rel loss: 2.127972	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.646278593
+Average validation per sec:  1445.78825156
+ 19400) Train loss: 4.5185    Train acc:  7.33%    Train rate:  405.4 sents/sec    Learning rate: 0.001145
+	Valid loss: 11.4742    Valid acc:  5.88%    Valid rate: 1448.8 sents/sec
+	log loss: 2.379469	rel loss: 2.139069	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 19500) Train loss: 4.4921    Train acc:  7.41%    Train rate:  411.1 sents/sec    Learning rate: 0.001141
+	Valid loss: 10.3710    Valid acc:  5.86%    Valid rate: 1464.5 sents/sec
+	log loss: 2.361626	rel loss: 2.130514	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:50:25
+Total time in prob_argmax: 2.812048
+Total time in forward: 1.081450
+Not tree: 1700
+Roots < 1: 1631; Roots > 1: 16; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2192 / 35446 * 100 = 6.18 %
+  Unlabeled attachment score: 10165 / 35446 * 100 = 28.68 %
+  Label accuracy score:       3261 / 35446 * 100 = 9.20 %
+
+
+UAS: 28.68    LAS: 6.18
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 19600) Train loss: 4.4911    Train acc:  7.44%    Train rate:  426.1 sents/sec    Learning rate: 0.001138
+	Valid loss: 11.1102    Valid acc:  5.80%    Valid rate: 1439.8 sents/sec
+	log loss: 2.364422	rel loss: 2.126722	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 19700) Train loss: 4.4634    Train acc:  7.45%    Train rate:  412.6 sents/sec    Learning rate: 0.001135
+	Valid loss: 10.9537    Valid acc:  5.82%    Valid rate: 1430.4 sents/sec
+	log loss: 2.341945	rel loss: 2.121456	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.527788636
+Average validation per sec:  1445.78987837
+ 19800) Train loss: 4.3441    Train acc:  7.87%    Train rate:  494.4 sents/sec    Learning rate: 0.001132
+	Valid loss: 10.8962    Valid acc:  5.82%    Valid rate: 1439.9 sents/sec
+	log loss: 2.271366	rel loss: 2.072766	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 19900) Train loss: 4.5153    Train acc:  7.37%    Train rate:  386.6 sents/sec    Learning rate: 0.001128
+	Valid loss: 10.9642    Valid acc:  5.93%    Valid rate: 1455.7 sents/sec
+	log loss: 2.377662	rel loss: 2.137666	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 20000) Train loss: 4.5344    Train acc:  7.31%    Train rate:  387.7 sents/sec    Learning rate: 0.001125
+	Valid loss: 10.9034    Valid acc:  5.67%    Valid rate: 1475.4 sents/sec
+	log loss: 2.389966	rel loss: 2.144412	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:53:18
+Total time in prob_argmax: 2.883410
+Total time in forward: 1.085051
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2117 / 35446 * 100 = 5.97 %
+  Unlabeled attachment score: 10165 / 35446 * 100 = 28.68 %
+  Label accuracy score:       3168 / 35446 * 100 = 8.94 %
+
+
+UAS: 28.68    LAS: 5.97
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  419.578759531
+Average validation per sec:  1445.95769972
+ 20100) Train loss: 4.4320    Train acc:  7.68%    Train rate:  446.1 sents/sec    Learning rate: 0.001122
+	Valid loss: 10.6445    Valid acc:  5.89%    Valid rate: 1435.2 sents/sec
+	log loss: 2.326961	rel loss: 2.105081	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 20200) Train loss: 4.5559    Train acc:  7.13%    Train rate:  372.7 sents/sec    Learning rate: 0.001119
+	Valid loss: 11.0245    Valid acc:  5.93%    Valid rate: 1425.1 sents/sec
+	log loss: 2.399808	rel loss: 2.156083	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 20300) Train loss: 4.5340    Train acc:  7.14%    Train rate:  372.7 sents/sec    Learning rate: 0.001115
+	Valid loss: 10.7653    Valid acc:  5.86%    Valid rate: 1436.3 sents/sec
+	log loss: 2.390214	rel loss: 2.143815	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 20400) Train loss: 4.3680    Train acc:  7.89%    Train rate:  480.0 sents/sec    Learning rate: 0.001112
+	Valid loss: 11.7808    Valid acc:  5.88%    Valid rate: 1437.6 sents/sec
+	log loss: 2.286398	rel loss: 2.081633	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.544937947
+Average validation per sec:  1445.71403864
+ 20500) Train loss: 4.5002    Train acc:  7.49%    Train rate:  407.2 sents/sec    Learning rate: 0.001109
+	Valid loss: 10.9688    Valid acc:  5.88%    Valid rate: 1442.9 sents/sec
+	log loss: 2.368453	rel loss: 2.131731	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:56:10
+Total time in prob_argmax: 2.977149
+Total time in forward: 1.083212
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2216 / 35446 * 100 = 6.25 %
+  Unlabeled attachment score: 10158 / 35446 * 100 = 28.66 %
+  Label accuracy score:       3357 / 35446 * 100 = 9.47 %
+
+
+UAS: 28.66    LAS: 6.25
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 20600) Train loss: 4.4906    Train acc:  7.37%    Train rate:  407.3 sents/sec    Learning rate: 0.001106
+	Valid loss: 11.2704    Valid acc:  5.88%    Valid rate: 1433.9 sents/sec
+	log loss: 2.364157	rel loss: 2.126476	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 20700) Train loss: 4.4588    Train acc:  7.41%    Train rate:  425.4 sents/sec    Learning rate: 0.001103
+	Valid loss: 10.8261    Valid acc:  5.89%    Valid rate: 1427.2 sents/sec
+	log loss: 2.341832	rel loss: 2.117000	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.454106235
+Average validation per sec:  1445.55422081
+ 20800) Train loss: 4.4131    Train acc:  7.69%    Train rate:  456.3 sents/sec    Learning rate: 0.001099
+	Valid loss: 10.9766    Valid acc:  5.98%    Valid rate: 1448.6 sents/sec
+	log loss: 2.312489	rel loss: 2.100644	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 20900) Train loss: 4.4687    Train acc:  7.38%    Train rate:  424.4 sents/sec    Learning rate: 0.001096
+	Valid loss: 10.9005    Valid acc:  5.91%    Valid rate: 1452.4 sents/sec
+	log loss: 2.348447	rel loss: 2.120247	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 21000) Train loss: 4.5016    Train acc:  7.50%    Train rate:  404.4 sents/sec    Learning rate: 0.001093
+	Valid loss: 11.3087    Valid acc:  5.96%    Valid rate: 1437.3 sents/sec
+	log loss: 2.370659	rel loss: 2.130935	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:01:59:02
+Total time in prob_argmax: 2.836958
+Total time in forward: 1.083486
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 8; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2212 / 35446 * 100 = 6.24 %
+  Unlabeled attachment score: 10117 / 35446 * 100 = 28.54 %
+  Label accuracy score:       3348 / 35446 * 100 = 9.45 %
+
+
+UAS: 28.54    LAS: 6.24
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  419.581693021
+Average validation per sec:  1445.56218397
+ 21100) Train loss: 4.4288    Train acc:  7.61%    Train rate:  445.4 sents/sec    Learning rate: 0.001090
+	Valid loss: 11.2099    Valid acc:  5.89%    Valid rate: 1429.4 sents/sec
+	log loss: 2.322226	rel loss: 2.106538	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 21200) Train loss: 4.4736    Train acc:  7.44%    Train rate:  405.7 sents/sec    Learning rate: 0.001087
+	Valid loss: 11.4523    Valid acc:  5.91%    Valid rate: 1428.9 sents/sec
+	log loss: 2.351939	rel loss: 2.121612	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 21300) Train loss: 4.4923    Train acc:  7.42%    Train rate:  413.9 sents/sec    Learning rate: 0.001084
+	Valid loss: 10.9511    Valid acc:  5.98%    Valid rate: 1432.2 sents/sec
+	log loss: 2.366860	rel loss: 2.125439	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 21400) Train loss: 4.4683    Train acc:  7.55%    Train rate:  422.0 sents/sec    Learning rate: 0.001081
+	Valid loss: 10.9033    Valid acc:  5.99%    Valid rate: 1442.4 sents/sec
+	log loss: 2.346912	rel loss: 2.121381	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.621779695
+Average validation per sec:  1445.33130901
+ 21500) Train loss: 4.4395    Train acc:  7.50%    Train rate:  421.6 sents/sec    Learning rate: 0.001078
+	Valid loss: 11.8111    Valid acc:  5.90%    Valid rate: 1477.6 sents/sec
+	log loss: 2.332925	rel loss: 2.106586	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:01:53
+Total time in prob_argmax: 2.995349
+Total time in forward: 1.083578
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 18; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2228 / 35446 * 100 = 6.29 %
+  Unlabeled attachment score: 10188 / 35446 * 100 = 28.74 %
+  Label accuracy score:       3352 / 35446 * 100 = 9.46 %
+
+
+UAS: 28.74    LAS: 6.29
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 21600) Train loss: 4.4900    Train acc:  7.30%    Train rate:  418.2 sents/sec    Learning rate: 0.001074
+	Valid loss: 12.1653    Valid acc:  5.99%    Valid rate: 1433.0 sents/sec
+	log loss: 2.362173	rel loss: 2.127824	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 21700) Train loss: 4.4675    Train acc:  7.48%    Train rate:  421.5 sents/sec    Learning rate: 0.001071
+	Valid loss: 11.9682    Valid acc:  6.01%    Valid rate: 1423.1 sents/sec
+	log loss: 2.347019	rel loss: 2.120481	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.632946409
+Average validation per sec:  1445.32053868
+ 21800) Train loss: 4.4412    Train acc:  7.63%    Train rate:  443.3 sents/sec    Learning rate: 0.001068
+	Valid loss: 11.1918    Valid acc:  5.88%    Valid rate: 1425.4 sents/sec
+	log loss: 2.333906	rel loss: 2.107286	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 21900) Train loss: 4.4686    Train acc:  7.41%    Train rate:  409.5 sents/sec    Learning rate: 0.001065
+	Valid loss: 10.9896    Valid acc:  5.88%    Valid rate: 1444.8 sents/sec
+	log loss: 2.346268	rel loss: 2.122311	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 22000) Train loss: 4.3958    Train acc:  7.72%    Train rate:  448.6 sents/sec    Learning rate: 0.001062
+	Valid loss: 12.3694    Valid acc:  5.77%    Valid rate: 1475.0 sents/sec
+	log loss: 2.306406	rel loss: 2.089352	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:04:46
+Total time in prob_argmax: 2.990016
+Total time in forward: 1.080171
+Not tree: 1700
+Roots < 1: 1559; Roots > 1: 21; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2169 / 35446 * 100 = 6.12 %
+  Unlabeled attachment score: 10154 / 35446 * 100 = 28.65 %
+  Label accuracy score:       3225 / 35446 * 100 = 9.10 %
+
+
+UAS: 28.65    LAS: 6.12
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 22100) Train loss: 4.5349    Train acc:  7.32%    Train rate:  393.9 sents/sec    Learning rate: 0.001059
+	Valid loss: 11.0488    Valid acc:  5.80%    Valid rate: 1437.7 sents/sec
+	log loss: 2.390666	rel loss: 2.144263	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.708950599
+Average validation per sec:  1445.32808785
+ 22200) Train loss: 4.5157    Train acc:  7.36%    Train rate:  400.4 sents/sec    Learning rate: 0.001056
+	Valid loss: 11.2970    Valid acc:  5.98%    Valid rate: 1427.1 sents/sec
+	log loss: 2.376648	rel loss: 2.139047	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 22300) Train loss: 4.4368    Train acc:  7.69%    Train rate:  436.0 sents/sec    Learning rate: 0.001053
+	Valid loss: 11.7168    Valid acc:  5.80%    Valid rate: 1438.7 sents/sec
+	log loss: 2.333052	rel loss: 2.103780	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 22400) Train loss: 4.4439    Train acc:  7.56%    Train rate:  420.7 sents/sec    Learning rate: 0.001050
+	Valid loss: 11.5391    Valid acc:  5.86%    Valid rate: 1472.9 sents/sec
+	log loss: 2.333960	rel loss: 2.109927	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.699978257
+Average validation per sec:  1445.34012811
+ 22500) Train loss: 4.5222    Train acc:  7.13%    Train rate:  368.6 sents/sec    Learning rate: 0.001047
+	Valid loss: 12.0994    Valid acc:  5.92%    Valid rate: 1483.7 sents/sec
+	log loss: 2.387505	rel loss: 2.134682	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:07:39
+Total time in prob_argmax: 2.966137
+Total time in forward: 1.082045
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 18; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2178 / 35446 * 100 = 6.14 %
+  Unlabeled attachment score: 10078 / 35446 * 100 = 28.43 %
+  Label accuracy score:       3248 / 35446 * 100 = 9.16 %
+
+
+UAS: 28.43    LAS: 6.14
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 22600) Train loss: 4.4664    Train acc:  7.58%    Train rate:  456.9 sents/sec    Learning rate: 0.001044
+	Valid loss: 11.1094    Valid acc:  5.95%    Valid rate: 1430.5 sents/sec
+	log loss: 2.345255	rel loss: 2.121185	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 22700) Train loss: 4.3660    Train acc:  7.83%    Train rate:  462.5 sents/sec    Learning rate: 0.001041
+	Valid loss: 11.3501    Valid acc:  5.78%    Valid rate: 1421.9 sents/sec
+	log loss: 2.287289	rel loss: 2.078675	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.827297975
+Average validation per sec:  1445.34059407
+ 22800) Train loss: 4.5041    Train acc:  7.26%    Train rate:  377.9 sents/sec    Learning rate: 0.001038
+	Valid loss: 11.1814    Valid acc:  6.02%    Valid rate: 1434.7 sents/sec
+	log loss: 2.371750	rel loss: 2.132327	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 22900) Train loss: 4.3954    Train acc:  7.82%    Train rate:  460.5 sents/sec    Learning rate: 0.001035
+	Valid loss: 11.1366    Valid acc:  5.97%    Valid rate: 1443.4 sents/sec
+	log loss: 2.308801	rel loss: 2.086613	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 23000) Train loss: 4.4212    Train acc:  7.54%    Train rate:  446.0 sents/sec    Learning rate: 0.001032
+	Valid loss: 11.0967    Valid acc:  6.13%    Valid rate: 1463.5 sents/sec
+	log loss: 2.315301	rel loss: 2.105906	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:10:32
+Total time in prob_argmax: 3.003379
+Total time in forward: 1.086201
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 11; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2299 / 35446 * 100 = 6.49 %
+  Unlabeled attachment score: 10207 / 35446 * 100 = 28.80 %
+  Label accuracy score:       3463 / 35446 * 100 = 9.77 %
+
+
+UAS: 28.80    LAS: 6.49
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 23100) Train loss: 4.5573    Train acc:  7.24%    Train rate:  378.7 sents/sec    Learning rate: 0.001029
+	Valid loss: 11.6707    Valid acc:  5.90%    Valid rate: 1433.1 sents/sec
+	log loss: 2.404471	rel loss: 2.152797	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.757289702
+Average validation per sec:  1445.31226994
+ 23200) Train loss: 4.4181    Train acc:  7.58%    Train rate:  435.0 sents/sec    Learning rate: 0.001026
+	Valid loss: 11.5169    Valid acc:  6.00%    Valid rate: 1421.2 sents/sec
+	log loss: 2.317994	rel loss: 2.100105	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 23300) Train loss: 4.5205    Train acc:  7.33%    Train rate:  378.8 sents/sec    Learning rate: 0.001023
+	Valid loss: 11.0856    Valid acc:  5.98%    Valid rate: 1437.2 sents/sec
+	log loss: 2.382601	rel loss: 2.137914	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 23400) Train loss: 4.4051    Train acc:  7.66%    Train rate:  460.2 sents/sec    Learning rate: 0.001020
+	Valid loss: 10.8595    Valid acc:  5.85%    Valid rate: 1441.0 sents/sec
+	log loss: 2.310384	rel loss: 2.094667	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.820356584
+Average validation per sec:  1445.15639709
+ 23500) Train loss: 4.4955    Train acc:  7.36%    Train rate:  397.8 sents/sec    Learning rate: 0.001017
+	Valid loss: 11.6214    Valid acc:  5.83%    Valid rate: 1448.2 sents/sec
+	log loss: 2.370026	rel loss: 2.125424	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:13:24
+Total time in prob_argmax: 2.886582
+Total time in forward: 1.090499
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 8; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2196 / 35446 * 100 = 6.20 %
+  Unlabeled attachment score: 10224 / 35446 * 100 = 28.84 %
+  Label accuracy score:       3278 / 35446 * 100 = 9.25 %
+
+
+UAS: 28.84    LAS: 6.20
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 23600) Train loss: 4.4135    Train acc:  7.66%    Train rate:  475.8 sents/sec    Learning rate: 0.001014
+	Valid loss: 11.7749    Valid acc:  5.83%    Valid rate: 1432.7 sents/sec
+	log loss: 2.316600	rel loss: 2.096945	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 23700) Train loss: 4.5030    Train acc:  7.24%    Train rate:  387.3 sents/sec    Learning rate: 0.001011
+	Valid loss: 11.3748    Valid acc:  5.95%    Valid rate: 1428.3 sents/sec
+	log loss: 2.370156	rel loss: 2.132848	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 23800) Train loss: 4.4526    Train acc:  7.45%    Train rate:  410.5 sents/sec    Learning rate: 0.001009
+	Valid loss: 11.2879    Valid acc:  5.91%    Valid rate: 1460.8 sents/sec
+	log loss: 2.339820	rel loss: 2.112789	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.787258791
+Average validation per sec:  1445.11199749
+ 23900) Train loss: 4.4206    Train acc:  7.53%    Train rate:  440.8 sents/sec    Learning rate: 0.001006
+	Valid loss: 11.7459    Valid acc:  5.78%    Valid rate: 1439.5 sents/sec
+	log loss: 2.321541	rel loss: 2.099109	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 24000) Train loss: 4.4444    Train acc:  7.50%    Train rate:  433.5 sents/sec    Learning rate: 0.001003
+	Valid loss: 11.0279    Valid acc:  6.08%    Valid rate: 1445.4 sents/sec
+	log loss: 2.333062	rel loss: 2.111290	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:16:17
+Total time in prob_argmax: 2.970788
+Total time in forward: 1.092294
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 8; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2262 / 35446 * 100 = 6.38 %
+  Unlabeled attachment score: 10164 / 35446 * 100 = 28.67 %
+  Label accuracy score:       3383 / 35446 * 100 = 9.54 %
+
+
+UAS: 28.67    LAS: 6.38
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 24100) Train loss: 4.4835    Train acc:  7.57%    Train rate:  412.8 sents/sec    Learning rate: 0.001000
+	Valid loss: 11.3606    Valid acc:  5.94%    Valid rate: 1432.8 sents/sec
+	log loss: 2.361399	rel loss: 2.122125	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.902468715
+Average validation per sec:  1445.03896555
+ 24200) Train loss: 4.4959    Train acc:  7.29%    Train rate:  386.2 sents/sec    Learning rate: 0.000997
+	Valid loss: 11.4957    Valid acc:  6.04%    Valid rate: 1432.4 sents/sec
+	log loss: 2.371189	rel loss: 2.124728	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 24300) Train loss: 4.4150    Train acc:  7.76%    Train rate:  439.8 sents/sec    Learning rate: 0.000994
+	Valid loss: 10.9572    Valid acc:  5.93%    Valid rate: 1434.7 sents/sec
+	log loss: 2.320250	rel loss: 2.094794	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 24400) Train loss: 4.5150    Train acc:  7.30%    Train rate:  393.8 sents/sec    Learning rate: 0.000991
+	Valid loss: 11.4902    Valid acc:  5.74%    Valid rate: 1429.1 sents/sec
+	log loss: 2.376170	rel loss: 2.138838	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.738494459
+Average validation per sec:  1444.87941294
+ 24500) Train loss: 4.4378    Train acc:  7.57%    Train rate:  430.4 sents/sec    Learning rate: 0.000988
+	Valid loss: 11.5012    Valid acc:  5.81%    Valid rate: 1452.3 sents/sec
+	log loss: 2.333002	rel loss: 2.104780	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:19:10
+Total time in prob_argmax: 2.896384
+Total time in forward: 1.090645
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2200 / 35446 * 100 = 6.21 %
+  Unlabeled attachment score: 10179 / 35446 * 100 = 28.72 %
+  Label accuracy score:       3279 / 35446 * 100 = 9.25 %
+
+
+UAS: 28.72    LAS: 6.21
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 24600) Train loss: 4.4232    Train acc:  7.69%    Train rate:  454.8 sents/sec    Learning rate: 0.000986
+	Valid loss: 11.8014    Valid acc:  5.84%    Valid rate: 1435.0 sents/sec
+	log loss: 2.323404	rel loss: 2.099838	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 24700) Train loss: 4.4427    Train acc:  7.57%    Train rate:  431.4 sents/sec    Learning rate: 0.000983
+	Valid loss: 11.7178    Valid acc:  5.84%    Valid rate: 1425.3 sents/sec
+	log loss: 2.335388	rel loss: 2.107286	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 24800) Train loss: 4.5020    Train acc:  7.32%    Train rate:  387.4 sents/sec    Learning rate: 0.000980
+	Valid loss: 11.2251    Valid acc:  5.93%    Valid rate: 1428.7 sents/sec
+	log loss: 2.370866	rel loss: 2.131180	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.839315525
+Average validation per sec:  1444.72499196
+ 24900) Train loss: 4.4784    Train acc:  7.41%    Train rate:  402.0 sents/sec    Learning rate: 0.000977
+	Valid loss: 11.3735    Valid acc:  5.91%    Valid rate: 1440.2 sents/sec
+	log loss: 2.358487	rel loss: 2.119898	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 25000) Train loss: 4.4534    Train acc:  7.49%    Train rate:  410.8 sents/sec    Learning rate: 0.000974
+	Valid loss: 11.2071    Valid acc:  6.02%    Valid rate: 1440.3 sents/sec
+	log loss: 2.341648	rel loss: 2.111718	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:22:03
+Total time in prob_argmax: 2.726085
+Total time in forward: 1.093289
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 8; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2276 / 35446 * 100 = 6.42 %
+  Unlabeled attachment score: 10165 / 35446 * 100 = 28.68 %
+  Label accuracy score:       3397 / 35446 * 100 = 9.58 %
+
+
+UAS: 28.68    LAS: 6.42
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 25100) Train loss: 4.5015    Train acc:  7.31%    Train rate:  415.8 sents/sec    Learning rate: 0.000972
+	Valid loss: 11.4808    Valid acc:  5.93%    Valid rate: 1434.0 sents/sec
+	log loss: 2.368195	rel loss: 2.133336	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.71626645
+Average validation per sec:  1444.64657631
+ 25200) Train loss: 4.3888    Train acc:  7.79%    Train rate:  456.5 sents/sec    Learning rate: 0.000969
+	Valid loss: 11.3458    Valid acc:  6.03%    Valid rate: 1429.9 sents/sec
+	log loss: 2.302854	rel loss: 2.085926	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 25300) Train loss: 4.4306    Train acc:  7.64%    Train rate:  433.6 sents/sec    Learning rate: 0.000966
+	Valid loss: 11.3210    Valid acc:  5.79%    Valid rate: 1421.6 sents/sec
+	log loss: 2.328301	rel loss: 2.102331	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 25400) Train loss: 4.5216    Train acc:  7.16%    Train rate:  376.0 sents/sec    Learning rate: 0.000963
+	Valid loss: 11.4164    Valid acc:  5.83%    Valid rate: 1435.1 sents/sec
+	log loss: 2.383889	rel loss: 2.137674	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 25500) Train loss: 4.4098    Train acc:  7.75%    Train rate:  447.0 sents/sec    Learning rate: 0.000960
+	Valid loss: 11.1687    Valid acc:  5.94%    Valid rate: 1465.1 sents/sec
+	log loss: 2.315903	rel loss: 2.093881	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:24:55
+Total time in prob_argmax: 2.481553
+Total time in forward: 1.085969
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2241 / 35446 * 100 = 6.32 %
+  Unlabeled attachment score: 10198 / 35446 * 100 = 28.77 %
+  Label accuracy score:       3334 / 35446 * 100 = 9.41 %
+
+
+UAS: 28.77    LAS: 6.32
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  419.850922578
+Average validation per sec:  1444.54115035
+ 25600) Train loss: 4.4112    Train acc:  7.61%    Train rate:  462.6 sents/sec    Learning rate: 0.000958
+	Valid loss: 11.6676    Valid acc:  5.79%    Valid rate: 1427.9 sents/sec
+	log loss: 2.316482	rel loss: 2.094737	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 25700) Train loss: 4.4470    Train acc:  7.54%    Train rate:  422.2 sents/sec    Learning rate: 0.000955
+	Valid loss: 11.9425    Valid acc:  5.87%    Valid rate: 1435.9 sents/sec
+	log loss: 2.338053	rel loss: 2.108979	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 25800) Train loss: 4.4856    Train acc:  7.40%    Train rate:  389.0 sents/sec    Learning rate: 0.000952
+	Valid loss: 11.3835    Valid acc:  5.87%    Valid rate: 1427.9 sents/sec
+	log loss: 2.363548	rel loss: 2.122090	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.905903271
+Average validation per sec:  1444.37842044
+ 25900) Train loss: 4.4670    Train acc:  7.42%    Train rate:  408.8 sents/sec    Learning rate: 0.000949
+	Valid loss: 11.3511    Valid acc:  5.84%    Valid rate: 1448.2 sents/sec
+	log loss: 2.348009	rel loss: 2.119007	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 26000) Train loss: 4.4174    Train acc:  7.67%    Train rate:  443.2 sents/sec    Learning rate: 0.000947
+	Valid loss: 11.6010    Valid acc:  5.96%    Valid rate: 1446.9 sents/sec
+	log loss: 2.325170	rel loss: 2.092267	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:27:48
+Total time in prob_argmax: 3.031149
+Total time in forward: 1.081817
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2195 / 35446 * 100 = 6.19 %
+  Unlabeled attachment score: 10140 / 35446 * 100 = 28.61 %
+  Label accuracy score:       3286 / 35446 * 100 = 9.27 %
+
+
+UAS: 28.61    LAS: 6.19
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 26100) Train loss: 4.4914    Train acc:  7.31%    Train rate:  419.1 sents/sec    Learning rate: 0.000944
+	Valid loss: 11.5396    Valid acc:  5.90%    Valid rate: 1441.3 sents/sec
+	log loss: 2.364737	rel loss: 2.126628	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.949592322
+Average validation per sec:  1444.39084866
+ 26200) Train loss: 4.4548    Train acc:  7.47%    Train rate:  417.5 sents/sec    Learning rate: 0.000941
+	Valid loss: 10.7259    Valid acc:  5.94%    Valid rate: 1432.3 sents/sec
+	log loss: 2.341997	rel loss: 2.112795	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 26300) Train loss: 4.4325    Train acc:  7.55%    Train rate:  422.2 sents/sec    Learning rate: 0.000939
+	Valid loss: 11.0589    Valid acc:  5.82%    Valid rate: 1432.8 sents/sec
+	log loss: 2.330255	rel loss: 2.102243	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 26400) Train loss: 4.4465    Train acc:  7.58%    Train rate:  429.2 sents/sec    Learning rate: 0.000936
+	Valid loss: 10.8347    Valid acc:  6.03%    Valid rate: 1440.8 sents/sec
+	log loss: 2.340220	rel loss: 2.106288	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 26500) Train loss: 4.4355    Train acc:  7.62%    Train rate:  425.5 sents/sec    Learning rate: 0.000933
+	Valid loss: 11.1494    Valid acc:  5.88%    Valid rate: 1451.1 sents/sec
+	log loss: 2.330640	rel loss: 2.104906	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:30:39
+Total time in prob_argmax: 3.022872
+Total time in forward: 1.086334
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2220 / 35446 * 100 = 6.26 %
+  Unlabeled attachment score: 10157 / 35446 * 100 = 28.65 %
+  Label accuracy score:       3339 / 35446 * 100 = 9.42 %
+
+
+UAS: 28.65    LAS: 6.26
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.004691639
+Average validation per sec:  1444.31357322
+ 26600) Train loss: 4.4809    Train acc:  7.41%    Train rate:  417.0 sents/sec    Learning rate: 0.000931
+	Valid loss: 11.9955    Valid acc:  5.88%    Valid rate: 1447.7 sents/sec
+	log loss: 2.358802	rel loss: 2.122126	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 26700) Train loss: 4.4832    Train acc:  7.35%    Train rate:  390.1 sents/sec    Learning rate: 0.000928
+	Valid loss: 11.9846    Valid acc:  5.79%    Valid rate: 1421.3 sents/sec
+	log loss: 2.361650	rel loss: 2.121531	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 26800) Train loss: 4.3905    Train acc:  7.73%    Train rate:  448.2 sents/sec    Learning rate: 0.000925
+	Valid loss: 11.3445    Valid acc:  5.79%    Valid rate: 1422.2 sents/sec
+	log loss: 2.302417	rel loss: 2.088101	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.987199337
+Average validation per sec:  1444.15753466
+ 26900) Train loss: 4.5176    Train acc:  7.26%    Train rate:  385.6 sents/sec    Learning rate: 0.000923
+	Valid loss: 11.8455    Valid acc:  5.82%    Valid rate: 1460.9 sents/sec
+	log loss: 2.384968	rel loss: 2.132642	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 27000) Train loss: 4.5039    Train acc:  7.22%    Train rate:  382.2 sents/sec    Learning rate: 0.000920
+	Valid loss: 11.7123    Valid acc:  5.82%    Valid rate: 1458.9 sents/sec
+	log loss: 2.373919	rel loss: 2.129983	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:33:31
+Total time in prob_argmax: 3.088235
+Total time in forward: 1.094158
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2199 / 35446 * 100 = 6.20 %
+  Unlabeled attachment score: 10187 / 35446 * 100 = 28.74 %
+  Label accuracy score:       3281 / 35446 * 100 = 9.26 %
+
+
+UAS: 28.74    LAS: 6.20
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 27100) Train loss: 4.4488    Train acc:  7.53%    Train rate:  446.1 sents/sec    Learning rate: 0.000917
+	Valid loss: 10.9243    Valid acc:  5.85%    Valid rate: 1439.5 sents/sec
+	log loss: 2.337078	rel loss: 2.111679	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 27200) Train loss: 4.3773    Train acc:  7.80%    Train rate:  464.0 sents/sec    Learning rate: 0.000915
+	Valid loss: 11.6244    Valid acc:  5.99%    Valid rate: 1417.6 sents/sec
+	log loss: 2.297741	rel loss: 2.079573	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  419.979923941
+Average validation per sec:  1444.15888502
+ 27300) Train loss: 4.4321    Train acc:  7.59%    Train rate:  424.4 sents/sec    Learning rate: 0.000912
+	Valid loss: 11.5661    Valid acc:  5.81%    Valid rate: 1432.3 sents/sec
+	log loss: 2.332712	rel loss: 2.099376	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 27400) Train loss: 4.4499    Train acc:  7.49%    Train rate:  413.1 sents/sec    Learning rate: 0.000909
+	Valid loss: 11.9083    Valid acc:  5.85%    Valid rate: 1447.4 sents/sec
+	log loss: 2.342172	rel loss: 2.107690	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 27500) Train loss: 4.4295    Train acc:  7.69%    Train rate:  434.7 sents/sec    Learning rate: 0.000907
+	Valid loss: 11.4209    Valid acc:  5.86%    Valid rate: 1444.4 sents/sec
+	log loss: 2.326427	rel loss: 2.103048	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:36:25
+Total time in prob_argmax: 2.946156
+Total time in forward: 1.086923
+Not tree: 1700
+Roots < 1: 1644; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2213 / 35446 * 100 = 6.24 %
+  Unlabeled attachment score: 10159 / 35446 * 100 = 28.66 %
+  Label accuracy score:       3293 / 35446 * 100 = 9.29 %
+
+
+UAS: 28.66    LAS: 6.24
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.024288255
+Average validation per sec:  1444.12836564
+ 27600) Train loss: 4.5034    Train acc:  7.24%    Train rate:  397.7 sents/sec    Learning rate: 0.000904
+	Valid loss: 11.5801    Valid acc:  5.95%    Valid rate: 1421.6 sents/sec
+	log loss: 2.373153	rel loss: 2.130229	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 27700) Train loss: 4.3991    Train acc:  7.80%    Train rate:  448.1 sents/sec    Learning rate: 0.000902
+	Valid loss: 12.0141    Valid acc:  5.93%    Valid rate: 1424.8 sents/sec
+	log loss: 2.307007	rel loss: 2.092093	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 27800) Train loss: 4.4729    Train acc:  7.46%    Train rate:  415.8 sents/sec    Learning rate: 0.000899
+	Valid loss: 11.5432    Valid acc:  5.93%    Valid rate: 1439.6 sents/sec
+	log loss: 2.354674	rel loss: 2.118217	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.029474042
+Average validation per sec:  1443.96154858
+ 27900) Train loss: 4.4825    Train acc:  7.37%    Train rate:  394.3 sents/sec    Learning rate: 0.000896
+	Valid loss: 12.0198    Valid acc:  5.79%    Valid rate: 1441.1 sents/sec
+	log loss: 2.363289	rel loss: 2.119182	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28000) Train loss: 4.3915    Train acc:  7.79%    Train rate:  450.0 sents/sec    Learning rate: 0.000894
+	Valid loss: 11.6492    Valid acc:  5.76%    Valid rate: 1452.3 sents/sec
+	log loss: 2.308656	rel loss: 2.082851	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:39:19
+Total time in prob_argmax: 2.891826
+Total time in forward: 1.080212
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2170 / 35446 * 100 = 6.12 %
+  Unlabeled attachment score: 10170 / 35446 * 100 = 28.69 %
+  Label accuracy score:       3241 / 35446 * 100 = 9.14 %
+
+
+UAS: 28.69    LAS: 6.12
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 28100) Train loss: 4.4421    Train acc:  7.51%    Train rate:  438.4 sents/sec    Learning rate: 0.000891
+	Valid loss: 11.9613    Valid acc:  5.67%    Valid rate: 1414.3 sents/sec
+	log loss: 2.336479	rel loss: 2.105578	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28200) Train loss: 4.4756    Train acc:  7.39%    Train rate:  401.3 sents/sec    Learning rate: 0.000889
+	Valid loss: 11.8554    Valid acc:  5.84%    Valid rate: 1446.2 sents/sec
+	log loss: 2.354405	rel loss: 2.121150	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.043251075
+Average validation per sec:  1443.88348762
+ 28300) Train loss: 4.4897    Train acc:  7.30%    Train rate:  398.0 sents/sec    Learning rate: 0.000886
+	Valid loss: 12.9149    Valid acc:  5.80%    Valid rate: 1445.6 sents/sec
+	log loss: 2.365121	rel loss: 2.124539	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28400) Train loss: 4.4410    Train acc:  7.51%    Train rate:  419.4 sents/sec    Learning rate: 0.000884
+	Valid loss: 12.1289    Valid acc:  5.94%    Valid rate: 1443.1 sents/sec
+	log loss: 2.336252	rel loss: 2.104720	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28500) Train loss: 4.3765    Train acc:  7.88%    Train rate:  456.4 sents/sec    Learning rate: 0.000881
+	Valid loss: 11.9861    Valid acc:  5.89%    Valid rate: 1438.4 sents/sec
+	log loss: 2.297947	rel loss: 2.078602	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:42:10
+Total time in prob_argmax: 2.792587
+Total time in forward: 1.086083
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2227 / 35446 * 100 = 6.28 %
+  Unlabeled attachment score: 10197 / 35446 * 100 = 28.77 %
+  Label accuracy score:       3333 / 35446 * 100 = 9.40 %
+
+
+UAS: 28.77    LAS: 6.28
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.090956209
+Average validation per sec:  1443.86750866
+ 28600) Train loss: 4.4987    Train acc:  7.27%    Train rate:  406.0 sents/sec    Learning rate: 0.000878
+	Valid loss: 11.7885    Valid acc:  5.65%    Valid rate: 1441.8 sents/sec
+	log loss: 2.370574	rel loss: 2.128171	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28700) Train loss: 4.4194    Train acc:  7.60%    Train rate:  435.7 sents/sec    Learning rate: 0.000876
+	Valid loss: 11.4826    Valid acc:  5.75%    Valid rate: 1423.5 sents/sec
+	log loss: 2.321168	rel loss: 2.098201	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28800) Train loss: 4.4686    Train acc:  7.43%    Train rate:  406.2 sents/sec    Learning rate: 0.000873
+	Valid loss: 11.6629    Valid acc:  5.84%    Valid rate: 1437.9 sents/sec
+	log loss: 2.349992	rel loss: 2.118575	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 28900) Train loss: 4.4569    Train acc:  7.59%    Train rate:  410.0 sents/sec    Learning rate: 0.000871
+	Valid loss: 11.7489    Valid acc:  5.81%    Valid rate: 1445.9 sents/sec
+	log loss: 2.348974	rel loss: 2.107935	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.012768552
+Average validation per sec:  1443.7759802
+ 29000) Train loss: 4.4328    Train acc:  7.72%    Train rate:  423.3 sents/sec    Learning rate: 0.000868
+	Valid loss: 11.4029    Valid acc:  5.89%    Valid rate: 1460.7 sents/sec
+	log loss: 2.335291	rel loss: 2.097474	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:45:01
+Total time in prob_argmax: 2.819382
+Total time in forward: 1.079754
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2178 / 35446 * 100 = 6.14 %
+  Unlabeled attachment score: 9976 / 35446 * 100 = 28.14 %
+  Label accuracy score:       3300 / 35446 * 100 = 9.31 %
+
+
+UAS: 28.14    LAS: 6.14
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 29100) Train loss: 4.4568    Train acc:  7.48%    Train rate:  437.1 sents/sec    Learning rate: 0.000866
+	Valid loss: 12.0523    Valid acc:  5.97%    Valid rate: 1422.4 sents/sec
+	log loss: 2.345916	rel loss: 2.110889	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 29200) Train loss: 4.4740    Train acc:  7.37%    Train rate:  404.1 sents/sec    Learning rate: 0.000863
+	Valid loss: 12.5220    Valid acc:  5.60%    Valid rate: 1418.2 sents/sec
+	log loss: 2.354309	rel loss: 2.119672	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.028071653
+Average validation per sec:  1443.67326397
+ 29300) Train loss: 4.4540    Train acc:  7.37%    Train rate:  402.6 sents/sec    Learning rate: 0.000861
+	Valid loss: 12.3812    Valid acc:  5.70%    Valid rate: 1445.3 sents/sec
+	log loss: 2.342229	rel loss: 2.111766	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 29400) Train loss: 4.4567    Train acc:  7.58%    Train rate:  420.3 sents/sec    Learning rate: 0.000858
+	Valid loss: 11.8769    Valid acc:  5.72%    Valid rate: 1453.3 sents/sec
+	log loss: 2.341081	rel loss: 2.115597	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 29500) Train loss: 4.3910    Train acc:  7.85%    Train rate:  450.1 sents/sec    Learning rate: 0.000856
+	Valid loss: 12.0559    Valid acc:  5.88%    Valid rate: 1436.3 sents/sec
+	log loss: 2.308713	rel loss: 2.082310	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:47:53
+Total time in prob_argmax: 2.835603
+Total time in forward: 1.084021
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2192 / 35446 * 100 = 6.18 %
+  Unlabeled attachment score: 10142 / 35446 * 100 = 28.61 %
+  Label accuracy score:       3207 / 35446 * 100 = 9.05 %
+
+
+UAS: 28.61    LAS: 6.18
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.071724053
+Average validation per sec:  1443.68608575
+ 29600) Train loss: 4.4377    Train acc:  7.59%    Train rate:  439.9 sents/sec    Learning rate: 0.000854
+	Valid loss: 11.9592    Valid acc:  6.04%    Valid rate: 1430.8 sents/sec
+	log loss: 2.332912	rel loss: 2.104742	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 29700) Train loss: 4.4012    Train acc:  7.61%    Train rate:  441.2 sents/sec    Learning rate: 0.000851
+	Valid loss: 12.0766    Valid acc:  5.88%    Valid rate: 1413.4 sents/sec
+	log loss: 2.308207	rel loss: 2.092988	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 29800) Train loss: 4.4854    Train acc:  7.49%    Train rate:  388.0 sents/sec    Learning rate: 0.000849
+	Valid loss: 11.5329    Valid acc:  5.88%    Valid rate: 1447.9 sents/sec
+	log loss: 2.364017	rel loss: 2.121429	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 29900) Train loss: 4.4835    Train acc:  7.43%    Train rate:  401.0 sents/sec    Learning rate: 0.000846
+	Valid loss: 11.4684    Valid acc:  5.88%    Valid rate: 1466.7 sents/sec
+	log loss: 2.364531	rel loss: 2.118930	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.037891689
+Average validation per sec:  1443.63278687
+ 30000) Train loss: 4.4821    Train acc:  7.37%    Train rate:  388.0 sents/sec    Learning rate: 0.000844
+	Valid loss: 12.2209    Valid acc:  5.91%    Valid rate: 1476.6 sents/sec
+	log loss: 2.362745	rel loss: 2.119379	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:50:45
+Total time in prob_argmax: 3.094875
+Total time in forward: 1.079835
+Not tree: 1700
+Roots < 1: 1639; Roots > 1: 4; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2234 / 35446 * 100 = 6.30 %
+  Unlabeled attachment score: 10161 / 35446 * 100 = 28.67 %
+  Label accuracy score:       3339 / 35446 * 100 = 9.42 %
+
+
+UAS: 28.67    LAS: 6.30
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 30100) Train loss: 4.4280    Train acc:  7.57%    Train rate:  460.3 sents/sec    Learning rate: 0.000841
+	Valid loss: 12.3952    Valid acc:  5.97%    Valid rate: 1436.4 sents/sec
+	log loss: 2.325187	rel loss: 2.102858	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 30200) Train loss: 4.3902    Train acc:  7.74%    Train rate:  443.5 sents/sec    Learning rate: 0.000839
+	Valid loss: 12.4301    Valid acc:  5.83%    Valid rate: 1424.0 sents/sec
+	log loss: 2.310653	rel loss: 2.079519	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.142958661
+Average validation per sec:  1443.65298308
+ 30300) Train loss: 4.5018    Train acc:  7.29%    Train rate:  379.3 sents/sec    Learning rate: 0.000837
+	Valid loss: 13.0547    Valid acc:  5.79%    Valid rate: 1454.6 sents/sec
+	log loss: 2.371776	rel loss: 2.130048	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 30400) Train loss: 4.4892    Train acc:  7.35%    Train rate:  390.3 sents/sec    Learning rate: 0.000834
+	Valid loss: 12.1934    Valid acc:  5.87%    Valid rate: 1457.9 sents/sec
+	log loss: 2.364779	rel loss: 2.124389	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 30500) Train loss: 4.4158    Train acc:  7.63%    Train rate:  438.1 sents/sec    Learning rate: 0.000832
+	Valid loss: 12.1439    Valid acc:  5.85%    Valid rate: 1438.9 sents/sec
+	log loss: 2.323710	rel loss: 2.092050	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:53:38
+Total time in prob_argmax: 2.573778
+Total time in forward: 1.091995
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2182 / 35446 * 100 = 6.16 %
+  Unlabeled attachment score: 10181 / 35446 * 100 = 28.72 %
+  Label accuracy score:       3246 / 35446 * 100 = 9.16 %
+
+
+UAS: 28.72    LAS: 6.16
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 30600) Train loss: 4.4009    Train acc:  7.66%    Train rate:  462.5 sents/sec    Learning rate: 0.000829
+	Valid loss: 11.2126    Valid acc:  5.90%    Valid rate: 1434.3 sents/sec
+	log loss: 2.310952	rel loss: 2.089943	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.108905425
+Average validation per sec:  1443.68933946
+ 30700) Train loss: 4.4834    Train acc:  7.38%    Train rate:  392.1 sents/sec    Learning rate: 0.000827
+	Valid loss: 11.8568    Valid acc:  5.86%    Valid rate: 1417.3 sents/sec
+	log loss: 2.364395	rel loss: 2.119045	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 30800) Train loss: 4.3819    Train acc:  7.81%    Train rate:  459.7 sents/sec    Learning rate: 0.000825
+	Valid loss: 11.2827    Valid acc:  5.96%    Valid rate: 1430.5 sents/sec
+	log loss: 2.299737	rel loss: 2.082211	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 30900) Train loss: 4.4996    Train acc:  7.25%    Train rate:  383.4 sents/sec    Learning rate: 0.000822
+	Valid loss: 12.5861    Valid acc:  5.60%    Valid rate: 1462.0 sents/sec
+	log loss: 2.370090	rel loss: 2.129555	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.027481132
+Average validation per sec:  1443.62038572
+ 31000) Train loss: 4.3779    Train acc:  7.89%    Train rate:  457.1 sents/sec    Learning rate: 0.000820
+	Valid loss: 11.3105    Valid acc:  5.90%    Valid rate: 1470.1 sents/sec
+	log loss: 2.304706	rel loss: 2.073162	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:56:31
+Total time in prob_argmax: 2.599691
+Total time in forward: 1.074182
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2230 / 35446 * 100 = 6.29 %
+  Unlabeled attachment score: 10204 / 35446 * 100 = 28.79 %
+  Label accuracy score:       3317 / 35446 * 100 = 9.36 %
+
+
+UAS: 28.79    LAS: 6.29
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 31100) Train loss: 4.4809    Train acc:  7.42%    Train rate:  410.0 sents/sec    Learning rate: 0.000818
+	Valid loss: 11.5061    Valid acc:  5.81%    Valid rate: 1431.5 sents/sec
+	log loss: 2.359940	rel loss: 2.120954	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 31200) Train loss: 4.4270    Train acc:  7.51%    Train rate:  431.6 sents/sec    Learning rate: 0.000815
+	Valid loss: 11.6220    Valid acc:  6.05%    Valid rate: 1426.2 sents/sec
+	log loss: 2.324411	rel loss: 2.102636	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.151082437
+Average validation per sec:  1443.61079205
+ 31300) Train loss: 4.4494    Train acc:  7.46%    Train rate:  420.6 sents/sec    Learning rate: 0.000813
+	Valid loss: 12.0145    Valid acc:  5.95%    Valid rate: 1458.0 sents/sec
+	log loss: 2.338290	rel loss: 2.111117	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 31400) Train loss: 4.3980    Train acc:  7.68%    Train rate:  451.2 sents/sec    Learning rate: 0.000810
+	Valid loss: 12.0589    Valid acc:  5.70%    Valid rate: 1459.4 sents/sec
+	log loss: 2.307744	rel loss: 2.090253	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 31500) Train loss: 4.4859    Train acc:  7.31%    Train rate:  381.0 sents/sec    Learning rate: 0.000808
+	Valid loss: 11.6414    Valid acc:  5.83%    Valid rate: 1457.6 sents/sec
+	log loss: 2.365504	rel loss: 2.120427	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:02:59:22
+Total time in prob_argmax: 2.933326
+Total time in forward: 1.084381
+Not tree: 1700
+Roots < 1: 1634; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2202 / 35446 * 100 = 6.21 %
+  Unlabeled attachment score: 10175 / 35446 * 100 = 28.71 %
+  Label accuracy score:       3281 / 35446 * 100 = 9.26 %
+
+
+UAS: 28.71    LAS: 6.21
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 31600) Train loss: 4.4274    Train acc:  7.74%    Train rate:  439.1 sents/sec    Learning rate: 0.000806
+	Valid loss: 11.6861    Valid acc:  5.74%    Valid rate: 1419.9 sents/sec
+	log loss: 2.328347	rel loss: 2.099046	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.187275505
+Average validation per sec:  1443.67574387
+ 31700) Train loss: 4.4329    Train acc:  7.56%    Train rate:  407.7 sents/sec    Learning rate: 0.000804
+	Valid loss: 12.4400    Valid acc:  6.03%    Valid rate: 1413.9 sents/sec
+	log loss: 2.333896	rel loss: 2.099037	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 31800) Train loss: 4.4199    Train acc:  7.73%    Train rate:  441.3 sents/sec    Learning rate: 0.000801
+	Valid loss: 11.1799    Valid acc:  5.88%    Valid rate: 1429.8 sents/sec
+	log loss: 2.323964	rel loss: 2.095934	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 31900) Train loss: 4.4672    Train acc:  7.39%    Train rate:  407.4 sents/sec    Learning rate: 0.000799
+	Valid loss: 11.5674    Valid acc:  5.97%    Valid rate: 1448.0 sents/sec
+	log loss: 2.352240	rel loss: 2.114944	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.174371577
+Average validation per sec:  1443.55214238
+ 32000) Train loss: 4.4234    Train acc:  7.55%    Train rate:  429.2 sents/sec    Learning rate: 0.000797
+	Valid loss: 11.7263    Valid acc:  5.91%    Valid rate: 1447.8 sents/sec
+	log loss: 2.326055	rel loss: 2.097331	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:02:14
+Total time in prob_argmax: 2.822778
+Total time in forward: 1.084630
+Not tree: 1700
+Roots < 1: 1639; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2224 / 35446 * 100 = 6.27 %
+  Unlabeled attachment score: 10164 / 35446 * 100 = 28.67 %
+  Label accuracy score:       3313 / 35446 * 100 = 9.35 %
+
+
+UAS: 28.67    LAS: 6.27
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 32100) Train loss: 4.4322    Train acc:  7.51%    Train rate:  438.2 sents/sec    Learning rate: 0.000794
+	Valid loss: 11.8546    Valid acc:  5.90%    Valid rate: 1428.3 sents/sec
+	log loss: 2.332084	rel loss: 2.100134	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 32200) Train loss: 4.4389    Train acc:  7.63%    Train rate:  427.2 sents/sec    Learning rate: 0.000792
+	Valid loss: 12.2463    Valid acc:  5.86%    Valid rate: 1418.4 sents/sec
+	log loss: 2.336459	rel loss: 2.102469	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 32300) Train loss: 4.5109    Train acc:  7.19%    Train rate:  372.0 sents/sec    Learning rate: 0.000790
+	Valid loss: 13.1331    Valid acc:  5.91%    Valid rate: 1430.8 sents/sec
+	log loss: 2.377597	rel loss: 2.133258	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.130550167
+Average validation per sec:  1443.40078197
+ 32400) Train loss: 4.4543    Train acc:  7.55%    Train rate:  424.1 sents/sec    Learning rate: 0.000788
+	Valid loss: 12.9218    Valid acc:  5.82%    Valid rate: 1438.1 sents/sec
+	log loss: 2.347894	rel loss: 2.106400	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 32500) Train loss: 4.4313    Train acc:  7.49%    Train rate:  419.5 sents/sec    Learning rate: 0.000785
+	Valid loss: 11.5884    Valid acc:  5.90%    Valid rate: 1447.4 sents/sec
+	log loss: 2.327342	rel loss: 2.103934	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:05:06
+Total time in prob_argmax: 3.055610
+Total time in forward: 1.088731
+Not tree: 1700
+Roots < 1: 1639; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2215 / 35446 * 100 = 6.25 %
+  Unlabeled attachment score: 10203 / 35446 * 100 = 28.78 %
+  Label accuracy score:       3259 / 35446 * 100 = 9.19 %
+
+
+UAS: 28.78    LAS: 6.25
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 32600) Train loss: 4.4336    Train acc:  7.57%    Train rate:  432.8 sents/sec    Learning rate: 0.000783
+	Valid loss: 11.8184    Valid acc:  5.84%    Valid rate: 1434.4 sents/sec
+	log loss: 2.333157	rel loss: 2.100428	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.179363556
+Average validation per sec:  1443.36921148
+ 32700) Train loss: 4.4616    Train acc:  7.39%    Train rate:  405.8 sents/sec    Learning rate: 0.000781
+	Valid loss: 11.8911    Valid acc:  5.87%    Valid rate: 1437.5 sents/sec
+	log loss: 2.351316	rel loss: 2.110299	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 32800) Train loss: 4.4508    Train acc:  7.47%    Train rate:  412.7 sents/sec    Learning rate: 0.000778
+	Valid loss: 12.0050    Valid acc:  5.79%    Valid rate: 1442.1 sents/sec
+	log loss: 2.345107	rel loss: 2.105669	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 32900) Train loss: 4.3960    Train acc:  7.76%    Train rate:  446.8 sents/sec    Learning rate: 0.000776
+	Valid loss: 12.0499    Valid acc:  5.87%    Valid rate: 1438.3 sents/sec
+	log loss: 2.306854	rel loss: 2.089130	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.193629645
+Average validation per sec:  1443.33212612
+ 33000) Train loss: 4.4748    Train acc:  7.43%    Train rate:  386.3 sents/sec    Learning rate: 0.000774
+	Valid loss: 12.2214    Valid acc:  5.92%    Valid rate: 1453.2 sents/sec
+	log loss: 2.356870	rel loss: 2.117977	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:07:59
+Total time in prob_argmax: 2.904246
+Total time in forward: 1.083616
+Not tree: 1700
+Roots < 1: 1639; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2260 / 35446 * 100 = 6.38 %
+  Unlabeled attachment score: 10158 / 35446 * 100 = 28.66 %
+  Label accuracy score:       3349 / 35446 * 100 = 9.45 %
+
+
+UAS: 28.66    LAS: 6.38
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 33100) Train loss: 4.4749    Train acc:  7.43%    Train rate:  403.3 sents/sec    Learning rate: 0.000772
+	Valid loss: 11.8896    Valid acc:  5.93%    Valid rate: 1446.6 sents/sec
+	log loss: 2.359783	rel loss: 2.115115	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 33200) Train loss: 4.3806    Train acc:  7.74%    Train rate:  448.8 sents/sec    Learning rate: 0.000770
+	Valid loss: 11.6928    Valid acc:  5.85%    Valid rate: 1410.7 sents/sec
+	log loss: 2.301019	rel loss: 2.079581	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 33300) Train loss: 4.4743    Train acc:  7.42%    Train rate:  404.9 sents/sec    Learning rate: 0.000767
+	Valid loss: 11.4126    Valid acc:  5.88%    Valid rate: 1436.2 sents/sec
+	log loss: 2.356309	rel loss: 2.117958	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.080981376
+Average validation per sec:  1443.25220989
+ 33400) Train loss: 4.4285    Train acc:  7.69%    Train rate:  433.4 sents/sec    Learning rate: 0.000765
+	Valid loss: 11.7890    Valid acc:  5.98%    Valid rate: 1459.0 sents/sec
+	log loss: 2.329546	rel loss: 2.098966	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 33500) Train loss: 4.4197    Train acc:  7.61%    Train rate:  432.9 sents/sec    Learning rate: 0.000763
+	Valid loss: 11.4534    Valid acc:  5.97%    Valid rate: 1467.3 sents/sec
+	log loss: 2.321070	rel loss: 2.098676	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:10:52
+Total time in prob_argmax: 2.981154
+Total time in forward: 1.086228
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2250 / 35446 * 100 = 6.35 %
+  Unlabeled attachment score: 10176 / 35446 * 100 = 28.71 %
+  Label accuracy score:       3361 / 35446 * 100 = 9.48 %
+
+
+UAS: 28.71    LAS: 6.35
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 33600) Train loss: 4.4454    Train acc:  7.62%    Train rate:  437.1 sents/sec    Learning rate: 0.000761
+	Valid loss: 11.8346    Valid acc:  6.00%    Valid rate: 1427.3 sents/sec
+	log loss: 2.339115	rel loss: 2.106302	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.209470785
+Average validation per sec:  1443.3234977
+ 33700) Train loss: 4.4754    Train acc:  7.31%    Train rate:  385.6 sents/sec    Learning rate: 0.000759
+	Valid loss: 11.9677    Valid acc:  5.93%    Valid rate: 1441.6 sents/sec
+	log loss: 2.362606	rel loss: 2.112802	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 33800) Train loss: 4.4179    Train acc:  7.53%    Train rate:  425.7 sents/sec    Learning rate: 0.000756
+	Valid loss: 12.3384    Valid acc:  5.87%    Valid rate: 1421.7 sents/sec
+	log loss: 2.319805	rel loss: 2.098092	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 33900) Train loss: 4.3820    Train acc:  7.84%    Train rate:  463.4 sents/sec    Learning rate: 0.000754
+	Valid loss: 11.1372    Valid acc:  5.86%    Valid rate: 1441.9 sents/sec
+	log loss: 2.302419	rel loss: 2.079573	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 34000) Train loss: 4.4878    Train acc:  7.30%    Train rate:  383.9 sents/sec    Learning rate: 0.000752
+	Valid loss: 11.9812    Valid acc:  5.82%    Valid rate: 1437.4 sents/sec
+	log loss: 2.364605	rel loss: 2.123173	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:13:45
+Total time in prob_argmax: 2.835545
+Total time in forward: 1.095844
+Not tree: 1700
+Roots < 1: 1639; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2183 / 35446 * 100 = 6.16 %
+  Unlabeled attachment score: 10198 / 35446 * 100 = 28.77 %
+  Label accuracy score:       3217 / 35446 * 100 = 9.08 %
+
+
+UAS: 28.77    LAS: 6.16
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.144134879
+Average validation per sec:  1443.2332486
+ 34100) Train loss: 4.3705    Train acc:  7.87%    Train rate:  470.3 sents/sec    Learning rate: 0.000750
+	Valid loss: 11.7188    Valid acc:  5.87%    Valid rate: 1435.5 sents/sec
+	log loss: 2.295269	rel loss: 2.075273	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 34200) Train loss: 4.4781    Train acc:  7.31%    Train rate:  393.4 sents/sec    Learning rate: 0.000748
+	Valid loss: 11.7195    Valid acc:  5.91%    Valid rate: 1415.5 sents/sec
+	log loss: 2.358016	rel loss: 2.120079	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 34300) Train loss: 4.4462    Train acc:  7.54%    Train rate:  415.2 sents/sec    Learning rate: 0.000746
+	Valid loss: 11.7419    Valid acc:  5.89%    Valid rate: 1432.4 sents/sec
+	log loss: 2.341606	rel loss: 2.104612	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.19823942
+Average validation per sec:  1443.09808662
+ 34400) Train loss: 4.4731    Train acc:  7.40%    Train rate:  392.5 sents/sec    Learning rate: 0.000743
+	Valid loss: 11.7164    Valid acc:  5.85%    Valid rate: 1453.0 sents/sec
+	log loss: 2.356709	rel loss: 2.116424	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 34500) Train loss: 4.3813    Train acc:  7.84%    Train rate:  451.2 sents/sec    Learning rate: 0.000741
+	Valid loss: 11.9460    Valid acc:  5.71%    Valid rate: 1438.8 sents/sec
+	log loss: 2.303026	rel loss: 2.078282	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:16:38
+Total time in prob_argmax: 2.976050
+Total time in forward: 1.084164
+Not tree: 1700
+Roots < 1: 1639; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2152 / 35446 * 100 = 6.07 %
+  Unlabeled attachment score: 10184 / 35446 * 100 = 28.73 %
+  Label accuracy score:       3197 / 35446 * 100 = 9.02 %
+
+
+UAS: 28.73    LAS: 6.07
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 34600) Train loss: 4.4215    Train acc:  7.70%    Train rate:  446.8 sents/sec    Learning rate: 0.000739
+	Valid loss: 12.1300    Valid acc:  5.96%    Valid rate: 1425.2 sents/sec
+	log loss: 2.323769	rel loss: 2.097705	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.284677867
+Average validation per sec:  1443.06241527
+ 34700) Train loss: 4.5153    Train acc:  7.23%    Train rate:  383.8 sents/sec    Learning rate: 0.000737
+	Valid loss: 11.8093    Valid acc:  5.91%    Valid rate: 1426.8 sents/sec
+	log loss: 2.381874	rel loss: 2.133435	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 34800) Train loss: 4.5024    Train acc:  7.25%    Train rate:  367.7 sents/sec    Learning rate: 0.000735
+	Valid loss: 11.8388    Valid acc:  5.82%    Valid rate: 1436.0 sents/sec
+	log loss: 2.373999	rel loss: 2.128403	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 34900) Train loss: 4.3559    Train acc:  7.98%    Train rate:  465.9 sents/sec    Learning rate: 0.000733
+	Valid loss: 12.1447    Valid acc:  5.84%    Valid rate: 1439.0 sents/sec
+	log loss: 2.286519	rel loss: 2.069416	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 35000) Train loss: 4.4348    Train acc:  7.58%    Train rate:  427.4 sents/sec    Learning rate: 0.000731
+	Valid loss: 11.8177    Valid acc:  5.80%    Valid rate: 1475.7 sents/sec
+	log loss: 2.333070	rel loss: 2.101739	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:19:31
+Total time in prob_argmax: 2.989792
+Total time in forward: 1.081335
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2147 / 35446 * 100 = 6.06 %
+  Unlabeled attachment score: 10170 / 35446 * 100 = 28.69 %
+  Label accuracy score:       3201 / 35446 * 100 = 9.03 %
+
+
+UAS: 28.69    LAS: 6.06
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.180764185
+Average validation per sec:  1443.07783702
+ 35100) Train loss: 4.4780    Train acc:  7.39%    Train rate:  407.4 sents/sec    Learning rate: 0.000729
+	Valid loss: 11.8861    Valid acc:  5.97%    Valid rate: 1435.8 sents/sec
+	log loss: 2.359318	rel loss: 2.118708	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 35200) Train loss: 4.4541    Train acc:  7.52%    Train rate:  418.9 sents/sec    Learning rate: 0.000727
+	Valid loss: 11.7030    Valid acc:  5.92%    Valid rate: 1423.1 sents/sec
+	log loss: 2.345394	rel loss: 2.108749	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 35300) Train loss: 4.4487    Train acc:  7.46%    Train rate:  396.8 sents/sec    Learning rate: 0.000724
+	Valid loss: 11.9369    Valid acc:  5.90%    Valid rate: 1444.4 sents/sec
+	log loss: 2.343152	rel loss: 2.105513	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.074679643
+Average validation per sec:  1443.00436564
+ 35400) Train loss: 4.3996    Train acc:  7.76%    Train rate:  444.2 sents/sec    Learning rate: 0.000722
+	Valid loss: 11.9849    Valid acc:  5.87%    Valid rate: 1450.5 sents/sec
+	log loss: 2.314567	rel loss: 2.085074	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 35500) Train loss: 4.4092    Train acc:  7.66%    Train rate:  438.9 sents/sec    Learning rate: 0.000720
+	Valid loss: 12.0482    Valid acc:  6.04%    Valid rate: 1473.3 sents/sec
+	log loss: 2.317616	rel loss: 2.091603	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:22:25
+Total time in prob_argmax: 2.976595
+Total time in forward: 1.080467
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2236 / 35446 * 100 = 6.31 %
+  Unlabeled attachment score: 10210 / 35446 * 100 = 28.80 %
+  Label accuracy score:       3313 / 35446 * 100 = 9.35 %
+
+
+UAS: 28.80    LAS: 6.31
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 35600) Train loss: 4.3729    Train acc:  7.83%    Train rate:  473.4 sents/sec    Learning rate: 0.000718
+	Valid loss: 11.8287    Valid acc:  5.83%    Valid rate: 1426.9 sents/sec
+	log loss: 2.295448	rel loss: 2.077418	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 35700) Train loss: 4.5109    Train acc:  7.19%    Train rate:  371.5 sents/sec    Learning rate: 0.000716
+	Valid loss: 11.6365    Valid acc:  5.80%    Valid rate: 1425.1 sents/sec
+	log loss: 2.380124	rel loss: 2.130779	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.20812742
+Average validation per sec:  1443.01490843
+ 35800) Train loss: 4.4299    Train acc:  7.59%    Train rate:  418.8 sents/sec    Learning rate: 0.000714
+	Valid loss: 12.0280    Valid acc:  5.88%    Valid rate: 1432.3 sents/sec
+	log loss: 2.329667	rel loss: 2.100237	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 35900) Train loss: 4.4402    Train acc:  7.52%    Train rate:  413.7 sents/sec    Learning rate: 0.000712
+	Valid loss: 11.8597    Valid acc:  5.94%    Valid rate: 1450.4 sents/sec
+	log loss: 2.340670	rel loss: 2.099488	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 36000) Train loss: 4.4480    Train acc:  7.51%    Train rate:  414.3 sents/sec    Learning rate: 0.000710
+	Valid loss: 11.8860    Valid acc:  5.95%    Valid rate: 1471.8 sents/sec
+	log loss: 2.341942	rel loss: 2.106103	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:25:18
+Total time in prob_argmax: 2.889603
+Total time in forward: 1.081729
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2247 / 35446 * 100 = 6.34 %
+  Unlabeled attachment score: 10170 / 35446 * 100 = 28.69 %
+  Label accuracy score:       3354 / 35446 * 100 = 9.46 %
+
+
+UAS: 28.69    LAS: 6.34
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.169719334
+Average validation per sec:  1443.0858608
+ 36100) Train loss: 4.4709    Train acc:  7.25%    Train rate:  409.6 sents/sec    Learning rate: 0.000708
+	Valid loss: 12.4426    Valid acc:  5.92%    Valid rate: 1443.7 sents/sec
+	log loss: 2.355520	rel loss: 2.115335	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 36200) Train loss: 4.3614    Train acc:  7.84%    Train rate:  464.2 sents/sec    Learning rate: 0.000706
+	Valid loss: 12.2404    Valid acc:  5.89%    Valid rate: 1416.9 sents/sec
+	log loss: 2.288982	rel loss: 2.072405	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 36300) Train loss: 4.4754    Train acc:  7.31%    Train rate:  392.1 sents/sec    Learning rate: 0.000704
+	Valid loss: 11.7814    Valid acc:  5.97%    Valid rate: 1439.8 sents/sec
+	log loss: 2.356913	rel loss: 2.118454	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.184529579
+Average validation per sec:  1443.00624841
+ 36400) Train loss: 4.4598    Train acc:  7.53%    Train rate:  415.3 sents/sec    Learning rate: 0.000702
+	Valid loss: 11.8836    Valid acc:  5.85%    Valid rate: 1469.0 sents/sec
+	log loss: 2.348025	rel loss: 2.111822	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 36500) Train loss: 4.4580    Train acc:  7.56%    Train rate:  406.5 sents/sec    Learning rate: 0.000700
+	Valid loss: 11.9429    Valid acc:  5.96%    Valid rate: 1459.2 sents/sec
+	log loss: 2.347976	rel loss: 2.110012	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:28:11
+Total time in prob_argmax: 2.882037
+Total time in forward: 1.083556
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2243 / 35446 * 100 = 6.33 %
+  Unlabeled attachment score: 10188 / 35446 * 100 = 28.74 %
+  Label accuracy score:       3353 / 35446 * 100 = 9.46 %
+
+
+UAS: 28.74    LAS: 6.33
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+ 36600) Train loss: 4.4099    Train acc:  7.51%    Train rate:  452.2 sents/sec    Learning rate: 0.000698
+	Valid loss: 11.9575    Valid acc:  5.77%    Valid rate: 1439.5 sents/sec
+	log loss: 2.318651	rel loss: 2.091215	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 36700) Train loss: 4.3878    Train acc:  7.72%    Train rate:  439.9 sents/sec    Learning rate: 0.000696
+	Valid loss: 11.7637    Valid acc:  5.89%    Valid rate: 1438.4 sents/sec
+	log loss: 2.304200	rel loss: 2.083553	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Average train per sec:  420.274597586
+Average validation per sec:  1443.09901603
+ 36800) Train loss: 4.4026    Train acc:  7.73%    Train rate:  437.2 sents/sec    Learning rate: 0.000694
+	Valid loss: 12.1827    Valid acc:  5.82%    Valid rate: 1442.7 sents/sec
+	log loss: 2.316458	rel loss: 2.086154	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 36900) Train loss: 4.5117    Train acc:  7.22%    Train rate:  373.4 sents/sec    Learning rate: 0.000692
+	Valid loss: 11.7868    Valid acc:  5.92%    Valid rate: 1448.9 sents/sec
+	log loss: 2.379967	rel loss: 2.131688	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 37000) Train loss: 4.4536    Train acc:  7.53%    Train rate:  401.0 sents/sec    Learning rate: 0.000690
+	Valid loss: 11.8257    Valid acc:  5.78%    Valid rate: 1439.4 sents/sec
+	log loss: 2.345751	rel loss: 2.107800	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+Elapsed time: 01:03:31:04
+Total time in prob_argmax: 2.986021
+Total time in forward: 1.094618
+Not tree: 1700
+Roots < 1: 1649; Roots > 1: 1; 2-cycles: -1700; n-cycles: -1700
+  Labeled   attachment score: 2172 / 35446 * 100 = 6.13 %
+  Unlabeled attachment score: 10185 / 35446 * 100 = 28.73 %
+  Label accuracy score:       3236 / 35446 * 100 = 9.13 %
+
+
+UAS: 28.73    LAS: 6.13
+POS: 96.68
+SRL acc: 0.00
+SRL F1: 0.0
+Average train per sec:  420.141540368
+Average validation per sec:  1443.10391067
+ 37100) Train loss: 4.3806    Train acc:  7.86%    Train rate:  474.2 sents/sec    Learning rate: 0.000688
+	Valid loss: 11.7580    Valid acc:  5.89%    Valid rate: 1432.1 sents/sec
+	log loss: 2.304875	rel loss: 2.075677	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+
+ 37200) Train loss: 4.4339    Train acc:  7.51%    Train rate:  406.5 sents/sec    Learning rate: 0.000686
+	Valid loss: 11.8301    Valid acc:  5.98%    Valid rate: 1433.2 sents/sec
+	log loss: 2.333495	rel loss: 2.100367	srl loss: 0.000000	trig loss: 0.000000	pos loss: 0.000000
+

@@ -27,8 +27,6 @@ import pickle as pkl
 import numpy as np
 import tensorflow as tf
 print(tf.__version__)
-import keras
-from keras.models import Sequential, Model
 
 from lib import models
 from lib import optimizers
@@ -992,7 +990,7 @@ if __name__ == '__main__':
                                         trace_steps=[],
                                         dump_steps=[]) if profile else dummy_context_mgr() as pctx:
     with tf.Session(config=config_proto) as sess:
-      writer = tf.summary.FileWriter('./graphstb', sess.graph)
+      writer = tf.summary.FileWriter('./graphs-4-2', sess.graph)
       sess.run(tf.global_variables_initializer())
       if not (args.test or args.matrix):
         if args.load:

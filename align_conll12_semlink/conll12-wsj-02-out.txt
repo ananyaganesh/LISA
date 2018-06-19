@@ -1,0 +1,1001 @@
+nw/wsj/02/wsj_0200	0	0	0	In	IN	IN	45	prep	_	-	-	-	-*	*	*	*	(ARGM-LOC*	-
+nw/wsj/02/wsj_0200	0	0	1	an	DT	DT	5	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	2	Oct.	NNP	NNP	5	nmod	_	-	-	-	-(DATE*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	3	19	CD	CD	3	nummod	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	4	review	NN	NN	1	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	5	of	IN	IN	5	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	6	``	``	``	9	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	7	The	DT	DT	9	det	_	-	-	-	-(WORK_OF_ART*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	8	Misanthrope	NN	NNP	6	pobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	9	''	''	''	9	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	10	at	IN	IN	9	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	11	Chicago	NNP	NNP	15	poss	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	12	's	POS	POS	12	case	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	13	Goodman	NNP	NNP	15	compound	_	-	-	-	-(FAC*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	14	Theatre	NNP	NNP	11	pobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	15	-LRB-	-LRB-	-LRB-	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	16	``	``	``	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	17	Revitalized	VBN	VBN	19	amod	_	revitalize	01	-	-(WORK_OF_ART*	(V*)	(ARG0*	*	*	-
+nw/wsj/02/wsj_0200	0	0	18	Classics	NNS	NNS	20	dep	_	-	-	-	-*	(ARG1*)=Experiencer	*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	19	Take	VBP	VBP	28	acl	_	take	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0200	0	0	21	Stage	NN	NN	20	dobj	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	22	in	IN	IN	20	prep	_	-	-	-	-*	*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0200	0	0	23	Windy	NNP	NNP	25	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	24	City	NNP	NNP	23	pobj	_	-	-	-	-*)	*	*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	25	,	,	,	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	26	''	''	''	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	27	Leisure	NN	NN	5	appos	_	-	-	-	-(ORG*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	28	&	CC	CC	28	cc	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	29	Arts	NNS	NNS	28	conj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	30	-RRB-	-RRB-	-RRB-	28	punct	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0200	0	0	31	,	,	,	45	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	32	the	DT	DT	34	det	_	-	-	-	-*	*	*	(ARG1*	(ARG1*	-
+nw/wsj/02/wsj_0200	0	0	33	role	NN	NN	45	dep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	34	of	IN	IN	34	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	35	Celimene	NNP	NNP	35	pobj	_	-	-	-	-(PERSON)	*	*	*)	*	-
+nw/wsj/02/wsj_0200	0	0	36	,	,	,	34	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	37	played	VBN	VBN	34	acl	_	play	02	-	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0200	0	0	38	by	IN	IN	38	prep	_	-	-	-	-*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0200	0	0	39	Kim	NNP	NNP	41	compound	_	-	-	-	-(PERSON*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	40	Cattrall	NNP	NNP	39	pobj	_	-	-	-	-*)	*	*	*)	*	-
+nw/wsj/02/wsj_0200	0	0	41	,	,	,	34	punct	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0200	0	0	42	was	VBD	VBD	45	auxpass	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	43	mistakenly	RB	RB	45	advmod	_	-	-	-	-*	*	*	*	(ARGM-MNR*)	-
+nw/wsj/02/wsj_0200	0	0	44	attributed	VBN	VBN	0	root	_	attribute	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0200	0	0	45	to	IN	IN	45	prep	_	-	-	-	-*	*	*	*	(ARG2*	-
+nw/wsj/02/wsj_0200	0	0	46	Christina	NNP	NNP	48	compound	_	-	-	-	-(PERSON*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	47	Haag	NNP	NNP	46	pobj	_	-	-	-	-*)	*	*	*	*)	-
+nw/wsj/02/wsj_0200	0	0	48	.	.	.	45	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	0	In	IN	IN	45	prep	_	-	-	-	-*	*	*	*	(ARGM-LOC*	-
+nw/wsj/02/wsj_0200	0	0	1	an	DT	DT	5	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	2	Oct.	NNP	NNP	5	nmod	_	-	-	-	-(DATE*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	3	19	CD	CD	3	nummod	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	4	review	NN	NN	1	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	5	of	IN	IN	5	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	6	``	``	``	9	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	7	The	DT	DT	9	det	_	-	-	-	-(WORK_OF_ART*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	8	Misanthrope	NN	NNP	6	pobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	9	''	''	''	9	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	10	at	IN	IN	9	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	11	Chicago	NNP	NNP	15	poss	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	12	's	POS	POS	12	case	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	13	Goodman	NNP	NNP	15	compound	_	-	-	-	-(FAC*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	14	Theatre	NNP	NNP	11	pobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	15	-LRB-	-LRB-	-LRB-	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	16	``	``	``	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	17	Revitalized	VBN	VBN	19	amod	_	revitalize	01	-	-(WORK_OF_ART*	(V*)	(ARG0*=Agent	*	*	-
+nw/wsj/02/wsj_0200	0	0	18	Classics	NNS	NNS	20	dep	_	-	-	-	-*	(ARG1*)	*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	19	Take	VBP	VBP	28	acl	_	take	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	(ARG1*=Theme	*	*	-
+nw/wsj/02/wsj_0200	0	0	21	Stage	NN	NN	20	dobj	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	22	in	IN	IN	20	prep	_	-	-	-	-*	*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0200	0	0	23	Windy	NNP	NNP	25	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	24	City	NNP	NNP	23	pobj	_	-	-	-	-*)	*	*)	*	*	-
+nw/wsj/02/wsj_0200	0	0	25	,	,	,	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	26	''	''	''	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	27	Leisure	NN	NN	5	appos	_	-	-	-	-(ORG*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	28	&	CC	CC	28	cc	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	29	Arts	NNS	NNS	28	conj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	30	-RRB-	-RRB-	-RRB-	28	punct	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0200	0	0	31	,	,	,	45	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	32	the	DT	DT	34	det	_	-	-	-	-*	*	*	(ARG1*	(ARG1*	-
+nw/wsj/02/wsj_0200	0	0	33	role	NN	NN	45	dep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	34	of	IN	IN	34	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	35	Celimene	NNP	NNP	35	pobj	_	-	-	-	-(PERSON)	*	*	*)	*	-
+nw/wsj/02/wsj_0200	0	0	36	,	,	,	34	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	37	played	VBN	VBN	34	acl	_	play	02	-	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0200	0	0	38	by	IN	IN	38	prep	_	-	-	-	-*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0200	0	0	39	Kim	NNP	NNP	41	compound	_	-	-	-	-(PERSON*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	40	Cattrall	NNP	NNP	39	pobj	_	-	-	-	-*)	*	*	*)	*	-
+nw/wsj/02/wsj_0200	0	0	41	,	,	,	34	punct	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0200	0	0	42	was	VBD	VBD	45	auxpass	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	43	mistakenly	RB	RB	45	advmod	_	-	-	-	-*	*	*	*	(ARGM-MNR*)	-
+nw/wsj/02/wsj_0200	0	0	44	attributed	VBN	VBN	0	root	_	attribute	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0200	0	0	45	to	IN	IN	45	prep	_	-	-	-	-*	*	*	*	(ARG2*	-
+nw/wsj/02/wsj_0200	0	0	46	Christina	NNP	NNP	48	compound	_	-	-	-	-(PERSON*	*	*	*	*	-
+nw/wsj/02/wsj_0200	0	0	47	Haag	NNP	NNP	46	pobj	_	-	-	-	-*)	*	*	*	*)	-
+nw/wsj/02/wsj_0200	0	0	48	.	.	.	45	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	0	Rolls	NNP	NNP	6	compound	_	-	-	-	-(ORG*	(ARG0*=Agent	*	*	-
+nw/wsj/02/wsj_0201	0	0	1	-	HYPH	HYPH	6	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	2	Royce	NNP	NNP	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	3	Motor	NNP	NNP	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	4	Cars	NNPS	NNPS	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	5	Inc.	NNP	NNP	7	dep	_	-	-	-	-*)	*)	*	*	-
+nw/wsj/02/wsj_0201	0	0	6	said	VBD	VBD	0	root	_	say	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0201	0	0	7	it	PRP	PRP	9	dep	_	-	-	-	-*	(ARG1*=Topic	(ARG0*)	*	-
+nw/wsj/02/wsj_0201	0	0	8	expects	VBZ	VBZ	7	advcl	_	expect	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0201	0	0	9	its	PRP$	PRP$	12	poss	_	-	-	-	-*	*	(ARG1*	(ARG1*	-
+nw/wsj/02/wsj_0201	0	0	10	U.S.	NNP	NNP	12	compound	_	-	-	-	-(GPE)	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	11	sales	NNS	NNS	14	dep	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0201	0	0	12	to	TO	TO	14	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	13	remain	VB	VB	9	xcomp	_	remain	01	-	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0201	0	0	14	steady	JJ	JJ	14	acomp	_	-	-	-	-*	*	*	(ARG3*)	-
+nw/wsj/02/wsj_0201	0	0	15	at	IN	IN	14	prep	_	-	-	-	-*	*	*	(ARGM-MNR*	-
+nw/wsj/02/wsj_0201	0	0	16	about	IN	RB	18	quantmod	_	-	-	-	-(CARDINAL*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	17	1,200	CD	CD	19	nummod	_	-	-	-	-*)	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	18	cars	NNS	NNS	16	pobj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0201	0	0	19	in	IN	IN	14	prep	_	-	-	-	-*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0201	0	0	20	1990	CD	CD	20	pobj	_	-	-	-	-(DATE)	*)	*)	*)	-
+nw/wsj/02/wsj_0201	0	0	21	.	.	.	7	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	0	Rolls	NNP	NNP	6	compound	_	-	-	-	-(ORG*	(ARG0*	*	*	-
+nw/wsj/02/wsj_0201	0	0	1	-	HYPH	HYPH	6	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	2	Royce	NNP	NNP	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	3	Motor	NNP	NNP	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	4	Cars	NNPS	NNPS	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	5	Inc.	NNP	NNP	7	dep	_	-	-	-	-*)	*)	*	*	-
+nw/wsj/02/wsj_0201	0	0	6	said	VBD	VBD	0	root	_	say	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0201	0	0	7	it	PRP	PRP	9	dep	_	-	-	-	-*	(ARG1*	(ARG0*)=Experiencer	*	-
+nw/wsj/02/wsj_0201	0	0	8	expects	VBZ	VBZ	7	advcl	_	expect	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0201	0	0	9	its	PRP$	PRP$	12	poss	_	-	-	-	-*	*	(ARG1*=Theme	(ARG1*	-
+nw/wsj/02/wsj_0201	0	0	10	U.S.	NNP	NNP	12	compound	_	-	-	-	-(GPE)	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	11	sales	NNS	NNS	14	dep	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0201	0	0	12	to	TO	TO	14	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	13	remain	VB	VB	9	xcomp	_	remain	01	-	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0201	0	0	14	steady	JJ	JJ	14	acomp	_	-	-	-	-*	*	*	(ARG3*)	-
+nw/wsj/02/wsj_0201	0	0	15	at	IN	IN	14	prep	_	-	-	-	-*	*	*	(ARGM-MNR*	-
+nw/wsj/02/wsj_0201	0	0	16	about	IN	RB	18	quantmod	_	-	-	-	-(CARDINAL*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	17	1,200	CD	CD	19	nummod	_	-	-	-	-*)	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	18	cars	NNS	NNS	16	pobj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0201	0	0	19	in	IN	IN	14	prep	_	-	-	-	-*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0201	0	0	20	1990	CD	CD	20	pobj	_	-	-	-	-(DATE)	*)	*)	*)	-
+nw/wsj/02/wsj_0201	0	0	21	.	.	.	7	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	0	Rolls	NNP	NNP	6	compound	_	-	-	-	-(ORG*	(ARG0*	*	*	-
+nw/wsj/02/wsj_0201	0	0	1	-	HYPH	HYPH	6	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	2	Royce	NNP	NNP	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	3	Motor	NNP	NNP	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	4	Cars	NNPS	NNPS	6	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	5	Inc.	NNP	NNP	7	dep	_	-	-	-	-*)	*)	*	*	-
+nw/wsj/02/wsj_0201	0	0	6	said	VBD	VBD	0	root	_	say	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0201	0	0	7	it	PRP	PRP	9	dep	_	-	-	-	-*	(ARG1*	(ARG0*)	*	-
+nw/wsj/02/wsj_0201	0	0	8	expects	VBZ	VBZ	7	advcl	_	expect	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0201	0	0	9	its	PRP$	PRP$	12	poss	_	-	-	-	-*	*	(ARG1*	(ARG1*=Theme	-
+nw/wsj/02/wsj_0201	0	0	10	U.S.	NNP	NNP	12	compound	_	-	-	-	-(GPE)	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	11	sales	NNS	NNS	14	dep	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0201	0	0	12	to	TO	TO	14	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	13	remain	VB	VB	9	xcomp	_	remain	01	-	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0201	0	0	14	steady	JJ	JJ	14	acomp	_	-	-	-	-*	*	*	(ARG3*)	-
+nw/wsj/02/wsj_0201	0	0	15	at	IN	IN	14	prep	_	-	-	-	-*	*	*	(ARGM-MNR*	-
+nw/wsj/02/wsj_0201	0	0	16	about	IN	RB	18	quantmod	_	-	-	-	-(CARDINAL*	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	17	1,200	CD	CD	19	nummod	_	-	-	-	-*)	*	*	*	-
+nw/wsj/02/wsj_0201	0	0	18	cars	NNS	NNS	16	pobj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0201	0	0	19	in	IN	IN	14	prep	_	-	-	-	-*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0201	0	0	20	1990	CD	CD	20	pobj	_	-	-	-	-(DATE)	*)	*)	*)	-
+nw/wsj/02/wsj_0201	0	0	21	.	.	.	7	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0201	1	0	0	The	DT	DT	4	det	_	-	-	-	-*	(ARG0*=Agent	-
+nw/wsj/02/wsj_0201	1	0	1	luxury	NN	NN	3	compound	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0201	1	0	2	auto	NN	NN	4	compound	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0201	1	0	3	maker	NN	NN	7	dep	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0201	1	0	4	last	JJ	JJ	6	amod	_	-	-	-	-(DATE*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0201	1	0	5	year	NN	NN	7	dep	_	-	-	-	-*)	*)	-
+nw/wsj/02/wsj_0201	1	0	6	sold	VBD	VBD	0	root	_	sell	01	-	-*	(V*)	-
+nw/wsj/02/wsj_0201	1	0	7	1,214	CD	CD	9	nummod	_	-	-	-	-(CARDINAL)	(ARG1*=Theme	-
+nw/wsj/02/wsj_0201	1	0	8	cars	NNS	NNS	7	dobj	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0201	1	0	9	in	IN	IN	7	prep	_	-	-	-	-*	(ARGM-LOC*	-
+nw/wsj/02/wsj_0201	1	0	10	the	DT	DT	12	det	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0201	1	0	11	U.S.	NNP	NNP	10	pobj	_	-	-	-	-(GPE)	*)	-
+nw/wsj/02/wsj_0201	2	0	0	Howard	NNP	NNP	2	compound	_	-	-	-	-(PERSON*	(ARG0*=Agent	*	-
+nw/wsj/02/wsj_0201	2	0	1	Mosher	NNP	NNP	10	dep	_	-	-	-	-*)	*	*	-
+nw/wsj/02/wsj_0201	2	0	2	,	,	,	2	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	3	president	NN	NN	2	appos	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	4	and	CC	CC	4	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	5	chief	JJ	JJ	8	amod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	6	executive	NN	JJ	8	compound	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	7	officer	NN	NN	4	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	8	,	,	,	2	punct	_	-	-	-	-*	*)	*	-
+nw/wsj/02/wsj_0201	2	0	9	said	VBD	VBD	0	root	_	say	01	-	-*	(V*)	*	-
+nw/wsj/02/wsj_0201	2	0	10	he	PRP	PRP	12	dep	_	-	-	-	-*	(ARG1*=Topic	(ARG0*)	-
+nw/wsj/02/wsj_0201	2	0	11	anticipates	VBZ	VBZ	10	advcl	_	anticipate	01	1	-*	*	(V*)	-
+nw/wsj/02/wsj_0201	2	0	12	growth	NN	NN	12	dobj	_	-	-	-	-*	*	(ARG1*	-
+nw/wsj/02/wsj_0201	2	0	13	for	IN	IN	13	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	14	the	DT	DT	18	det	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	15	luxury	NN	NN	17	compound	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	16	auto	NN	NN	18	compound	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	17	maker	NN	NN	14	pobj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	18	in	IN	IN	13	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	19	Britain	NNP	NNP	19	pobj	_	-	-	-	-(GPE)	*	*	-
+nw/wsj/02/wsj_0201	2	0	20	and	CC	CC	20	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	21	Europe	NNP	NNP	20	conj	_	-	-	-	-(LOC)	*	*	-
+nw/wsj/02/wsj_0201	2	0	22	,	,	,	19	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	23	and	CC	CC	19	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	24	in	IN	IN	19	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0201	2	0	25	Far	JJ	NNP	27	amod	_	-	-	-	-(NORP*	*	*	-
+nw/wsj/02/wsj_0201	2	0	26	Eastern	JJ	JJ	28	amod	_	-	-	-	-*)	*	*	-
+nw/wsj/02/wsj_0201	2	0	27	markets	NNS	NNS	25	pobj	_	-	-	-	-*	*)	*)	-
+nw/wsj/02/wsj_0201	2	0	28	.	.	.	10	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0202	0	0	0	BELL	NNP	NNP	3	compound	_	-	-	-	-(ORG*	(ARG0*	-
+nw/wsj/02/wsj_0202	0	0	1	INDUSTRIES	NNP	NNP	3	compound	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0202	0	0	2	Inc.	NNP	NNP	4	dep	_	-	-	-	-*)	*)	-
+nw/wsj/02/wsj_0202	0	0	3	increased	VBD	VBD	0	root	_	increase	01	1	-*	(V*)	-
+nw/wsj/02/wsj_0202	0	0	4	its	PRP$	PRP$	6	poss	_	-	-	-	-*	(ARG1*=Patient	-
+nw/wsj/02/wsj_0202	0	0	5	quarterly	NN	NN	4	dobj	_	-	-	-	-(DATE)	*)	-
+nw/wsj/02/wsj_0202	0	0	6	to	IN	IN	4	prep	_	-	-	-	-*	(ARG4*	-
+nw/wsj/02/wsj_0202	0	0	7	10	CD	CD	9	nummod	_	-	-	-	-(MONEY*	*	-
+nw/wsj/02/wsj_0202	0	0	8	cents	NNS	NNS	7	pobj	_	-	-	-	-*)	*)	-
+nw/wsj/02/wsj_0202	0	0	9	from	IN	IN	4	prep	_	-	-	-	-*	(ARG3*	-
+nw/wsj/02/wsj_0202	0	0	10	seven	CD	CD	12	nummod	_	-	-	-	-(MONEY*	*	-
+nw/wsj/02/wsj_0202	0	0	11	cents	NNS	NNS	10	pobj	_	-	-	-	-*)	*	-
+nw/wsj/02/wsj_0202	0	0	12	a	DT	DT	14	det	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0202	0	0	13	share	NN	NN	12	appos	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0202	0	0	14	.	.	.	4	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0202	3	0	0	Bell	NNP	NNP	8	dep	_	-	-	-	-(ORG)	(ARG1*)	(ARG0*=Agent	(ARG0*	-
+nw/wsj/02/wsj_0202	3	0	1	,	,	,	1	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	2	based	VBN	VBN	1	acl	_	base	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0202	3	0	3	in	IN	IN	3	prep	_	-	-	-	-*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0202	3	0	4	Los	NNP	NNP	6	compound	_	-	-	-	-(GPE*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	5	Angeles	NNP	NNP	4	pobj	_	-	-	-	-*)	*)	*	*	-
+nw/wsj/02/wsj_0202	3	0	6	,	,	,	1	punct	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0202	3	0	7	makes	VBZ	VBZ	0	root	_	make	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0202	3	0	8	and	CC	CC	8	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	9	distributes	VBZ	VBZ	8	conj	_	distribute	01	1	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0202	3	0	10	electronic	JJ	JJ	16	amod	_	-	-	-	-*	*	(ARG1*=Product	(ARG1*	-
+nw/wsj/02/wsj_0202	3	0	11	,	,	,	11	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	12	computer	NN	NN	11	conj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	13	and	CC	CC	13	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	14	building	NN	NN	13	conj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	15	products	NNS	NNS	10	dobj	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0202	3	0	16	.	.	.	8	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	0	Bell	NNP	NNP	8	dep	_	-	-	-	-(ORG)	(ARG1*)	(ARG0*	(ARG0*=Agent	-
+nw/wsj/02/wsj_0202	3	0	1	,	,	,	1	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	2	based	VBN	VBN	1	acl	_	base	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0202	3	0	3	in	IN	IN	3	prep	_	-	-	-	-*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0202	3	0	4	Los	NNP	NNP	6	compound	_	-	-	-	-(GPE*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	5	Angeles	NNP	NNP	4	pobj	_	-	-	-	-*)	*)	*	*	-
+nw/wsj/02/wsj_0202	3	0	6	,	,	,	1	punct	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0202	3	0	7	makes	VBZ	VBZ	0	root	_	make	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0202	3	0	8	and	CC	CC	8	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	9	distributes	VBZ	VBZ	8	conj	_	distribute	01	1	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0202	3	0	10	electronic	JJ	JJ	16	amod	_	-	-	-	-*	*	(ARG1*	(ARG1*=Theme	-
+nw/wsj/02/wsj_0202	3	0	11	,	,	,	11	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	12	computer	NN	NN	11	conj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	13	and	CC	CC	13	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	14	building	NN	NN	13	conj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0202	3	0	15	products	NNS	NNS	10	dobj	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0202	3	0	16	.	.	.	8	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	0	0	0	Investors	NNS	NNS	3	dep	_	-	-	-	-*	(ARG0*)	*	-
+nw/wsj/02/wsj_0203	0	0	1	are	VBP	VBP	3	aux	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	2	appealing	VBG	VBG	0	root	_	appeal	02	2	-*	(V*)	*	-
+nw/wsj/02/wsj_0203	0	0	3	to	IN	IN	3	prep	_	-	-	-	-*	(ARG1*	*	-
+nw/wsj/02/wsj_0203	0	0	4	the	DT	DT	9	det	_	-	-	-	-(ORG*	*	(ARG0*=Cause	-
+nw/wsj/02/wsj_0203	0	0	5	Securities	NNPS	NNPS	9	nmod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	6	and	CC	CC	6	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	7	Exchange	NNP	NNP	6	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	8	Commission	NNP	NNP	4	pobj	_	-	-	-	-*)	*)	*)	-
+nw/wsj/02/wsj_0203	0	0	9	not	RB	RB	12	neg	_	-	-	-	-*	(ARG2*	(ARGM-NEG*)	-
+nw/wsj/02/wsj_0203	0	0	10	to	TO	TO	12	aux	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	11	limit	VB	VB	3	xcomp	_	limit	01	-	-*	*	(V*)	-
+nw/wsj/02/wsj_0203	0	0	12	their	PRP$	PRP$	14	poss	_	-	-	-	-*	*	(ARG1*=Patient	-
+nw/wsj/02/wsj_0203	0	0	13	access	NN	NN	12	dobj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	14	to	IN	IN	14	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	15	information	NN	NN	15	pobj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	16	about	IN	IN	16	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	17	stock	NN	NN	19	compound	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	18	purchases	NNS	NNS	17	pobj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	19	and	CC	CC	19	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	20	sales	NNS	NNS	19	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	21	by	IN	IN	19	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	22	corporate	JJ	JJ	24	amod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	0	0	23	insiders	NNS	NNS	22	pobj	_	-	-	-	-*	*)	*)	-
+nw/wsj/02/wsj_0203	0	0	24	.	.	.	3	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	1	0	0	A	DT	DT	3	det	_	-	-	-	-*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	1	0	1	SEC	NNP	NNP	3	compound	_	-	-	-	-(ORG)	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	2	proposal	NN	NN	13	dep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	3	to	TO	TO	5	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	4	ease	VB	VB	3	acl	_	ease	02	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	1	0	5	reporting	NN	NN	7	compound	_	-	-	-	-*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	1	0	6	requirements	NNS	NNS	5	dobj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	7	for	IN	IN	7	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	8	some	DT	DT	11	det	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	9	company	NN	NN	11	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	10	executives	NNS	NNS	8	pobj	_	-	-	-	-*	*)	*)	*	-
+nw/wsj/02/wsj_0203	1	0	11	would	MD	MD	13	aux	_	-	-	-	-*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	1	0	12	undermine	VB	VB	34	advcl	_	undermine	01	1	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	1	0	13	the	DT	DT	15	det	_	-	-	-	-*	*	(ARG1*	*	-
+nw/wsj/02/wsj_0203	1	0	14	usefulness	NN	NN	13	dobj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	15	of	IN	IN	15	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	16	information	NN	NN	16	pobj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	17	on	IN	IN	17	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	18	insider	NN	NN	20	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	19	trades	NNS	NNS	18	pobj	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	20	as	IN	IN	15	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	21	a	DT	DT	26	det	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	22	stock	NN	NN	25	npadvmod	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	23	-	HYPH	HYPH	25	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	24	picking	VBG	VBG	26	amod	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	25	tool	NN	NN	21	pobj	_	-	-	-	-*	*	*)	*	-
+nw/wsj/02/wsj_0203	1	0	26	,	,	,	34	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	27	individual	JJ	JJ	29	amod	_	-	-	-	-*	*	*	(ARG0*=Agent	-
+nw/wsj/02/wsj_0203	1	0	28	investors	NNS	NNS	34	dep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	29	and	CC	CC	29	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	30	professional	JJ	JJ	33	amod	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	31	money	NN	NN	33	compound	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	1	0	32	managers	NNS	NNS	29	conj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0203	1	0	33	contend	VBP	VBP	0	root	_	contend	01	1	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	1	0	34	.	.	.	34	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	0	They	PRP	PRP	2	dep	_	-	-	-	-*	(ARG0*)=Agent	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	1	make	VBP	VBP	0	root	_	make	01	-	-*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	2	the	DT	DT	4	det	_	-	-	-	-*	(ARG1*=Product	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	3	argument	NN	NN	2	dobj	_	-	-	-	-*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	4	in	IN	IN	2	prep	_	-	-	-	-*	(ARGM-LOC*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	5	letters	NNS	NNS	5	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	6	to	IN	IN	6	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	7	the	DT	DT	9	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	8	agency	NN	NN	7	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	9	about	IN	IN	6	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	10	rule	NN	NN	12	compound	_	-	-	-	-*	*	(ARG1*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	2	0	11	changes	NNS	NNS	10	pobj	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	2	0	12	proposed	VBD	VBD	12	acl	_	propose	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	2	0	13	this	DT	DT	16	det	_	-	-	-	-(DATE*	*	(ARGM-TMP*	*	*	-
+nw/wsj/02/wsj_0203	2	0	14	past	JJ	JJ	16	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	15	summer	NN	NN	13	dobj	_	-	-	-	-*)	*	*)	*)	*	-
+nw/wsj/02/wsj_0203	2	0	16	that	WDT	WDT	24	dep	12:ref	-	-	-	-*	*	*	(R-ARG0*)	*	-
+nw/wsj/02/wsj_0203	2	0	17	,	,	,	24	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	18	among	IN	IN	24	prep	_	-	-	-	-*	*	*	(ARGM-LOC*	*	-
+nw/wsj/02/wsj_0203	2	0	19	other	JJ	JJ	21	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	20	things	NNS	NNS	19	pobj	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	2	0	21	,	,	,	24	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	22	would	MD	MD	24	aux	_	-	-	-	-*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	2	0	23	exempt	VB	VB	12	relcl	_	exempt	01	1	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	2	0	24	many	JJ	JJ	29	amod	_	-	-	-	-*	*	*	(ARG1*	(ARG0*	-
+nw/wsj/02/wsj_0203	2	0	25	middle	JJ	JJ	28	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	26	-	HYPH	HYPH	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	27	management	NN	NN	29	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	28	executives	NNS	NNS	24	dobj	_	-	-	-	-*	*	*	*)	*)	-
+nw/wsj/02/wsj_0203	2	0	29	from	IN	IN	24	prep	_	-	-	-	-*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	2	0	30	reporting	VBG	VBG	30	pcomp	_	report	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	2	0	31	trades	NNS	NNS	31	dobj	_	-	-	-	-*	*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	2	0	32	in	IN	IN	32	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	33	their	PRP$	PRP$	36	poss	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	34	own	JJ	JJ	36	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	35	companies	NNS	NNS	38	poss	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	36	'	POS	POS	36	case	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	37	shares	NNS	NNS	33	pobj	_	-	-	-	-*	*)	*	*)	*)	-
+nw/wsj/02/wsj_0203	2	0	38	.	.	.	2	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	0	They	PRP	PRP	2	dep	_	-	-	-	-*	(ARG0*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	1	make	VBP	VBP	0	root	_	make	01	-	-*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	2	the	DT	DT	4	det	_	-	-	-	-*	(ARG1*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	3	argument	NN	NN	2	dobj	_	-	-	-	-*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	4	in	IN	IN	2	prep	_	-	-	-	-*	(ARGM-LOC*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	5	letters	NNS	NNS	5	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	6	to	IN	IN	6	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	7	the	DT	DT	9	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	8	agency	NN	NN	7	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	9	about	IN	IN	6	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	10	rule	NN	NN	12	compound	_	-	-	-	-*	*	(ARG1*=Topic	(ARG0*	*	-
+nw/wsj/02/wsj_0203	2	0	11	changes	NNS	NNS	10	pobj	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	2	0	12	proposed	VBD	VBD	12	acl	_	propose	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	2	0	13	this	DT	DT	16	det	_	-	-	-	-(DATE*	*	(ARGM-TMP*	*	*	-
+nw/wsj/02/wsj_0203	2	0	14	past	JJ	JJ	16	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	15	summer	NN	NN	13	dobj	_	-	-	-	-*)	*	*)	*)	*	-
+nw/wsj/02/wsj_0203	2	0	16	that	WDT	WDT	24	dep	12:ref	-	-	-	-*	*	*	(R-ARG0*)	*	-
+nw/wsj/02/wsj_0203	2	0	17	,	,	,	24	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	18	among	IN	IN	24	prep	_	-	-	-	-*	*	*	(ARGM-LOC*	*	-
+nw/wsj/02/wsj_0203	2	0	19	other	JJ	JJ	21	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	20	things	NNS	NNS	19	pobj	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	2	0	21	,	,	,	24	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	22	would	MD	MD	24	aux	_	-	-	-	-*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	2	0	23	exempt	VB	VB	12	relcl	_	exempt	01	1	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	2	0	24	many	JJ	JJ	29	amod	_	-	-	-	-*	*	*	(ARG1*	(ARG0*	-
+nw/wsj/02/wsj_0203	2	0	25	middle	JJ	JJ	28	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	26	-	HYPH	HYPH	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	27	management	NN	NN	29	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	28	executives	NNS	NNS	24	dobj	_	-	-	-	-*	*	*	*)	*)	-
+nw/wsj/02/wsj_0203	2	0	29	from	IN	IN	24	prep	_	-	-	-	-*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	2	0	30	reporting	VBG	VBG	30	pcomp	_	report	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	2	0	31	trades	NNS	NNS	31	dobj	_	-	-	-	-*	*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	2	0	32	in	IN	IN	32	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	33	their	PRP$	PRP$	36	poss	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	34	own	JJ	JJ	36	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	35	companies	NNS	NNS	38	poss	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	36	'	POS	POS	36	case	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	37	shares	NNS	NNS	33	pobj	_	-	-	-	-*	*)	*	*)	*)	-
+nw/wsj/02/wsj_0203	2	0	38	.	.	.	2	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	0	They	PRP	PRP	2	dep	_	-	-	-	-*	(ARG0*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	1	make	VBP	VBP	0	root	_	make	01	-	-*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	2	the	DT	DT	4	det	_	-	-	-	-*	(ARG1*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	3	argument	NN	NN	2	dobj	_	-	-	-	-*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	4	in	IN	IN	2	prep	_	-	-	-	-*	(ARGM-LOC*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	5	letters	NNS	NNS	5	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	6	to	IN	IN	6	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	7	the	DT	DT	9	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	8	agency	NN	NN	7	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	9	about	IN	IN	6	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	10	rule	NN	NN	12	compound	_	-	-	-	-*	*	(ARG1*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	2	0	11	changes	NNS	NNS	10	pobj	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	2	0	12	proposed	VBD	VBD	12	acl	_	propose	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	2	0	13	this	DT	DT	16	det	_	-	-	-	-(DATE*	*	(ARGM-TMP*	*	*	-
+nw/wsj/02/wsj_0203	2	0	14	past	JJ	JJ	16	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	15	summer	NN	NN	13	dobj	_	-	-	-	-*)	*	*)	*)	*	-
+nw/wsj/02/wsj_0203	2	0	16	that	WDT	WDT	24	dep	12:ref	-	-	-	-*	*	*	(R-ARG0*)	*	-
+nw/wsj/02/wsj_0203	2	0	17	,	,	,	24	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	18	among	IN	IN	24	prep	_	-	-	-	-*	*	*	(ARGM-LOC*	*	-
+nw/wsj/02/wsj_0203	2	0	19	other	JJ	JJ	21	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	20	things	NNS	NNS	19	pobj	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	2	0	21	,	,	,	24	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	22	would	MD	MD	24	aux	_	-	-	-	-*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	2	0	23	exempt	VB	VB	12	relcl	_	exempt	01	1	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	2	0	24	many	JJ	JJ	29	amod	_	-	-	-	-*	*	*	(ARG1*	(ARG0*	-
+nw/wsj/02/wsj_0203	2	0	25	middle	JJ	JJ	28	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	26	-	HYPH	HYPH	28	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	27	management	NN	NN	29	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	28	executives	NNS	NNS	24	dobj	_	-	-	-	-*	*	*	*)	*)	-
+nw/wsj/02/wsj_0203	2	0	29	from	IN	IN	24	prep	_	-	-	-	-*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	2	0	30	reporting	VBG	VBG	30	pcomp	_	report	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	2	0	31	trades	NNS	NNS	31	dobj	_	-	-	-	-*	*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	2	0	32	in	IN	IN	32	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	33	their	PRP$	PRP$	36	poss	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	34	own	JJ	JJ	36	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	35	companies	NNS	NNS	38	poss	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	36	'	POS	POS	36	case	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	2	0	37	shares	NNS	NNS	33	pobj	_	-	-	-	-*	*)	*	*)	*)	-
+nw/wsj/02/wsj_0203	2	0	38	.	.	.	2	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	0	The	DT	DT	3	det	_	-	-	-	-*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	3	0	1	proposed	VBN	VBN	3	amod	_	propose	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	3	0	2	changes	NNS	NNS	6	dep	_	-	-	-	-*	(ARG1*)=Topic	*)	*	-
+nw/wsj/02/wsj_0203	3	0	3	also	RB	RB	6	advmod	_	-	-	-	-*	*	(ARGM-DIS*)	*	-
+nw/wsj/02/wsj_0203	3	0	4	would	MD	MD	6	aux	_	-	-	-	-*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	3	0	5	allow	VB	VB	0	root	_	allow	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	3	0	6	executives	NNS	NNS	9	dep	_	-	-	-	-*	*	(ARG1*	(ARG0*)	-
+nw/wsj/02/wsj_0203	3	0	7	to	TO	TO	9	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	8	report	VB	VB	6	xcomp	_	report	01	-	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	3	0	9	exercises	NNS	NNS	9	dobj	_	-	-	-	-*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	3	0	10	of	IN	IN	10	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	11	options	NNS	NNS	11	pobj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0203	3	0	12	later	RB	RB	9	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	3	0	13	and	CC	CC	13	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	14	less	RBR	RBR	16	advmod	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	15	often	RB	RB	13	conj	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0203	3	0	16	.	.	.	6	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	0	The	DT	DT	3	det	_	-	-	-	-*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	3	0	1	proposed	VBN	VBN	3	amod	_	propose	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	3	0	2	changes	NNS	NNS	6	dep	_	-	-	-	-*	(ARG1*)	*)	*	-
+nw/wsj/02/wsj_0203	3	0	3	also	RB	RB	6	advmod	_	-	-	-	-*	*	(ARGM-DIS*)	*	-
+nw/wsj/02/wsj_0203	3	0	4	would	MD	MD	6	aux	_	-	-	-	-*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	3	0	5	allow	VB	VB	0	root	_	allow	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	3	0	6	executives	NNS	NNS	9	dep	_	-	-	-	-*	*	(ARG1*	(ARG0*)	-
+nw/wsj/02/wsj_0203	3	0	7	to	TO	TO	9	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	8	report	VB	VB	6	xcomp	_	report	01	-	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	3	0	9	exercises	NNS	NNS	9	dobj	_	-	-	-	-*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	3	0	10	of	IN	IN	10	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	11	options	NNS	NNS	11	pobj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0203	3	0	12	later	RB	RB	9	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	3	0	13	and	CC	CC	13	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	14	less	RBR	RBR	16	advmod	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	15	often	RB	RB	13	conj	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0203	3	0	16	.	.	.	6	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	0	The	DT	DT	3	det	_	-	-	-	-*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	3	0	1	proposed	VBN	VBN	3	amod	_	propose	01	-	-*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	3	0	2	changes	NNS	NNS	6	dep	_	-	-	-	-*	(ARG1*)	*)	*	-
+nw/wsj/02/wsj_0203	3	0	3	also	RB	RB	6	advmod	_	-	-	-	-*	*	(ARGM-DIS*)	*	-
+nw/wsj/02/wsj_0203	3	0	4	would	MD	MD	6	aux	_	-	-	-	-*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	3	0	5	allow	VB	VB	0	root	_	allow	01	-	-*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	3	0	6	executives	NNS	NNS	9	dep	_	-	-	-	-*	*	(ARG1*	(ARG0*)	-
+nw/wsj/02/wsj_0203	3	0	7	to	TO	TO	9	aux	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	8	report	VB	VB	6	xcomp	_	report	01	-	-*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	3	0	9	exercises	NNS	NNS	9	dobj	_	-	-	-	-*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	3	0	10	of	IN	IN	10	prep	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	11	options	NNS	NNS	11	pobj	_	-	-	-	-*	*	*	*)	-
+nw/wsj/02/wsj_0203	3	0	12	later	RB	RB	9	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	3	0	13	and	CC	CC	13	cc	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	14	less	RBR	RBR	16	advmod	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	3	0	15	often	RB	RB	13	conj	_	-	-	-	-*	*	*)	*)	-
+nw/wsj/02/wsj_0203	3	0	16	.	.	.	6	punct	_	-	-	-	-*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	0	Many	JJ	JJ	5	dep	_	-	-	-	-*	(ARG0*=Agent	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	1	of	IN	IN	1	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	2	the	DT	DT	4	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	3	letters	NNS	NNS	2	pobj	_	-	-	-	-*	*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	4	maintain	VBP	VBP	0	root	_	maintain	01	-	-*	(V*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	5	that	IN	IN	12	mark	_	-	-	-	-*	(ARG1*=Theme	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	6	investor	NN	NN	8	compound	_	-	-	-	-*	*	(ARG1*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	7	confidence	NN	NN	12	dep	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	8	has	VBZ	VBZ	12	aux	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	9	been	VBN	VBN	12	auxpass	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	10	so	RB	RB	12	advmod	_	-	-	-	-*	*	(ARGM-ADV*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	11	shaken	VBN	VBN	5	ccomp	_	shake	01	-	-*	*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	12	by	IN	IN	12	prep	_	-	-	-	-*	*	(ARG0*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	13	the	DT	DT	18	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	14	1987	CD	CD	18	nummod	_	-	-	-	-(DATE)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	15	stock	NN	NN	17	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	16	market	NN	NN	18	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	17	crash	NN	NN	13	pobj	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	18	--	:	:	12	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	19	and	CC	CC	12	cc	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	4	0	21	markets	NNS	NNS	25	dep	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	22	already	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	23	so	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-EXT*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	24	stacked	VBN	VBN	12	conj	_	stack	01	-	-*	*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	25	against	IN	IN	25	prep	_	-	-	-	-*	*	*	(ARG2*	*	*	-
+nw/wsj/02/wsj_0203	4	0	26	the	DT	DT	29	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	27	little	JJ	JJ	29	amod	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	28	guy	NN	NN	26	pobj	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	29	--	:	:	25	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	30	that	IN	IN	42	mark	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	31	any	DT	DT	33	det	_	-	-	-	-*	*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	4	0	32	decrease	NN	NN	42	dep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	33	in	IN	IN	33	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	34	information	NN	NN	34	pobj	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	35	on	IN	IN	35	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	36	insider	NN	NN	39	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	37	-	HYPH	HYPH	39	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	38	trading	NN	NN	40	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	39	patterns	NNS	NNS	36	pobj	_	-	-	-	-*	*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	4	0	40	might	MD	MD	42	aux	_	-	-	-	-*	*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	4	0	41	prompt	VB	VB	25	conj	_	prompt	02	1	-*	*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	4	0	42	individuals	NNS	NNS	42	dobj	_	-	-	-	-*	*	*	*	(ARG1*)	(ARG1*)	-
+nw/wsj/02/wsj_0203	4	0	43	to	TO	TO	45	aux	_	-	-	-	-*	*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	4	0	44	get	VB	VB	42	xcomp	_	get	05	-	-*	*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	4	0	45	out	RB	IN	45	advmod	_	-	-	-	-*	*	*	*	*	(ARG2*	-
+nw/wsj/02/wsj_0203	4	0	46	of	IN	IN	46	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	47	stocks	NNS	NNS	47	pobj	_	-	-	-	-*	*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	4	0	48	altogether	RB	RB	45	advmod	_	-	-	-	-*	*)	*	*	*)	(ARGM-ADV*)	-
+nw/wsj/02/wsj_0203	4	0	49	.	.	.	5	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	0	Many	JJ	JJ	5	dep	_	-	-	-	-*	(ARG0*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	1	of	IN	IN	1	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	2	the	DT	DT	4	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	3	letters	NNS	NNS	2	pobj	_	-	-	-	-*	*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	4	maintain	VBP	VBP	0	root	_	maintain	01	-	-*	(V*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	5	that	IN	IN	12	mark	_	-	-	-	-*	(ARG1*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	6	investor	NN	NN	8	compound	_	-	-	-	-*	*	(ARG1*=Experiencer	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	7	confidence	NN	NN	12	dep	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	8	has	VBZ	VBZ	12	aux	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	9	been	VBN	VBN	12	auxpass	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	10	so	RB	RB	12	advmod	_	-	-	-	-*	*	(ARGM-ADV*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	11	shaken	VBN	VBN	5	ccomp	_	shake	01	-	-*	*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	12	by	IN	IN	12	prep	_	-	-	-	-*	*	(ARG0*=Stimulus	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	13	the	DT	DT	18	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	14	1987	CD	CD	18	nummod	_	-	-	-	-(DATE)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	15	stock	NN	NN	17	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	16	market	NN	NN	18	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	17	crash	NN	NN	13	pobj	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	18	--	:	:	12	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	19	and	CC	CC	12	cc	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	4	0	21	markets	NNS	NNS	25	dep	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	22	already	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	23	so	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-EXT*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	24	stacked	VBN	VBN	12	conj	_	stack	01	-	-*	*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	25	against	IN	IN	25	prep	_	-	-	-	-*	*	*	(ARG2*	*	*	-
+nw/wsj/02/wsj_0203	4	0	26	the	DT	DT	29	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	27	little	JJ	JJ	29	amod	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	28	guy	NN	NN	26	pobj	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	29	--	:	:	25	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	30	that	IN	IN	42	mark	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	31	any	DT	DT	33	det	_	-	-	-	-*	*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	4	0	32	decrease	NN	NN	42	dep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	33	in	IN	IN	33	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	34	information	NN	NN	34	pobj	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	35	on	IN	IN	35	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	36	insider	NN	NN	39	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	37	-	HYPH	HYPH	39	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	38	trading	NN	NN	40	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	39	patterns	NNS	NNS	36	pobj	_	-	-	-	-*	*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	4	0	40	might	MD	MD	42	aux	_	-	-	-	-*	*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	4	0	41	prompt	VB	VB	25	conj	_	prompt	02	1	-*	*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	4	0	42	individuals	NNS	NNS	42	dobj	_	-	-	-	-*	*	*	*	(ARG1*)	(ARG1*)	-
+nw/wsj/02/wsj_0203	4	0	43	to	TO	TO	45	aux	_	-	-	-	-*	*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	4	0	44	get	VB	VB	42	xcomp	_	get	05	-	-*	*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	4	0	45	out	RB	IN	45	advmod	_	-	-	-	-*	*	*	*	*	(ARG2*	-
+nw/wsj/02/wsj_0203	4	0	46	of	IN	IN	46	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	47	stocks	NNS	NNS	47	pobj	_	-	-	-	-*	*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	4	0	48	altogether	RB	RB	45	advmod	_	-	-	-	-*	*)	*	*	*)	(ARGM-ADV*)	-
+nw/wsj/02/wsj_0203	4	0	49	.	.	.	5	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	0	Many	JJ	JJ	5	dep	_	-	-	-	-*	(ARG0*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	1	of	IN	IN	1	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	2	the	DT	DT	4	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	3	letters	NNS	NNS	2	pobj	_	-	-	-	-*	*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	4	maintain	VBP	VBP	0	root	_	maintain	01	-	-*	(V*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	5	that	IN	IN	12	mark	_	-	-	-	-*	(ARG1*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	6	investor	NN	NN	8	compound	_	-	-	-	-*	*	(ARG1*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	7	confidence	NN	NN	12	dep	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	8	has	VBZ	VBZ	12	aux	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	9	been	VBN	VBN	12	auxpass	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	10	so	RB	RB	12	advmod	_	-	-	-	-*	*	(ARGM-ADV*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	11	shaken	VBN	VBN	5	ccomp	_	shake	01	-	-*	*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	12	by	IN	IN	12	prep	_	-	-	-	-*	*	(ARG0*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	13	the	DT	DT	18	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	14	1987	CD	CD	18	nummod	_	-	-	-	-(DATE)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	15	stock	NN	NN	17	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	16	market	NN	NN	18	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	17	crash	NN	NN	13	pobj	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	18	--	:	:	12	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	19	and	CC	CC	12	cc	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	*	(ARG1*=Theme	*	*	-
+nw/wsj/02/wsj_0203	4	0	21	markets	NNS	NNS	25	dep	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	22	already	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	23	so	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-EXT*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	24	stacked	VBN	VBN	12	conj	_	stack	01	-	-*	*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	25	against	IN	IN	25	prep	_	-	-	-	-*	*	*	(ARG2*=Destination	*	*	-
+nw/wsj/02/wsj_0203	4	0	26	the	DT	DT	29	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	27	little	JJ	JJ	29	amod	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	28	guy	NN	NN	26	pobj	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	29	--	:	:	25	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	30	that	IN	IN	42	mark	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	31	any	DT	DT	33	det	_	-	-	-	-*	*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	4	0	32	decrease	NN	NN	42	dep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	33	in	IN	IN	33	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	34	information	NN	NN	34	pobj	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	35	on	IN	IN	35	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	36	insider	NN	NN	39	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	37	-	HYPH	HYPH	39	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	38	trading	NN	NN	40	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	39	patterns	NNS	NNS	36	pobj	_	-	-	-	-*	*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	4	0	40	might	MD	MD	42	aux	_	-	-	-	-*	*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	4	0	41	prompt	VB	VB	25	conj	_	prompt	02	1	-*	*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	4	0	42	individuals	NNS	NNS	42	dobj	_	-	-	-	-*	*	*	*	(ARG1*)	(ARG1*)	-
+nw/wsj/02/wsj_0203	4	0	43	to	TO	TO	45	aux	_	-	-	-	-*	*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	4	0	44	get	VB	VB	42	xcomp	_	get	05	-	-*	*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	4	0	45	out	RB	IN	45	advmod	_	-	-	-	-*	*	*	*	*	(ARG2*	-
+nw/wsj/02/wsj_0203	4	0	46	of	IN	IN	46	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	47	stocks	NNS	NNS	47	pobj	_	-	-	-	-*	*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	4	0	48	altogether	RB	RB	45	advmod	_	-	-	-	-*	*)	*	*	*)	(ARGM-ADV*)	-
+nw/wsj/02/wsj_0203	4	0	49	.	.	.	5	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	0	Many	JJ	JJ	5	dep	_	-	-	-	-*	(ARG0*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	1	of	IN	IN	1	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	2	the	DT	DT	4	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	3	letters	NNS	NNS	2	pobj	_	-	-	-	-*	*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	4	maintain	VBP	VBP	0	root	_	maintain	01	-	-*	(V*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	5	that	IN	IN	12	mark	_	-	-	-	-*	(ARG1*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	6	investor	NN	NN	8	compound	_	-	-	-	-*	*	(ARG1*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	7	confidence	NN	NN	12	dep	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	8	has	VBZ	VBZ	12	aux	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	9	been	VBN	VBN	12	auxpass	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	10	so	RB	RB	12	advmod	_	-	-	-	-*	*	(ARGM-ADV*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	11	shaken	VBN	VBN	5	ccomp	_	shake	01	-	-*	*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	12	by	IN	IN	12	prep	_	-	-	-	-*	*	(ARG0*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	13	the	DT	DT	18	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	14	1987	CD	CD	18	nummod	_	-	-	-	-(DATE)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	15	stock	NN	NN	17	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	16	market	NN	NN	18	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	17	crash	NN	NN	13	pobj	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	18	--	:	:	12	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	19	and	CC	CC	12	cc	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	4	0	21	markets	NNS	NNS	25	dep	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	22	already	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	23	so	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-EXT*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	24	stacked	VBN	VBN	12	conj	_	stack	01	-	-*	*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	25	against	IN	IN	25	prep	_	-	-	-	-*	*	*	(ARG2*	*	*	-
+nw/wsj/02/wsj_0203	4	0	26	the	DT	DT	29	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	27	little	JJ	JJ	29	amod	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	28	guy	NN	NN	26	pobj	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	29	--	:	:	25	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	30	that	IN	IN	42	mark	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	31	any	DT	DT	33	det	_	-	-	-	-*	*	*	*	(ARG0*=Agent	*	-
+nw/wsj/02/wsj_0203	4	0	32	decrease	NN	NN	42	dep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	33	in	IN	IN	33	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	34	information	NN	NN	34	pobj	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	35	on	IN	IN	35	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	36	insider	NN	NN	39	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	37	-	HYPH	HYPH	39	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	38	trading	NN	NN	40	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	39	patterns	NNS	NNS	36	pobj	_	-	-	-	-*	*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	4	0	40	might	MD	MD	42	aux	_	-	-	-	-*	*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	4	0	41	prompt	VB	VB	25	conj	_	prompt	02	1	-*	*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	4	0	42	individuals	NNS	NNS	42	dobj	_	-	-	-	-*	*	*	*	(ARG1*)=Patient	(ARG1*)	-
+nw/wsj/02/wsj_0203	4	0	43	to	TO	TO	45	aux	_	-	-	-	-*	*	*	*	(ARG2*=Result	*	-
+nw/wsj/02/wsj_0203	4	0	44	get	VB	VB	42	xcomp	_	get	05	-	-*	*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	4	0	45	out	RB	IN	45	advmod	_	-	-	-	-*	*	*	*	*	(ARG2*	-
+nw/wsj/02/wsj_0203	4	0	46	of	IN	IN	46	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	47	stocks	NNS	NNS	47	pobj	_	-	-	-	-*	*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	4	0	48	altogether	RB	RB	45	advmod	_	-	-	-	-*	*)	*	*	*)	(ARGM-ADV*)	-
+nw/wsj/02/wsj_0203	4	0	49	.	.	.	5	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	0	Many	JJ	JJ	5	dep	_	-	-	-	-*	(ARG0*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	1	of	IN	IN	1	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	2	the	DT	DT	4	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	3	letters	NNS	NNS	2	pobj	_	-	-	-	-*	*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	4	maintain	VBP	VBP	0	root	_	maintain	01	-	-*	(V*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	5	that	IN	IN	12	mark	_	-	-	-	-*	(ARG1*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	6	investor	NN	NN	8	compound	_	-	-	-	-*	*	(ARG1*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	7	confidence	NN	NN	12	dep	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	8	has	VBZ	VBZ	12	aux	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	9	been	VBN	VBN	12	auxpass	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	10	so	RB	RB	12	advmod	_	-	-	-	-*	*	(ARGM-ADV*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	11	shaken	VBN	VBN	5	ccomp	_	shake	01	-	-*	*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	12	by	IN	IN	12	prep	_	-	-	-	-*	*	(ARG0*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	13	the	DT	DT	18	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	14	1987	CD	CD	18	nummod	_	-	-	-	-(DATE)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	15	stock	NN	NN	17	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	16	market	NN	NN	18	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	17	crash	NN	NN	13	pobj	_	-	-	-	-*	*	*)	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	18	--	:	:	12	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	19	and	CC	CC	12	cc	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	20	the	DT	DT	22	det	_	-	-	-	-*	*	*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	4	0	21	markets	NNS	NNS	25	dep	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	22	already	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-TMP*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	23	so	RB	RB	25	advmod	_	-	-	-	-*	*	*	(ARGM-EXT*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	24	stacked	VBN	VBN	12	conj	_	stack	01	-	-*	*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	25	against	IN	IN	25	prep	_	-	-	-	-*	*	*	(ARG2*	*	*	-
+nw/wsj/02/wsj_0203	4	0	26	the	DT	DT	29	det	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	27	little	JJ	JJ	29	amod	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	28	guy	NN	NN	26	pobj	_	-	-	-	-*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	4	0	29	--	:	:	25	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	30	that	IN	IN	42	mark	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	31	any	DT	DT	33	det	_	-	-	-	-*	*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	4	0	32	decrease	NN	NN	42	dep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	33	in	IN	IN	33	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	34	information	NN	NN	34	pobj	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	35	on	IN	IN	35	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	36	insider	NN	NN	39	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	37	-	HYPH	HYPH	39	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	38	trading	NN	NN	40	compound	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	39	patterns	NNS	NNS	36	pobj	_	-	-	-	-*	*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	4	0	40	might	MD	MD	42	aux	_	-	-	-	-*	*	*	*	(ARGM-MOD*)	*	-
+nw/wsj/02/wsj_0203	4	0	41	prompt	VB	VB	25	conj	_	prompt	02	1	-*	*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	4	0	42	individuals	NNS	NNS	42	dobj	_	-	-	-	-*	*	*	*	(ARG1*)	(ARG1*)=Patient	-
+nw/wsj/02/wsj_0203	4	0	43	to	TO	TO	45	aux	_	-	-	-	-*	*	*	*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	4	0	44	get	VB	VB	42	xcomp	_	get	05	-	-*	*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	4	0	45	out	RB	IN	45	advmod	_	-	-	-	-*	*	*	*	*	(ARG2*=Goal	-
+nw/wsj/02/wsj_0203	4	0	46	of	IN	IN	46	prep	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	4	0	47	stocks	NNS	NNS	47	pobj	_	-	-	-	-*	*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	4	0	48	altogether	RB	RB	45	advmod	_	-	-	-	-*	*)	*	*	*)	(ARGM-ADV*)	-
+nw/wsj/02/wsj_0203	4	0	49	.	.	.	5	punct	_	-	-	-	-*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	0	``	``	``	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	1	The	DT	DT	3	det	_	-	-	-	-*	(ARG0*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	5	0	2	SEC	NNP	NNP	6	dep	_	-	-	-	-(ORG)	*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	3	has	VBZ	VBZ	6	aux	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	4	historically	RB	RB	6	advmod	_	-	-	-	-*	(ARGM-TMP*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	5	paid	VBN	VBN	18	xcomp	_	pay	01	-	-*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	6	obeisance	NN	NN	6	dobj	_	-	-	-	-*	(ARG1*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	7	to	IN	IN	6	prep	_	-	-	-	-*	(ARG2*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	8	the	DT	DT	10	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	9	ideal	NN	NN	8	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	10	of	IN	IN	10	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	11	a	DT	DT	15	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	12	level	JJ	NN	15	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	13	playing	NN	NN	15	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	14	field	NN	NN	11	pobj	_	-	-	-	-*	*)	*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	15	,	,	,	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	16	''	''	''	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	17	wrote	VBD	VBD	0	root	_	write	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	18	Clyde	NNP	NNP	21	compound	_	-	-	-	-(PERSON*	*	(ARG0*	*	*	-
+nw/wsj/02/wsj_0203	5	0	19	S.	NNP	NNP	21	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	20	McGregor	NNP	NNP	18	dobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	21	of	IN	IN	21	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	22	Winnetka	NNP	NNP	22	pobj	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	23	,	,	,	23	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	24	Ill.	NNP	NNP	23	appos	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	25	,	,	,	23	punct	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	26	in	IN	IN	18	prep	_	-	-	-	-*	*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0203	5	0	27	one	CD	CD	27	pobj	_	-	-	-	-(CARDINAL)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	28	of	IN	IN	28	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	29	the	DT	DT	32	det	_	-	-	-	-*	*	*	(ARG1*	*	-
+nw/wsj/02/wsj_0203	5	0	30	92	CD	CD	32	nummod	_	-	-	-	-(CARDINAL)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	31	letters	NNS	NNS	29	pobj	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	5	0	32	the	DT	DT	34	det	_	-	-	-	-*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	5	0	33	agency	NN	NN	36	dep	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	5	0	34	has	VBZ	VBZ	36	aux	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	35	received	VBN	VBN	32	advcl	_	receive	01	-	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	5	0	36	since	IN	IN	41	mark	_	-	-	-	-*	*	*	(ARGM-TMP*	*	-
+nw/wsj/02/wsj_0203	5	0	37	the	DT	DT	39	det	_	-	-	-	-*	*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	5	0	38	changes	NNS	NNS	41	dep	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	5	0	39	were	VBD	VBD	41	auxpass	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	40	proposed	VBN	VBN	36	advcl	_	propose	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	5	0	41	Aug.	NNP	NNP	41	dobj	_	-	-	-	-(DATE*	*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	5	0	42	17	CD	CD	42	nummod	_	-	-	-	-*)	*	*)	*)	*)	-
+nw/wsj/02/wsj_0203	5	0	43	.	.	.	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	0	``	``	``	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	1	The	DT	DT	3	det	_	-	-	-	-*	(ARG0*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	5	0	2	SEC	NNP	NNP	6	dep	_	-	-	-	-(ORG)	*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	3	has	VBZ	VBZ	6	aux	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	4	historically	RB	RB	6	advmod	_	-	-	-	-*	(ARGM-TMP*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	5	paid	VBN	VBN	18	xcomp	_	pay	01	-	-*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	6	obeisance	NN	NN	6	dobj	_	-	-	-	-*	(ARG1*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	7	to	IN	IN	6	prep	_	-	-	-	-*	(ARG2*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	8	the	DT	DT	10	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	9	ideal	NN	NN	8	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	10	of	IN	IN	10	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	11	a	DT	DT	15	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	12	level	JJ	NN	15	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	13	playing	NN	NN	15	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	14	field	NN	NN	11	pobj	_	-	-	-	-*	*)	*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	15	,	,	,	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	16	''	''	''	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	17	wrote	VBD	VBD	0	root	_	write	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	18	Clyde	NNP	NNP	21	compound	_	-	-	-	-(PERSON*	*	(ARG0*	*	*	-
+nw/wsj/02/wsj_0203	5	0	19	S.	NNP	NNP	21	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	20	McGregor	NNP	NNP	18	dobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	21	of	IN	IN	21	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	22	Winnetka	NNP	NNP	22	pobj	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	23	,	,	,	23	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	24	Ill.	NNP	NNP	23	appos	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	25	,	,	,	23	punct	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	26	in	IN	IN	18	prep	_	-	-	-	-*	*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0203	5	0	27	one	CD	CD	27	pobj	_	-	-	-	-(CARDINAL)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	28	of	IN	IN	28	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	29	the	DT	DT	32	det	_	-	-	-	-*	*	*	(ARG1*=Theme	*	-
+nw/wsj/02/wsj_0203	5	0	30	92	CD	CD	32	nummod	_	-	-	-	-(CARDINAL)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	31	letters	NNS	NNS	29	pobj	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	5	0	32	the	DT	DT	34	det	_	-	-	-	-*	*	*	(ARG0*=Agent	*	-
+nw/wsj/02/wsj_0203	5	0	33	agency	NN	NN	36	dep	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	5	0	34	has	VBZ	VBZ	36	aux	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	35	received	VBN	VBN	32	advcl	_	receive	01	-	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	5	0	36	since	IN	IN	41	mark	_	-	-	-	-*	*	*	(ARGM-TMP*	*	-
+nw/wsj/02/wsj_0203	5	0	37	the	DT	DT	39	det	_	-	-	-	-*	*	*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	5	0	38	changes	NNS	NNS	41	dep	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	5	0	39	were	VBD	VBD	41	auxpass	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	40	proposed	VBN	VBN	36	advcl	_	propose	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	5	0	41	Aug.	NNP	NNP	41	dobj	_	-	-	-	-(DATE*	*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	5	0	42	17	CD	CD	42	nummod	_	-	-	-	-*)	*	*)	*)	*)	-
+nw/wsj/02/wsj_0203	5	0	43	.	.	.	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	0	``	``	``	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	1	The	DT	DT	3	det	_	-	-	-	-*	(ARG0*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	5	0	2	SEC	NNP	NNP	6	dep	_	-	-	-	-(ORG)	*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	3	has	VBZ	VBZ	6	aux	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	4	historically	RB	RB	6	advmod	_	-	-	-	-*	(ARGM-TMP*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	5	paid	VBN	VBN	18	xcomp	_	pay	01	-	-*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	6	obeisance	NN	NN	6	dobj	_	-	-	-	-*	(ARG1*)	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	7	to	IN	IN	6	prep	_	-	-	-	-*	(ARG2*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	8	the	DT	DT	10	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	9	ideal	NN	NN	8	pobj	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	10	of	IN	IN	10	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	11	a	DT	DT	15	det	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	12	level	JJ	NN	15	amod	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	13	playing	NN	NN	15	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	14	field	NN	NN	11	pobj	_	-	-	-	-*	*)	*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	15	,	,	,	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	16	''	''	''	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	17	wrote	VBD	VBD	0	root	_	write	01	-	-*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	18	Clyde	NNP	NNP	21	compound	_	-	-	-	-(PERSON*	*	(ARG0*	*	*	-
+nw/wsj/02/wsj_0203	5	0	19	S.	NNP	NNP	21	compound	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	20	McGregor	NNP	NNP	18	dobj	_	-	-	-	-*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	21	of	IN	IN	21	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	22	Winnetka	NNP	NNP	22	pobj	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	23	,	,	,	23	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	24	Ill.	NNP	NNP	23	appos	_	-	-	-	-(GPE)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	25	,	,	,	23	punct	_	-	-	-	-*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	5	0	26	in	IN	IN	18	prep	_	-	-	-	-*	*	(ARGM-LOC*	*	*	-
+nw/wsj/02/wsj_0203	5	0	27	one	CD	CD	27	pobj	_	-	-	-	-(CARDINAL)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	28	of	IN	IN	28	prep	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	29	the	DT	DT	32	det	_	-	-	-	-*	*	*	(ARG1*	*	-
+nw/wsj/02/wsj_0203	5	0	30	92	CD	CD	32	nummod	_	-	-	-	-(CARDINAL)	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	31	letters	NNS	NNS	29	pobj	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	5	0	32	the	DT	DT	34	det	_	-	-	-	-*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	5	0	33	agency	NN	NN	36	dep	_	-	-	-	-*	*	*	*)	*	-
+nw/wsj/02/wsj_0203	5	0	34	has	VBZ	VBZ	36	aux	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	35	received	VBN	VBN	32	advcl	_	receive	01	-	-*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	5	0	36	since	IN	IN	41	mark	_	-	-	-	-*	*	*	(ARGM-TMP*	*	-
+nw/wsj/02/wsj_0203	5	0	37	the	DT	DT	39	det	_	-	-	-	-*	*	*	*	(ARG1*=Topic	-
+nw/wsj/02/wsj_0203	5	0	38	changes	NNS	NNS	41	dep	_	-	-	-	-*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	5	0	39	were	VBD	VBD	41	auxpass	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	5	0	40	proposed	VBN	VBN	36	advcl	_	propose	01	-	-*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	5	0	41	Aug.	NNP	NNP	41	dobj	_	-	-	-	-(DATE*	*	*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	5	0	42	17	CD	CD	42	nummod	_	-	-	-	-*)	*	*)	*)	*)	-
+nw/wsj/02/wsj_0203	5	0	43	.	.	.	18	punct	_	-	-	-	-*	*	*	*	*	-
+nw/wsj/02/wsj_0203	6	0	0	``	``	``	8	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	6	0	1	Apparently	RB	RB	8	advmod	_	-	-	-	-*	(ARGM-DIS*)	-
+nw/wsj/02/wsj_0203	6	0	2	the	DT	DT	4	det	_	-	-	-	-*	(ARG0*	-
+nw/wsj/02/wsj_0203	6	0	3	commission	NN	NN	8	dep	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0203	6	0	4	did	VBD	VBD	8	aux	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	6	0	5	not	RB	RB	8	neg	_	-	-	-	-*	(ARGM-NEG*)	-
+nw/wsj/02/wsj_0203	6	0	6	really	RB	RB	8	advmod	_	-	-	-	-*	(ARGM-DIS*)	-
+nw/wsj/02/wsj_0203	6	0	7	believe	VB	VB	0	root	_	believe	01	-	-*	(V*)	-
+nw/wsj/02/wsj_0203	6	0	8	in	IN	IN	8	prep	_	-	-	-	-*	(ARG1*	-
+nw/wsj/02/wsj_0203	6	0	9	this	DT	DT	11	det	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	6	0	10	ideal	NN	NN	9	pobj	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0203	6	0	11	.	.	.	8	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	6	0	12	''	''	''	8	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	7	0	0	Currently	RB	RB	5	advmod	_	-	-	-	-*	(ARGM-TMP*)	*	-
+nw/wsj/02/wsj_0203	7	0	1	,	,	,	5	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	2	the	DT	DT	4	det	_	-	-	-	-*	(ARG0*=Agent	*	-
+nw/wsj/02/wsj_0203	7	0	3	rules	NNS	NNS	5	dep	_	-	-	-	-*	*)	*	-
+nw/wsj/02/wsj_0203	7	0	4	force	VBP	VBP	0	root	_	force	01	-	-*	(V*)	*	-
+nw/wsj/02/wsj_0203	7	0	5	executives	NNS	NNS	5	dobj	_	-	-	-	-*	(ARG1*=Patient	(ARG0*	-
+nw/wsj/02/wsj_0203	7	0	6	,	,	,	6	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	7	directors	NNS	NNS	6	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	8	and	CC	CC	8	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	9	other	JJ	JJ	12	amod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	10	corporate	JJ	JJ	12	amod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	11	insiders	NNS	NNS	8	conj	_	-	-	-	-*	*)	*)	-
+nw/wsj/02/wsj_0203	7	0	12	to	TO	TO	14	aux	_	-	-	-	-*	(ARG2*=Result	*	-
+nw/wsj/02/wsj_0203	7	0	13	report	VB	VB	5	xcomp	_	report	01	-	-*	*	(V*)	-
+nw/wsj/02/wsj_0203	7	0	14	purchases	NNS	NNS	14	dobj	_	-	-	-	-*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	7	0	15	and	CC	CC	15	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	16	sales	NNS	NNS	15	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	17	of	IN	IN	15	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	18	their	PRP$	PRP$	20	poss	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	19	companies	NNS	NNS	22	poss	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	20	'	POS	POS	20	case	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	21	shares	NNS	NNS	18	pobj	_	-	-	-	-*	*	*)	-
+nw/wsj/02/wsj_0203	7	0	22	within	IN	IN	14	prep	_	-	-	-	-*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	7	0	23	about	IN	IN	25	quantmod	_	-	-	-	-(DATE*	*	*	-
+nw/wsj/02/wsj_0203	7	0	24	a	DT	DT	26	nummod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	25	month	NN	NN	23	pobj	_	-	-	-	-*)	*	*	-
+nw/wsj/02/wsj_0203	7	0	26	after	IN	IN	26	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	27	the	DT	DT	29	det	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	28	transaction	NN	NN	27	pobj	_	-	-	-	-*	*)	*)	-
+nw/wsj/02/wsj_0203	7	0	29	.	.	.	5	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	0	Currently	RB	RB	5	advmod	_	-	-	-	-*	(ARGM-TMP*)	*	-
+nw/wsj/02/wsj_0203	7	0	1	,	,	,	5	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	2	the	DT	DT	4	det	_	-	-	-	-*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	7	0	3	rules	NNS	NNS	5	dep	_	-	-	-	-*	*)	*	-
+nw/wsj/02/wsj_0203	7	0	4	force	VBP	VBP	0	root	_	force	01	-	-*	(V*)	*	-
+nw/wsj/02/wsj_0203	7	0	5	executives	NNS	NNS	5	dobj	_	-	-	-	-*	(ARG1*	(ARG0*	-
+nw/wsj/02/wsj_0203	7	0	6	,	,	,	6	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	7	directors	NNS	NNS	6	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	8	and	CC	CC	8	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	9	other	JJ	JJ	12	amod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	10	corporate	JJ	JJ	12	amod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	11	insiders	NNS	NNS	8	conj	_	-	-	-	-*	*)	*)	-
+nw/wsj/02/wsj_0203	7	0	12	to	TO	TO	14	aux	_	-	-	-	-*	(ARG2*	*	-
+nw/wsj/02/wsj_0203	7	0	13	report	VB	VB	5	xcomp	_	report	01	-	-*	*	(V*)	-
+nw/wsj/02/wsj_0203	7	0	14	purchases	NNS	NNS	14	dobj	_	-	-	-	-*	*	(ARG1*	-
+nw/wsj/02/wsj_0203	7	0	15	and	CC	CC	15	cc	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	16	sales	NNS	NNS	15	conj	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	17	of	IN	IN	15	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	18	their	PRP$	PRP$	20	poss	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	19	companies	NNS	NNS	22	poss	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	20	'	POS	POS	20	case	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	21	shares	NNS	NNS	18	pobj	_	-	-	-	-*	*	*)	-
+nw/wsj/02/wsj_0203	7	0	22	within	IN	IN	14	prep	_	-	-	-	-*	*	(ARGM-TMP*	-
+nw/wsj/02/wsj_0203	7	0	23	about	IN	IN	25	quantmod	_	-	-	-	-(DATE*	*	*	-
+nw/wsj/02/wsj_0203	7	0	24	a	DT	DT	26	nummod	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	25	month	NN	NN	23	pobj	_	-	-	-	-*)	*	*	-
+nw/wsj/02/wsj_0203	7	0	26	after	IN	IN	26	prep	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	27	the	DT	DT	29	det	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	7	0	28	transaction	NN	NN	27	pobj	_	-	-	-	-*	*)	*)	-
+nw/wsj/02/wsj_0203	7	0	29	.	.	.	5	punct	_	-	-	-	-*	*	*	-
+nw/wsj/02/wsj_0203	8	0	0	But	CC	CC	14	cc	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	1	about	IN	IN	3	quantmod	_	-	-	-	-(PERCENT*	(ARG0*=Agent	-
+nw/wsj/02/wsj_0203	8	0	2	25	CD	CD	4	nummod	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	3	%	NN	NN	14	dep	_	-	-	-	-*)	*	-
+nw/wsj/02/wsj_0203	8	0	4	of	IN	IN	4	prep	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	5	the	DT	DT	7	det	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	6	insiders	NNS	NNS	5	pobj	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0203	8	0	7	,	,	,	14	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	8	according	VBG	VBG	14	prep	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	9	to	IN	IN	9	prep	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	10	SEC	NNP	NNP	12	compound	_	-	-	-	-(ORG)	*	-
+nw/wsj/02/wsj_0203	8	0	11	figures	NNS	NNS	10	pobj	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	12	,	,	,	14	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	8	0	13	file	VBP	VBP	0	root	_	file	01	-	-*	(V*)	-
+nw/wsj/02/wsj_0203	8	0	14	their	PRP$	PRP$	16	poss	_	-	-	-	-*	(ARG1*=Theme	-
+nw/wsj/02/wsj_0203	8	0	15	reports	NNS	NNS	14	dobj	_	-	-	-	-*	*)	-
+nw/wsj/02/wsj_0203	8	0	16	late	RB	RB	14	advmod	_	-	-	-	-*	(ARGM-TMP*)	-
+nw/wsj/02/wsj_0203	8	0	17	.	.	.	14	punct	_	-	-	-	-*	*	-
+nw/wsj/02/wsj_0203	9	0	0	The	DT	DT	2	det	_	-	-	-	-*	(ARG1*=Topic	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	1	changes	NNS	NNS	4	dep	_	-	-	-	-*	*)	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	2	were	VBD	VBD	4	auxpass	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	3	proposed	VBN	VBN	27	xcomp	_	propose	01	-	-*	(V*)	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	4	in	IN	IN	4	prep	_	-	-	-	-*	(ARGM-PRP*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	5	an	DT	DT	7	det	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	6	effort	NN	NN	5	pobj	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	7	to	TO	TO	9	aux	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	8	streamline	VB	VB	7	acl	_	streamline	01	1	-*	*	(V*)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	9	federal	JJ	JJ	11	amod	_	-	-	-	-*	*	(ARG1*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	10	bureaucracy	NN	NN	9	dobj	_	-	-	-	-*	*	*)	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	11	and	CC	CC	9	cc	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	12	boost	VB	VB	9	conj	_	boost	01	1	-*	*	*	(V*)	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	13	compliance	NN	NN	13	dobj	_	compliance	01	1	-*	*	*	(ARG1*	(V*)	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	14	by	IN	IN	14	prep	_	-	-	-	-*	*	*	*	(ARG0*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	15	the	DT	DT	17	det	_	-	-	-	-*	*	*	*	*	(ARG0*	*	*	-
+nw/wsj/02/wsj_0203	9	0	16	executives	NNS	NNS	15	pobj	_	-	-	-	-*	*	*	*	*	*)	*	*	-
+nw/wsj/02/wsj_0203	9	0	17	``	``	``	17	punct	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	18	who	WP	WP	22	dep	17:ref	-	-	-	-*	*	*	*	*	(R-ARG0*)	*	*	-
+nw/wsj/02/wsj_0203	9	0	19	are	VBP	VBP	22	aux	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	20	really	RB	RB	22	advmod	_	-	-	-	-*	*	*	*	*	(ARGM-ADV*)	*	*	-
+nw/wsj/02/wsj_0203	9	0	21	calling	VBG	VBG	17	relcl	_	call	11	-	-*	*	*	*	*	(V*)	*	*	-
+nw/wsj/02/wsj_0203	9	0	22	the	DT	DT	24	det	_	-	-	-	-*	*	*	*	*	(ARG1*	*	*	-
+nw/wsj/02/wsj_0203	9	0	23	shots	NNS	NNS	22	dobj	_	-	-	-	-*	*)	*	*)	*)	*)	*	*	-
+nw/wsj/02/wsj_0203	9	0	24	,	,	,	27	punct	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	25	''	''	''	27	punct	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	26	said	VBD	VBD	0	root	_	say	01	-	-*	*	*	*	*	*	(V*)	*	-
+nw/wsj/02/wsj_0203	9	0	27	Brian	NNP	NNP	29	compound	_	-	-	-	-(PERSON*	*	*	*	*	*	(ARG0*	*	-
+nw/wsj/02/wsj_0203	9	0	28	Lane	NNP	NNP	27	dobj	_	-	-	-	-*)	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	29	,	,	,	29	punct	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	30	special	JJ	JJ	32	amod	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	31	counsel	NN	NN	29	appos	_	counsel	-	1	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	32	at	IN	IN	32	prep	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	33	the	DT	DT	35	det	_	-	-	-	-*	*	*	*	*	*	*	(ARG0*	-
+nw/wsj/02/wsj_0203	9	0	34	SEC	NNP	NNP	37	poss	_	-	-	-	-(ORG)	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	35	's	POS	POS	35	case	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	36	office	NN	NN	33	pobj	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	37	of	IN	IN	37	prep	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	38	disclosure	NN	NN	40	compound	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	39	policy	NN	NN	38	pobj	_	-	-	-	-*	*	*	*	*	*	*	*)	-
+nw/wsj/02/wsj_0203	9	0	40	,	,	,	37	punct	_	-	-	-	-*	*	*	*	*	*	*	*	-
+nw/wsj/02/wsj_0203	9	0	41	which	WDT	WDT	43	dep	37:ref	-	-	-	-*	*	*	*	*	*	*	(R-ARG0*)	-
+nw/wsj/02/wsj_0203	9	0	42	proposed	VBD	VBD	37	relcl	_	propose	01	-	-*	*	*	*	*	*	*	(V*)	-
+nw/wsj/02/wsj_0203	9	0	43	the	DT	DT	45	det	_	-	-	-	-*	*	*	*	*	*	*	(ARG1*=Topic	-
+nw/wsj/02/wsj_0203	9	0	44	changes	NNS	NNS	43	dobj	_	-	-	-	-*	*	*	*	*	*	*)	*)	-
+nw/wsj/02/wsj_0203	9	0	45	.	.	.	27	punct	_	-	-	-	-*	*	*	*	*	*	*	*	-
