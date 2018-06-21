@@ -5,15 +5,32 @@ remove_list = ['rel', 'LINK-SLC', 'LINK-PSV', 'LINK-PRO']
 arg_re = re.compile(r"(ARG[0-5A])-[A-Za-z]+")
 
 semlink_fname = "semlink_wsj_02.txt"
+conll_fname = "conll2012-wsj02-processed.txt"
 outfile = open("conll12-wsj-02-out.txt", 'w')
 
 semlink_map = {}
 arg_mapping_counts = {}
 arg_mappings = {}
 proposition_count = 0
+
+with open(conll_fname, 'r') as conll_file:
+
+	sent_buff = []
+	old_key = ('null','null')
+	for conll_line in conll_file:
+		conll_split_line = conll_line.split()
+		conll_key = (conll_split_line[0], conll_split_line[1])
+		if conll_key == old_key:
+			sent_buff.append(conll_split_line)
+		else:
+			print(conll_key, old_key)
+			for sent_word in sent_buff:
+				print(sent_word)
+			old_key = conll_key
+
 with open(semlink_fname, 'r') as semlink_file:
-	for line in semlink_file:
-		line = line.strip()
+ 	for line in semlink_file:
+ 		line = line.strip()
 		if line:
 		  proposition_count += 1
 		  split_line = line.split()
