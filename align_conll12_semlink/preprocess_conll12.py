@@ -1,5 +1,5 @@
-conll_fname = "conll2012-wsj02-train.txt"
-conll_outname = "conll2012-wsj02-processed.txt"
+conll_fname = "conll2012-wsj-train.txt"
+conll_outname = "conll2012-wsj-processed.txt"
 with open(conll_fname, 'r') as conll_file:
 	with open(conll_outname, 'w') as conll_out:
 		docid = 'null'
