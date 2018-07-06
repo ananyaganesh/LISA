@@ -10,8 +10,9 @@ from wsj_syntax_helper import extract_gold_syntax_spans
 from full_analysis import read_file, read_conll_prediction, extract_spans,\
                           find, unlabeled_find
 
-CORE_ROLES = ['ARG0', 'ARG1', 'ARG2', 'ARG3', 'ARG4', 'ARG5', 'AA']
-
+CORE_ROLES = ['ARG0', 'ARG1', 'ARG2', 'ARG3', 'ARG4', 'ARG5', 'AA']    
+arg_dict = {'ARG0':0, 'ARG1':0, 'ARG2':0, 'ARG3':0, 'ARG4':0, 'ARG5':0}
+label_errors = 0
 MAX_LEN = 200
 CONLL05_GOLD_SYNTAX = 'conll12-syntax.txt'
 CONLL05_GOLD_SRL = 'conll2012-dev-gold-props.txt'
@@ -27,14 +28,26 @@ def fix_labels(pred_spans, gold_spans):
   for p in pred_spans:
     fixed = False
     for g in gold_spans:
+      #print(p, g)
       if p[0] != g[0] and p[1] == g[1] and p[2] == g[2]:
         ops.append(("fix_label", p[0], g[0]))
+        if g[0] in arg_dict:
+          arg_dict[g[0]] += 1
+        global label_errors
+        label_errors += 1
         new_spans.append([g[0], p[1], p[2]])
         fixed = True
         break
     if not fixed:
       new_spans.append([p[0], p[1], p[2]])
 
+  #print('Core arg errors: ', arg_dict)
+  #print('Label_errors: ', label_errors)
+  #core_errors = sum(arg_dict.values())
+  #try:
+    #print('Error proportion: ', float(core_errors)/label_errors)
+  #except:
+    #print('error')
   return new_spans, ops
 
 def merge_two_spans(pred_spans, gold_spans, max_gap = 1):
@@ -442,3 +455,7 @@ if __name__ == '__main__':
   for label, freq in sem_attachments.most_common(10):
     print "{}\t{}\t{}".format(label, freq, 100.0 * freq / total)
  
+  print('Core arg arrors: ', arg_dict)
+  print('Total core arg errors: ', sum(arg_dict.values()))
+  print('Total label errors: ', label_errors)
+
