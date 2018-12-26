@@ -566,6 +566,11 @@ class Configurable(object):
   argparser.add_argument('--gold_train_vn')
 
   @property
+  def gold_test_vn(self):
+    return self._config.getboolean('Training', 'gold_test_vn')
+  argparser.add_argument('--gold_test_vn')
+
+  @property
   def add_predicates_to_input(self):
     return self._config.getboolean('Training', 'add_predicates_to_input')
   argparser.add_argument('--add_predicates_to_input')

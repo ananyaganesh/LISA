@@ -53,13 +53,14 @@ class Parser(BaseParser):
 
     srl_targets_nopad = tf.gather_nd(srl_targets_combined, pb_indices)
     vn_targets_nopad = tf.gather_nd(srl_targets_combined, vn_indices)
+    #srl_targets_nopad = tf.Print(srl_targets_nopad, [tf.shape(vn_scatter_indices), tf.shape(vn_targets_nopad), tf.shape(pb_indices), tf.shape(srl_targets_nopad), vn_scatter_indices, pb_indices], summarize=100)
 
     srl_targets = tf.scatter_nd(pb_indices, srl_targets_nopad, [tf.cast(batch_size, tf.int64), tf.cast(bucket_size, tf.int64), max_preds_in_batch])
     vn_targets = tf.scatter_nd(vn_scatter_indices, vn_targets_nopad, [tf.cast(batch_size, tf.int64), tf.cast(bucket_size, tf.int64), max_preds_in_batch])
+    #vn_targets = tf.ones_like(srl_targets)
 
     annotated = dataset.annotated
     step = dataset.step
-    mappings = dataset.mappings
 
     num_pos_classes = len(vocabs[1])
     num_rel_classes = len(vocabs[2])
@@ -616,7 +617,8 @@ class Parser(BaseParser):
       #vn_logits = tf.Print(vn_logits, [tf.shape(vn_logits), tf.shape(vn_target), preds_in_batch], "logits and target ")
       logits_shape = tf.shape(vn_logits)
       num_classes = num_vn_classes
-      if self.gold_train_vn:
+      if self.gold_train_vn and (self.gold_test_vn or dataset.name == 'Trainset'):
+        print('using gold vn')
         trigger_counts = tf.reduce_sum(predicate_predictions, -1)
         vn_targets_indices = tf.where(tf.sequence_mask(tf.reshape(trigger_counts, [-1])))
         vn_targets_gathered = tf.gather_nd(tf.transpose(vn_target, [0, 2, 1]), vn_targets_indices)
@@ -625,6 +627,7 @@ class Parser(BaseParser):
 
         vn_scores = tf.reshape(vn_targets_one_hot, [preds_in_batch * bucket_size, num_classes])
       else:
+        print('using predicted vn')
         vn_scores = tf.reshape(tf.nn.softmax(vn_logits, axis=-1), [preds_in_batch * bucket_size, num_classes])
 
       vn_embeddings = vocabs[6].embedding_lookup(tf.range(num_classes), moving_params=self.moving_params)
@@ -671,7 +674,9 @@ class Parser(BaseParser):
         # tf.zeros([num_triggers, bucket_size]),
           'logits': tf.zeros([num_triggers, bucket_size, num_vn_classes]),
           'correct': tf.constant(0.),
-          'count': tf.constant(1.)
+          'count': tf.constant(1.),
+          'targets': tf.constant(0.),
+          'preds_to_keep': tf.ones([num_triggers,1])
         }
 
       vn_embeddings = compute_vn_rep(vn_targets, vn_output['logits'])
