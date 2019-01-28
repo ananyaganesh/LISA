@@ -5,7 +5,10 @@ import re
 conll_fname = sys.argv[1]
 semlink_fname = sys.argv[2]
 out_fname = sys.argv[3]
-docid_filt = sys.argv[4]
+try:
+    docid_filt = sys.argv[4]
+except IndexError:
+    docid_filt = None
 
 if docid_filt:
     with open(docid_filt, 'r') as f:
@@ -29,7 +32,7 @@ with open(conll_fname) as conll_file:
             # if line not blank, read all tokens in sentence
             if len(split_conll_line) > 0:
 
-                if docid_set and split_conll_line[0] in docid_set:
+                #if docid_set and split_conll_line[0] in docid_set:
 
                     # if new doc id, reset sentence num
                     if split_conll_line[0] != oldkey:
@@ -161,7 +164,7 @@ with open(conll_fname) as conll_file:
 
                 # write the sentence back with annotation and updated frames
                 for i, token in enumerate(buff):
-                    # print(token[0] + '\t' + str(annotated) + '\t' + '\t'.join(token[1:15]) + '\t' + '\t'.join(frames[i]) + '\n')
+                    print(token[0] + '\t' + str(annotated) + '\t' + '\t'.join(token[1:15]) + '\t' + '\t'.join(frames[i]) + '\n')
                     out_file.write(token[0] + '\t' + str(annotated) + '\t' + '\t'.join(token[1:15]) + '\t' + '\t'.join(
                         frames[i]) + '\t' + last_col[i] + '\n')
 
