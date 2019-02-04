@@ -615,9 +615,11 @@ class Parser(BaseParser):
       preds_in_batch = tf.reduce_sum(predicate_targets_binary)
       bucket_size = tf.shape(vn_target)[1]
       #vn_logits = tf.Print(vn_logits, [tf.shape(vn_logits), tf.shape(vn_target), preds_in_batch], "logits and target ")
-      logits_shape = tf.shape(vn_logits)
       num_classes = num_vn_classes
-      if self.gold_train_vn and (self.gold_test_vn or dataset.name == 'Trainset'):
+      k = self.sample_gold_k
+      epsilon = k/(k + np.exp(float(step)/k))
+      print(step, epsilon)
+      if np.random.rand() < epsilon and self.gold_train_vn and (self.gold_test_vn or dataset.name == 'Trainset'):
         #print('using gold vn')
         trigger_counts = tf.reduce_sum(predicate_predictions, -1)
         vn_targets_indices = tf.where(tf.sequence_mask(tf.reshape(trigger_counts, [-1])))

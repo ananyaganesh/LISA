@@ -575,6 +575,11 @@ class Configurable(object):
   argparser.add_argument('--gold_test_vn')
 
   @property
+  def sample_gold_k(self):
+    return self._config.getfloat('Training', 'sample_gold_k')
+  argparser.add_argument('--sample_gold_k')
+
+  @property
   def add_predicates_to_input(self):
     return self._config.getboolean('Training', 'add_predicates_to_input')
   argparser.add_argument('--add_predicates_to_input')
