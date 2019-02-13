@@ -616,25 +616,34 @@ class Parser(BaseParser):
       bucket_size = tf.shape(vn_target)[1]
       #vn_logits = tf.Print(vn_logits, [tf.shape(vn_logits), tf.shape(vn_target), preds_in_batch], "logits and target ")
       num_classes = num_vn_classes
-      k = self.sample_gold_k
-      epsilon = k/(k + np.exp(float(step)/k))
-      print(step, epsilon)
-      if np.random.rand() < epsilon and self.gold_train_vn and (self.gold_test_vn or dataset.name == 'Trainset'):
-        #print('using gold vn')
-        trigger_counts = tf.reduce_sum(predicate_predictions, -1)
-        vn_targets_indices = tf.where(tf.sequence_mask(tf.reshape(trigger_counts, [-1])))
-        vn_targets_gathered = tf.gather_nd(tf.transpose(vn_target, [0, 2, 1]), vn_targets_indices)
 
-        vn_targets_one_hot = tf.one_hot(vn_targets_gathered, depth=num_classes, axis=-1)
+      def get_gold_vn():
+        if self.gold_train_vn and (self.gold_test_vn or dataset.name == 'Trainset'):
+          # print('using gold vn')
+          trigger_counts = tf.reduce_sum(predicate_predictions, -1)
+          vn_targets_indices = tf.where(tf.sequence_mask(tf.reshape(trigger_counts, [-1])))
+          vn_targets_gathered = tf.gather_nd(tf.transpose(vn_target, [0, 2, 1]), vn_targets_indices)
 
-        vn_scores = tf.reshape(vn_targets_one_hot, [preds_in_batch * bucket_size, num_classes])
+          vn_targets_one_hot = tf.one_hot(vn_targets_gathered, depth=num_classes, axis=-1)
 
-        vn_embeddings = tf.nn.dropout(vocabs[6].embedding_lookup(tf.range(num_classes), moving_params=self.moving_params), keep_prob=self.gold_vn_dropout)
-      else:
-        #print('using predicted vn')
+          vn_scores = tf.reshape(vn_targets_one_hot, [preds_in_batch * bucket_size, num_classes])
+
+          vn_embeddings = tf.nn.dropout(vocabs[6].embedding_lookup(tf.range(num_classes), moving_params=self.moving_params), keep_prob=self.gold_vn_dropout)
+
+          return vn_scores, vn_embeddings
+
+        else:
+          return get_pred_vn()
+
+      def get_pred_vn():
         vn_scores = tf.reshape(tf.nn.softmax(vn_logits, axis=-1), [preds_in_batch * bucket_size, num_classes])
         vn_embeddings = vocabs[6].embedding_lookup(tf.range(num_classes), moving_params=self.moving_params)
-
+        return vn_scores, vn_embeddings
+      
+      k = self.sample_gold_k
+      epsilon = k/(k + tf.exp(step/k))
+      coin_flip = tf.random_uniform((), dtype=tf.float32)
+      vn_scores, vn_embeddings = tf.cond(tf.less(coin_flip, epsilon), get_gold_vn, get_pred_vn)
       weighted_vn_embeddings = tf.reshape(tf.matmul(vn_scores, vn_embeddings), [preds_in_batch, bucket_size, 200])
 
       return weighted_vn_embeddings
