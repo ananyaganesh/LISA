@@ -575,7 +575,11 @@ class Parser(BaseParser):
         tiled_roles = tf.reshape(tf.tile(role_mlp, [1, bucket_size, 1]), [batch_size, bucket_size, bucket_size, self.role_mlp_size])
         gathered_roles = tf.gather_nd(tiled_roles, predicate_gather_indices)
         if combine_with_vn:
+          vn_embeddings = tf.Print(vn_embeddings,
+                                            [tf.norm(vn_embeddings, 'euclidean', axis=-1)], "VN labels norm", summarize=200)
+          gathered_roles = tf.Print(gathered_roles, [tf.norm(gathered_roles, 'euclidean', axis=-1)], "PB weights norm", summarize=200)
           derived_roles = tf.add(gathered_roles, vn_embeddings)
+          derived_roles = tf.Print(derived_roles, [tf.norm(derived_roles, 'euclidean')], "Combined norm", summarize=200)
         else:
           derived_roles = gathered_roles
 
@@ -644,6 +648,7 @@ class Parser(BaseParser):
       epsilon = k/(k + tf.exp(step/k))
       coin_flip = tf.random_uniform((), dtype=tf.float32)
       vn_scores, vn_embeddings = tf.cond(tf.less(coin_flip, epsilon), get_gold_vn, get_pred_vn)
+      #vn_scores = tf.Print(vn_scores, [vn_scores], summarize=200)
       weighted_vn_embeddings = tf.reshape(tf.matmul(vn_scores, vn_embeddings), [preds_in_batch, bucket_size, 200])
 
       return weighted_vn_embeddings
