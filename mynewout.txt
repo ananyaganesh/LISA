@@ -1,0 +1,298 @@
+*** Parser ***
+Loading vocabs
+Loaded pre-trained embeddings. Trainable: True
+Loading data
+Loading training data from domains: all
+Loaded 75186 sentences with 1299299 tokens (Trainset)
+running k means
+Sizes of splits:  [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 39, 43, 48, 56, 69, 94, 210]
+Bucket Sents-0 is 4773 x 2
+Bucket Sents-1 is 1588 x 3
+Bucket Sents-2 is 1839 x 4
+Bucket Sents-3 is 2321 x 5
+Bucket Sents-4 is 2665 x 6
+Bucket Sents-5 is 3028 x 7
+Bucket Sents-6 is 3268 x 8
+Bucket Sents-7 is 3243 x 9
+Bucket Sents-8 is 3199 x 10
+Bucket Sents-9 is 3102 x 11
+Bucket Sents-10 is 3077 x 12
+Bucket Sents-11 is 2975 x 13
+Bucket Sents-12 is 2791 x 14
+Bucket Sents-13 is 2659 x 15
+Bucket Sents-14 is 2599 x 16
+Bucket Sents-15 is 2360 x 17
+Bucket Sents-16 is 2270 x 18
+Bucket Sents-17 is 2037 x 19
+Bucket Sents-18 is 1972 x 20
+Bucket Sents-19 is 1754 x 21
+Bucket Sents-20 is 1607 x 22
+Bucket Sents-21 is 1549 x 23
+Bucket Sents-22 is 1458 x 24
+Bucket Sents-23 is 1387 x 25
+Bucket Sents-24 is 1294 x 26
+Bucket Sents-25 is 1196 x 27
+Bucket Sents-26 is 1080 x 28
+Bucket Sents-27 is 1050 x 29
+Bucket Sents-28 is 920 x 30
+Bucket Sents-29 is 860 x 31
+Bucket Sents-30 is 790 x 32
+Bucket Sents-31 is 1463 x 34
+Bucket Sents-32 is 1203 x 36
+Bucket Sents-33 is 1393 x 39
+Bucket Sents-34 is 1336 x 43
+Bucket Sents-35 is 1190 x 48
+Bucket Sents-36 is 972 x 56
+Bucket Sents-37 is 584 x 69
+Bucket Sents-38 is 265 x 94
+Bucket Sents-39 is 69 x 210
+Loading training data from domains: all
+Loaded 9603 sentences with 163104 tokens (Validset)
+running k means
+Sizes of splits:  [3, 7, 10, 14, 19, 25, 33, 45, 62, 186]
+Bucket Sents-0 is 951 x 3
+Bucket Sents-1 is 1400 x 7
+Bucket Sents-2 is 1129 x 10
+Bucket Sents-3 is 1431 x 14
+Bucket Sents-4 is 1458 x 19
+Bucket Sents-5 is 1237 x 25
+Bucket Sents-6 is 1038 x 33
+Bucket Sents-7 is 642 x 45
+Bucket Sents-8 is 258 x 62
+Bucket Sents-9 is 59 x 186
+Loading training data from domains: all
+Loaded 9479 sentences with 169579 tokens (Testset)
+running k means
+Sizes of splits:  [2, 6, 9, 13, 18, 23, 31, 41, 59, 151]
+Bucket Sents-0 is 603 x 2
+Bucket Sents-1 is 1000 x 6
+Bucket Sents-2 is 1124 x 9
+Bucket Sents-3 is 1464 x 13
+Bucket Sents-4 is 1639 x 18
+Bucket Sents-5 is 1190 x 23
+Bucket Sents-6 is 1171 x 31
+Bucket Sents-7 is 777 x 41
+Bucket Sents-8 is 402 x 59
+Bucket Sents-9 is 109 x 151
+n_recur:  12
+num heads:  8
+cnn dim:  1024
+relu hidden size:  800
+head size:  25
+cnn2d_layers:  0
+cnn_dim_2d:  128
+multitask penalties:  {'parents': 1.0}
+multitask layers:  {'parents': set([4])}
+sampling schedule:  constant
+use gold parse (Trainset):  True
+Setting pos_pred_inputs to: block0/CNN/layer_norm/add_1:0
+Setting predicate_inputs to: block0/CNN/layer_norm/add_1:0
+block0/proj1/Linear
+Orthogonal pretrainer loss: 5.00e+01
+Layer 0 capsule heads: 0
+Layer 1 capsule heads: 0
+Setting pos_pred_inputs to: block0/Transformer/layer1/ffnn/Add:0
+Setting predicate_inputs to: block0/Transformer/layer1/ffnn/Add:0
+Layer 2 capsule heads: 0
+Layer 3 capsule heads: 0
+Setting parse_pred_inputs to: block0/Transformer/layer3/ffnn/Add:0
+block0/Transformer/layer4/MLP/Linear
+Orthogonal pretrainer loss: 2.00e+02
+Layer 4 capsule heads: 0
+Layer 5 capsule heads: 0
+Layer 6 capsule heads: 0
+Layer 7 capsule heads: 0
+Layer 8 capsule heads: 0
+Layer 9 capsule heads: 0
+Layer 10 capsule heads: 0
+Layer 11 capsule heads: 0
+SRL-Predicates/Linear
+Orthogonal pretrainer loss: 5.34e-11
+SRL-Predicates/SRL-Predicates-Classifier/Linear
+Orthogonal pretrainer loss: 1.10e-31
+SRL-MLP/Linear
+Orthogonal pretrainer loss: 1.00e+02
+VN-MLP/Linear
+Orthogonal pretrainer loss: 1.00e+02
+use gold parse (Validset):  False
+use gold parse (Testset):  False
+Training
+   100) Train loss: nan    Train acc:  1.17%    Train rate:  731.7 sents/sec    Learning rate: 0.000006    Sample prob: 1.000000
+	Valid loss: 9.5664    Valid acc:  1.91%    Valid rate: 3243.1 sents/sec
+	log loss: nan	rel loss: 0.373255	srl loss: 3.979361	trig loss: 4.181741	pos loss: 0.000000	vn loss: 2.831015
+
+   200) Train loss: nan    Train acc:  1.66%    Train rate:  694.8 sents/sec    Learning rate: 0.000011    Sample prob: 1.000000
+	Valid loss: 8.1666    Valid acc:  3.01%    Valid rate: 3480.7 sents/sec
+	log loss: nan	rel loss: 0.319733	srl loss: 2.390593	trig loss: 3.661653	pos loss: 0.000000	vn loss: 1.030897
+
+   300) Train loss: nan    Train acc:  4.08%    Train rate:  716.0 sents/sec    Learning rate: 0.000017    Sample prob: 1.000000
+	Valid loss: 7.8846    Valid acc: 10.02%    Valid rate: 3438.9 sents/sec
+	log loss: nan	rel loss: 0.287491	srl loss: 2.347274	trig loss: 3.220565	pos loss: 0.000000	vn loss: 1.048486
+
+   400) Train loss: nan    Train acc: 10.51%    Train rate:  781.6 sents/sec    Learning rate: 0.000022    Sample prob: 1.000000
+	Valid loss: 6.8861    Valid acc: 19.18%    Valid rate: 3409.6 sents/sec
+	log loss: nan	rel loss: 0.235182	srl loss: 2.391250	trig loss: 2.789324	pos loss: 0.000000	vn loss: 0.972285
+
+   500) Train loss: nan    Train acc: 16.50%    Train rate:  865.9 sents/sec    Learning rate: 0.000028    Sample prob: 1.000000
+	Valid loss: 6.2382    Valid acc: 25.90%    Valid rate: 3362.9 sents/sec
+	log loss: nan	rel loss: 0.188583	srl loss: 2.323450	trig loss: 2.328802	pos loss: 0.000000	vn loss: 1.052878
+
+Elapsed time: 01:00:04:25
+Total time in prob_argmax: 11.548177
+Total time in forward: 7.512396
+Not tree: 9603
+Roots < 1: 45; Roots > 1: 7243; 2-cycles: -9603; n-cycles: -9603
+  Labeled   attachment score: 32247 / 145219 * 100 = 22.21 %
+  Unlabeled attachment score: 52800 / 145219 * 100 = 36.36 %
+  Label accuracy score:       61781 / 145219 * 100 = 42.54 %
+
+
+Number of Sentences    :        9603
+Number of Propositions :       23910
+Percentage of perfect props :  10.35
+
+              corr.  excess  missed    prec.    rec.      F1
+------------------------------------------------------------
+   Overall        1    1022   53905     0.10    0.00    0.00
+----------
+      ARG0        0       0   11444     0.00    0.00    0.00
+      ARG1        1    1022   18215     0.10    0.01    0.01
+      ARG2        0       0    6429     0.00    0.00    0.00
+      ARG3        0       0     373     0.00    0.00    0.00
+      ARG4        0       0     358     0.00    0.00    0.00
+      ARG5        0       0      10     0.00    0.00    0.00
+      ARGA        0       0       3     0.00    0.00    0.00
+  ARGM-ADJ        0       0     232     0.00    0.00    0.00
+  ARGM-ADV        0       0    2089     0.00    0.00    0.00
+  ARGM-CAU        0       0     365     0.00    0.00    0.00
+  ARGM-COM        0       0      24     0.00    0.00    0.00
+  ARGM-DIR        0       0     453     0.00    0.00    0.00
+  ARGM-DIS        0       0    2378     0.00    0.00    0.00
+  ARGM-DSP        0       0       2     0.00    0.00    0.00
+  ARGM-EXT        0       0     175     0.00    0.00    0.00
+  ARGM-GOL        0       0      70     0.00    0.00    0.00
+  ARGM-LOC        0       0    1455     0.00    0.00    0.00
+  ARGM-LVB        0       0      50     0.00    0.00    0.00
+  ARGM-MNR        0       0    1275     0.00    0.00    0.00
+  ARGM-MOD        0       0    1844     0.00    0.00    0.00
+  ARGM-NEG        0       0    1071     0.00    0.00    0.00
+  ARGM-PNC        0       0      87     0.00    0.00    0.00
+  ARGM-PRD        0       0     264     0.00    0.00    0.00
+  ARGM-PRP        0       0     335     0.00    0.00    0.00
+  ARGM-REC        0       0       8     0.00    0.00    0.00
+  ARGM-TMP        0       0    3724     0.00    0.00    0.00
+    R-ARG0        0       0     555     0.00    0.00    0.00
+    R-ARG1        0       0     456     0.00    0.00    0.00
+    R-ARG2        0       0      35     0.00    0.00    0.00
+    R-ARG3        0       0       6     0.00    0.00    0.00
+    R-ARG4        0       0       1     0.00    0.00    0.00
+R-ARGM-ADV        0       0       2     0.00    0.00    0.00
+R-ARGM-CAU        0       0       2     0.00    0.00    0.00
+R-ARGM-DIR        0       0       1     0.00    0.00    0.00
+R-ARGM-EXT        0       0       2     0.00    0.00    0.00
+R-ARGM-LOC        0       0      60     0.00    0.00    0.00
+R-ARGM-MNR        0       0      11     0.00    0.00    0.00
+R-ARGM-PRP        0       0       1     0.00    0.00    0.00
+R-ARGM-TMP        0       0      40     0.00    0.00    0.00
+------------------------------------------------------------
+         V        0       0   23910     0.00    0.00    0.00
+------------------------------------------------------------
+
+Attention UAS: 
+
+UAS: 36.36    LAS: 22.21
+POS: 54.57
+SRL acc: 54.18
+viterbi SRL F1: 0.0
+   600) Train loss: nan    Train acc: 21.83%    Train rate:  718.9 sents/sec    Learning rate: 0.000033    Sample prob: 1.000000
+	Valid loss: 5.7057    Valid acc: 33.09%    Valid rate: 3245.8 sents/sec
+	log loss: nan	rel loss: 0.157150	srl loss: 2.251146	trig loss: 1.937920	pos loss: 0.000000	vn loss: 0.936531
+
+   700) Train loss: nan    Train acc: 27.92%    Train rate:  858.1 sents/sec    Learning rate: 0.000039    Sample prob: 1.000000
+	Valid loss: 5.2115    Valid acc: 38.19%    Valid rate: 3186.7 sents/sec
+	log loss: nan	rel loss: 0.135128	srl loss: 2.171882	trig loss: 1.672949	pos loss: 0.000000	vn loss: 1.007051
+
+   800) Train loss: nan    Train acc: 32.04%    Train rate:  799.9 sents/sec    Learning rate: 0.000045    Sample prob: 1.000000
+	Valid loss: 4.8915    Valid acc: 42.62%    Valid rate: 3186.0 sents/sec
+	log loss: nan	rel loss: 0.117476	srl loss: 2.084474	trig loss: 1.435866	pos loss: 0.000000	vn loss: 0.933425
+
+   900) Train loss: nan    Train acc: 34.97%    Train rate:  746.9 sents/sec    Learning rate: 0.000050    Sample prob: 1.000000
+	Valid loss: 4.5385    Valid acc: 46.62%    Valid rate: 3150.7 sents/sec
+	log loss: nan	rel loss: 0.105527	srl loss: 2.033535	trig loss: 1.248727	pos loss: 0.000000	vn loss: 1.054651
+
+  1000) Train loss: nan    Train acc: 38.99%    Train rate:  778.1 sents/sec    Learning rate: 0.000056    Sample prob: 1.000000
+	Valid loss: 4.3074    Valid acc: 49.54%    Valid rate: 3095.7 sents/sec
+	log loss: nan	rel loss: 0.092781	srl loss: 1.972303	trig loss: 1.091584	pos loss: 0.000000	vn loss: 0.946562
+
+Elapsed time: 01:00:09:43
+Total time in prob_argmax: 12.101501
+Total time in forward: 3.262529
+Not tree: 9603
+Roots < 1: 133; Roots > 1: 5645; 2-cycles: -9603; n-cycles: -9603
+  Labeled   attachment score: 66962 / 145219 * 100 = 46.11 %
+  Unlabeled attachment score: 79994 / 145219 * 100 = 55.09 %
+  Label accuracy score:       87354 / 145219 * 100 = 60.15 %
+
+
+Number of Sentences    :        9603
+Number of Propositions :       23910
+Percentage of perfect props :  11.43
+
+              corr.  excess  missed    prec.    rec.      F1
+------------------------------------------------------------
+   Overall     6707   12096   47199    35.67   12.44   18.45
+----------
+      ARG0     2846    2768    8598    50.69   24.87   33.37
+      ARG1     2795    7712   15421    26.60   15.34   19.46
+      ARG2      463    1185    5966    28.09    7.20   11.46
+      ARG3        0       0     373     0.00    0.00    0.00
+      ARG4        5       2     353    71.43    1.40    2.74
+      ARG5        0       0      10     0.00    0.00    0.00
+      ARGA        0       0       3     0.00    0.00    0.00
+  ARGM-ADJ        0       0     232     0.00    0.00    0.00
+  ARGM-ADV        0       0    2089     0.00    0.00    0.00
+  ARGM-CAU        0       0     365     0.00    0.00    0.00
+  ARGM-COM        0       0      24     0.00    0.00    0.00
+  ARGM-DIR        0       0     453     0.00    0.00    0.00
+  ARGM-DIS       64      16    2314    80.00    2.69    5.21
+  ARGM-DSP        0       0       2     0.00    0.00    0.00
+  ARGM-EXT        0       0     175     0.00    0.00    0.00
+  ARGM-GOL        0       0      70     0.00    0.00    0.00
+  ARGM-LOC        6      34    1449    15.00    0.41    0.80
+  ARGM-LVB        0       0      50     0.00    0.00    0.00
+  ARGM-MNR        0       0    1275     0.00    0.00    0.00
+  ARGM-MOD      397     195    1447    67.06   21.53   32.59
+  ARGM-NEG      114     116     957    49.57   10.64   17.52
+  ARGM-PNC        0       0      87     0.00    0.00    0.00
+  ARGM-PRD        0       0     264     0.00    0.00    0.00
+  ARGM-PRP        0       0     335     0.00    0.00    0.00
+  ARGM-REC        0       0       8     0.00    0.00    0.00
+  ARGM-TMP       16      68    3708    19.05    0.43    0.84
+    R-ARG0        1       0     554   100.00    0.18    0.36
+    R-ARG1        0       0     456     0.00    0.00    0.00
+    R-ARG2        0       0      35     0.00    0.00    0.00
+    R-ARG3        0       0       6     0.00    0.00    0.00
+    R-ARG4        0       0       1     0.00    0.00    0.00
+R-ARGM-ADV        0       0       2     0.00    0.00    0.00
+R-ARGM-CAU        0       0       2     0.00    0.00    0.00
+R-ARGM-DIR        0       0       1     0.00    0.00    0.00
+R-ARGM-EXT        0       0       2     0.00    0.00    0.00
+R-ARGM-LOC        0       0      60     0.00    0.00    0.00
+R-ARGM-MNR        0       0      11     0.00    0.00    0.00
+R-ARGM-PRP        0       0       1     0.00    0.00    0.00
+R-ARGM-TMP        0       0      40     0.00    0.00    0.00
+------------------------------------------------------------
+         V     9137    6993   14773    56.65   38.21   45.64
+------------------------------------------------------------
+
+Attention UAS: 
+
+UAS: 55.09    LAS: 46.11
+POS: 80.31
+SRL acc: 59.33
+viterbi SRL F1: 18.45
+Writing model to saves/srl-vn-shapes/parser-trained
+  1100) Train loss: nan    Train acc: 42.59%    Train rate:  795.1 sents/sec    Learning rate: 0.000061    Sample prob: 1.000000
+	Valid loss: 4.2059    Valid acc: 52.17%    Valid rate: 3114.3 sents/sec
+	log loss: nan	rel loss: 0.084026	srl loss: 1.904174	trig loss: 0.970779	pos loss: 0.000000	vn loss: 0.975245
+

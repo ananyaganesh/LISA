@@ -176,21 +176,25 @@ def bilinear(inputs1, inputs2, output_size, add_bias2=True, add_bias1=True, add_
 
 
 # ===============================================================
-def bilinear_noreshape(inputs1, inputs2, output_size, add_bias2=True, add_bias1=True, add_bias=False, initializer=None,
+def bilinear_noreshape(inputs1, inputs2, output_size, combine, combined_weights, add_bias2=True, add_bias1=True, add_bias=False, initializer=None,
              scope=None, moving_params=None):
   """"""
 
   with tf.variable_scope(scope or 'Bilinear'):
     # Reformat the inputs
-    ndims = len(inputs1.get_shape().as_list())
+    #print(inputs1.get_shape().as_list(), inputs2.get_shape().as_list())
+    ndims = len(inputs1.get_shape().as_list()) # ndims = 3
     inputs1_shape = tf.shape(inputs1)
     inputs1_bucket_size = inputs1_shape[ndims - 2]
+    # 'd' for predicate projection?
     inputs1_size = inputs1.get_shape().as_list()[-1]
 
     inputs2_shape = tf.shape(inputs2)
     inputs2_bucket_size = inputs2_shape[ndims - 2]
+    # 'd' for role projection?
     inputs2_size = inputs2.get_shape().as_list()[-1]
     # output_shape = []
+    #print('Inputs1 size: ', inputs1_size, 'Inputs2 size: ', inputs2_size, 'Output size: ', output_size)
     batch_size1 = 1
     batch_size2 = 1
     for i in xrange(ndims - 2):
@@ -208,6 +212,9 @@ def bilinear_noreshape(inputs1, inputs2, output_size, add_bias2=True, add_bias1=
     if add_bias2:
       inputs2 = tf.concat(axis=2, values=[inputs2, tf.ones(tf.stack([batch_size2, inputs2_bucket_size, 1]))])
 
+    #print('After reshape: ', inputs1.get_shape().as_list(), inputs2.get_shape().as_list())
+    #inputs2 = tf.Print(inputs2, [tf.shape(inputs2)], "Inputs2 after reshape")
+
     # Get the matrix
     if initializer is None and moving_params is None:
       mat = orthonormal_initializer(inputs1_size + add_bias1, inputs2_size + add_bias2)[:, None, :]
@@ -215,11 +222,17 @@ def bilinear_noreshape(inputs1, inputs2, output_size, add_bias2=True, add_bias1=
       initializer = tf.constant_initializer(mat)
     weights = tf.get_variable('Weights', [inputs1_size + add_bias1, output_size, inputs2_size + add_bias2],
                               initializer=initializer)
+
+    if combine:
+      print('Using combined weights')
+      weights = combined_weights
+
     if moving_params is not None:
       weights = moving_params.average(weights)
     else:
       tf.add_to_collection('Weights', weights)
 
+    #print('Weights shape: ', weights)
     # inputs1: num_triggers_in_batch x 1 x self.trigger_mlp_size
     # inputs2: batch x seq_len x self.role_mlp_size
 

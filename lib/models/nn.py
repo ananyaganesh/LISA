@@ -943,14 +943,17 @@ class NN(Configurable):
     return weighted_bilin, bilin
 
   # =============================================================
-  def bilinear_classifier_nary(self, inputs1, inputs2, n_classes, add_bias1=True, add_bias2=True):
+  def bilinear_classifier_nary(self, inputs1, inputs2, n_classes, combine=False, combined_weights=None, add_bias1=True, add_bias2=True):
     """"""
 
+    #inputs1 = tf.Print(inputs1, [tf.shape(inputs1)], "Pred reps shape")
+    #inputs2 = tf.Print(inputs2, [tf.shape(inputs2)], "Role reps shape")
     input_shape1 = tf.shape(inputs1)
     input_shape2 = tf.shape(inputs2)
 
     batch_size1 = input_shape1[0]
     batch_size2 = input_shape2[0]
+
 
     # with tf.control_dependencies([tf.assert_equal(input_shape1[1], input_shape2[1])]):
     bucket_size1 = input_shape1[1]
@@ -985,6 +988,8 @@ class NN(Configurable):
 
     bilin = linalg.bilinear_noreshape(inputs1, inputs2,
                             n_classes,
+                            combine=combine,
+                            combined_weights=combined_weights,
                             add_bias1=add_bias1,
                             add_bias2=add_bias2,
                             initializer=tf.zeros_initializer(),
@@ -1218,7 +1223,7 @@ class NN(Configurable):
     return output
 
   # =============================================================
-  def output_srl_gather(self, logits_transposed, targets, trigger_predictions, transition_params):
+  def output_srl_gather(self, logits_transposed, targets, trigger_predictions, transition_params, annotated3D=None, ignore_label_idx=None):
     """"""
 
     # logits are triggers_in_batch x num_classes x seq_len
@@ -1233,11 +1238,21 @@ class NN(Configurable):
     bucket_size = original_shape[1]
     num_labels = tf.shape(logits_transposed)[-1]
 
+    if annotated3D is not None:
+      #tokens_to_keep = tf.Print(self.tokens_to_keep3D, [tf.count_nonzero(self.tokens_to_keep3D, dtype=tf.float32)], "tokenstokeep")
+      #annotated = tf.Print(annotated3D, [tf.count_nonzero(annotated3D, dtype=tf.float32)], "annotated")
+      tokens_to_keep3D = tf.cast(tf.logical_and(tf.cast(self.tokens_to_keep3D, dtype=tf.bool), tf.cast(annotated3D, dtype=tf.bool)), dtype=tf.float32)
+      #tokens_to_keep3D = tf.Print(tokens_to_keep3D, [tf.count_nonzero(tokens_to_keep3D, dtype=tf.float32)], "final tokenstokeep")
+
+    else:
+      tokens_to_keep3D = self.tokens_to_keep3D
+
     # need to repeat each of these once for each target in the sentence
     # mask = tf.gather_nd(tf.tile(tf.transpose(self.tokens_to_keep3D, [0, 2, 1]), [1, bucket_size, 1]),
     #                     tf.where(tf.equal(trigger_predictions, 1)))
-    mask_tiled = tf.reshape(tf.tile(tf.squeeze(self.tokens_to_keep3D, -1), [1, bucket_size]), [batch_size, bucket_size, bucket_size])
+    mask_tiled = tf.reshape(tf.tile(tf.squeeze(tokens_to_keep3D, -1), [1, bucket_size]), [batch_size, bucket_size, bucket_size])
     mask = tf.gather_nd(mask_tiled, tf.where(tf.equal(trigger_predictions, 1)))
+    #mask = tf.Print(mask, [tf.shape(mask)], "mask shape")
     count = tf.cast(tf.count_nonzero(mask), tf.float32)
 
     # now we have k sets of targets for the k frames
@@ -1254,17 +1269,29 @@ class NN(Configurable):
     # num_triggers_in_batch x seq_len
     predictions = tf.cast(tf.argmax(logits_transposed, axis=-1), tf.int32)
 
+    #mask = tf.Print(mask, [tf.shape(mask), tf.shape(predictions)], "mask and predictions")
+    # if annotated3D is not None:
+    #   pass
+    #   #predictions = tf.Print(predictions, [tf.shape(predictions)], "VN Predictions shape")
+
     trigger_counts = tf.reduce_sum(trigger_predictions, -1)
 
-    def compute_srl_loss(logits_transposed, srl_targets_transposed, transition_params):
-      # batch*num_targets x seq_len
-      srl_targets_indices = tf.where(tf.sequence_mask(tf.reshape(trigger_counts, [-1])))
+    def compute_srl_loss(logits_transposed, srl_targets_transposed, transition_params, mask):
+      # batch*num_targets x seq_len -- num_triggers?
+      seq_mask = tf.sequence_mask(tf.reshape(trigger_counts, [-1]))
+      srl_targets_indices = tf.where(seq_mask)
 
-      # srl_targets_indices = tf.Print(srl_targets_indices, [batch_size, bucket_size, tf.shape(logits_transposed), tf.shape(targets), tf.shape(srl_targets_transposed), tf.shape(srl_targets_indices)], summarize=10)
+      #srl_targets_indices = tf.Print(srl_targets_indices, [batch_size, bucket_size, tf.shape(logits_transposed), tf.shape(srl_targets_indices), seq_mask[0], srl_targets_indices[0]], summarize=200)
 
+      # num_triggers_in_batch x seq_len
       srl_targets = tf.gather_nd(srl_targets_transposed, srl_targets_indices)
 
-
+      if ignore_label_idx is not None:
+        preds_to_keep = tf.cast(tf.reduce_all(tf.not_equal(srl_targets, ignore_label_idx), axis=-1, keepdims=True), tf.float32)
+        # preds_to_keep = tf.Print(preds_to_keep, [tf.shape(preds_to_keep), tf.shape(annotated3D), tf.shape(mask)])
+        mask = tf.multiply(mask, preds_to_keep)
+      else:
+        preds_to_keep = tf.ones_like(tf.reduce_max(srl_targets, axis=-1))
 
       if transition_params is not None:
         seq_lens = tf.reduce_sum(mask, 1)
@@ -1279,10 +1306,35 @@ class NN(Configurable):
           # srl_targets_onehot = tf.Print(srl_targets_onehot, [tf.reduce_sum(trigger_counts), tf.shape(logits_transposed), tf.shape(srl_targets), tf.shape(srl_targets_onehot)], "srl logits", summarize=200)
           # srl_targets_onehot = tf.Print(srl_targets_onehot, [logits_transposed], "srl logits", summarize=200)
           #
-          # srl_targets_onehot = tf.Print(srl_targets_onehot, [srl_targets], "srl targets", summarize=200)
-          # srl_targets_onehot = tf.Print(srl_targets_onehot, [srl_targets_onehot], "srl targets onehot", summarize=200)
+          #srl_targets_onehot = tf.Print(srl_targets_onehot, [num_labels, tf.shape(srl_targets_onehot)], "srl targets", summarize=200)
+          #srl_targets_onehot = tf.Print(srl_targets_onehot, [tf.shape(srl_targets_onehot)], "srl targets onehot", summarize=200)
 
-          orig_logits_shape = tf.shape(logits_transposed)
+          # orig_logits_shape = tf.shape(logits_transposed)
+
+          # if annotated3D is not None:
+          #   new_mask = mask
+          #   #num_labels = tf.Print(num_labels, [num_labels, tf.shape(srl_targets_onehot)], "num labels")
+          #   # todo don't hardcode num_labels
+          #   class_weights_np = np.ones(50, dtype=np.float32)
+          #   class_weights_np[2] = 0
+          #   class_weights_np[0] = 0
+          #   #class_weights_np[7] = 0
+          #   class_weights = tf.convert_to_tensor(class_weights_np)
+          #
+          #   srl_targets_onehot = tf.Print(srl_targets_onehot, [tf.shape(srl_targets_onehot)], "srl_targets_onehot")
+          #
+          #   # preds_in_batch x bucket_size x num_labels
+          #   sample_weights = tf.reduce_sum(tf.multiply(srl_targets_onehot, class_weights), 2)
+          #
+          #   sample_weights = tf.Print(sample_weights, [tf.shape(sample_weights)], "sample_weights")
+          #
+          #
+          #   #sample_weights = tf.Print(sample_weights, [tf.shape(sample_weights), sample_weights], "class weights", summarize=10)
+          #   new_mask = tf.cast(tf.logical_and(tf.cast(sample_weights, tf.bool), tf.cast(mask, tf.bool)), tf.float32)
+          # else:
+          #   new_mask = mask
+
+          # Backprop into logits?
           loss = tf.losses.softmax_cross_entropy(logits=tf.reshape(logits_transposed, [-1, num_labels]),
                                                  onehot_labels=tf.reshape(srl_targets_onehot, [-1, num_labels]),
                                                  weights=tf.reshape(mask, [-1]),
@@ -1295,15 +1347,31 @@ class NN(Configurable):
           cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits_transposed, labels=srl_targets)
           cross_entropy *= mask
           loss = tf.cond(tf.equal(count, 0.), lambda: tf.constant(0.), lambda: tf.reduce_sum(cross_entropy) / count)
-      correct = tf.reduce_sum(tf.cast(tf.equal(predictions, srl_targets), tf.float32))
-      return loss, correct
 
-    compute_loss = tf.logical_and(tf.greater(tf.shape(targets)[2], 0), tf.greater(tf.reduce_sum(trigger_counts), 0))
-    loss, correct = tf.cond(compute_loss,
-                   lambda: compute_srl_loss(logits_transposed, srl_targets_transposed, transition_params),
-                   lambda: (tf.constant(0.), tf.constant(0.)))
+      if annotated3D is not None:
+        preds_to_keep = tf.multiply(preds_to_keep, tf.cast(tf.reduce_any(tf.cast(mask, tf.bool), axis=-1, keepdims=True), tf.float32))
+        # preds_to_keep = tf.Print(preds_to_keep, [tf.shape(preds_to_keep), tf.shape(annotated3D), tf.shape(mask)])
+        #srl_targets = tf.Print(srl_targets, [tf.shape(srl_targets)], "VN Targets shape ")
+
+      #predictions = tf.cast(tf.argmax(logits_transposed, axis=-1), tf.int32)
+      #predictions = tf.Print(predictions, [tf.shape(predictions, tf.shape(srl_targets))], "predictions and targets")
+      correct_unmasked = tf.cast(tf.equal(predictions, srl_targets), tf.float32)
+      correct_masked = correct_unmasked * mask
+      correct = tf.reduce_sum(correct_masked)
+      return loss, correct, preds_to_keep, srl_targets
+
+    # compute_loss = tf.logical_and(tf.greater(tf.shape(targets)[2], 0), tf.greater(tf.reduce_sum(trigger_counts), 0))
+    # loss, correct, preds_to_ignore = tf.cond(compute_loss,
+    #                lambda: compute_srl_loss(logits_transposed, srl_targets_transposed, transition_params, mask),
+    #                lambda: (tf.constant(0.), tf.constant(0.), tf.constant(0.)))
+
+    loss, correct, preds_to_keep, targets = compute_srl_loss(logits_transposed, srl_targets_transposed, transition_params, mask)
 
     probabilities = tf.nn.softmax(logits_transposed)
+    if annotated3D is not None:
+      pass
+      #correct = tf.Print(correct, [correct], "VN correct ")
+      #count = tf.Print(count, [count], "VN count ")
 
     output = {
       'loss': loss,
@@ -1312,7 +1380,9 @@ class NN(Configurable):
       'logits': logits_transposed,
       'transition_params': tf.constant(0.),
       'count': count,
-      'correct': correct
+      'correct': correct,
+      'preds_to_keep': preds_to_keep,
+      'targets': targets
     }
 
     return output
@@ -1796,8 +1866,8 @@ class NN(Configurable):
         #   print(' '.join(map(str, r)))
 
         a = coo2.toarray()
-        for r in a:
-          print("[%s]," % ', '.join(map(str, r)))
+        #for r in a:
+        #  print("[%s]," % ', '.join(map(str, r)))
 
       if not self.svd_tree or len_2_cycles or n_cycles:
         root_probs = np.diag(parse_probs)

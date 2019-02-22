@@ -9,6 +9,9 @@ data_dir=$DATA_DIR/conll-2012-sdeps-filt-new
 
 valid_file=$data_dir/conll2012-dev.txt.bio
 valid_props_file=$data_dir/conll2012-dev-gold-props.txt
+
+valid_file=$data_dir/conll2012-dev.txt.bio
+valid_props_file=$data_dir/conll2012-dev-gold-props.txt
 valid_parse_file=$data_dir/conll2012-dev-gold-parse.txt
 
 # Test
@@ -17,8 +20,8 @@ test_props_file=$data_dir/conll2012-test-gold-props.txt
 test_parse_file=$data_dir/conll2012-test-gold-parse.txt
 
 # D&M injected
-dm_valid_file=lstm_predicted_parses_elmo_new/parse_preds-conll2012-lstm-dev.tsv.replaced
-dm_test_file=lstm_predicted_parses_elmo_new/parse_preds-conll2012-lstm-test.tsv.replaced
+dm_valid_file=lstm_predicted_parses/parse_preds-conll2012-lstm-dev.tsv.replaced.filt
+dm_test_file=lstm_predicted_parses/parse_preds-conll2012-lstm-test.tsv.replaced
 
 if [[ "$parse_config" == "dm" || "$parse_config" == "gold" ]]; then
     gold_attn_at_train="False"

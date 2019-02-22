@@ -67,9 +67,14 @@ class Metabucket(Configurable):
     
     if isinstance(self._data, np.ndarray):
       raise TypeError("The buckets have already been finalized, you can't add more to them")
-    
+
+    # find which bucket from 0-40 a sent of this length goes into
     bkt_idx = self._len2bkt[len(sent)]
+
+    # add sent to chosen bucket. idx = how many sents in bucket
     idx = self._buckets[bkt_idx].add(sent)
+
+    #print('Index: ', (bkt_idx, idx))
     self._data.append( (bkt_idx, idx) )
     return len(self._data)-1
   

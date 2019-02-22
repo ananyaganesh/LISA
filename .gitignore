@@ -1,5 +1,7 @@
 *.pyc
 saves
 data
+logs
 lib-old
+*.txt
 .idea
