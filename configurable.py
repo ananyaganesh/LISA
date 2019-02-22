@@ -741,6 +741,20 @@ class Configurable(object):
     return self._config.getboolean('Training', 'full_parse')
   argparser.add_argument('--full_parse')
 
+  def use_elmo(self):
+    return self._config.getboolean('Training', 'use_elmo')
+  argparser.add_argument('--use_elmo')
+
+  @property
+  def max_test_batch_size(self):
+    return self._config.getint('Training', 'max_test_batch_size')
+  argparser.add_argument('--max_test_batch_size')
+
+  @property
+  def max_dev_batch_size(self):
+    return self._config.getint('Training', 'max_dev_batch_size')
+  argparser.add_argument('--max_dev_batch_size')
+
   @property
   def sampling_schedule(self):
     return self._config.get('Training', 'sampling_schedule')

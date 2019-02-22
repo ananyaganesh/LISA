@@ -83,13 +83,21 @@ class Parser(BaseParser):
     vn_nolabel_idx = vocabs[6]['NoLabel'][0]
     print(vn_nolabel_idx)
 
-    if self.add_to_pretrained:
-      word_inputs, pret_inputs = vocabs[0].embedding_lookup(inputs[:, :, 0], inputs[:, :, 1],
-                                                            moving_params=self.moving_params)
-      word_inputs += pret_inputs
+    if self.use_elmo:
+      print("using elmo w/ reuse = ", reuse)
+      with tf.variable_scope(tf.get_variable_scope(), reuse=reuse):
+        # # with tf.variable_scope('elmo', reuse=reuse):
+        #   from lib.models.bilm import ElmoLSTMEncoder
+        #   elmo_encoder = ElmoLSTMEncoder(dataset)
+        word_inputs = dataset.elmo_encoder.embed_text()
     else:
-      word_inputs = vocabs[0].embedding_lookup(inputs[:, :, 1], moving_params=self.moving_params)
-      #print('Word inputs: ', word_inputs.shape)
+      if self.add_to_pretrained:
+        word_inputs, pret_inputs = vocabs[0].embedding_lookup(inputs[:, :, 0], inputs[:, :, 1],
+                                                              moving_params=self.moving_params)
+        word_inputs += pret_inputs
+      else:
+        word_inputs = vocabs[0].embedding_lookup(inputs[:, :, 1], moving_params=self.moving_params)
+        #print('Word inputs: ', word_inputs.shape)
     if self.word_l2_reg > 0:
       unk_mask = tf.expand_dims(tf.to_float(tf.greater(inputs[:,:,1], vocabs[0].UNK)), 2)
       word_loss = self.word_l2_reg*tf.nn.l2_loss((word_inputs - pret_inputs) * unk_mask)
@@ -133,7 +141,11 @@ class Parser(BaseParser):
         if pred_label in vocabs[4].SPECIAL_TOKENS:
           postag = pred_label
         else:
-          _, postag = pred_label.split('/')
+          print(pred_label)
+          try:
+            _, postag = pred_label.split('/')
+          except:
+            continue
         pos_idx = vocabs[1][postag]
         preds_to_pos_map[pred_idx] = pos_idx
 
@@ -575,11 +587,17 @@ class Parser(BaseParser):
         tiled_roles = tf.reshape(tf.tile(role_mlp, [1, bucket_size, 1]), [batch_size, bucket_size, bucket_size, self.role_mlp_size])
         gathered_roles = tf.gather_nd(tiled_roles, predicate_gather_indices)
         if combine_with_vn:
-          vn_embeddings = tf.Print(vn_embeddings,
-                                            [tf.norm(vn_embeddings, 'euclidean', axis=-1)], "VN labels norm", summarize=200)
-          gathered_roles = tf.Print(gathered_roles, [tf.norm(gathered_roles, 'euclidean', axis=-1)], "PB weights norm", summarize=200)
+          if dataset.name == 'Trainset':
+            #vn_embeddings = tf.Print(vn_embeddings,
+                                     #[tf.norm(vn_embeddings, 'euclidean', axis=-1)], "VN labels norm", summarize=200)
+            #gathered_roles = tf.Print(gathered_roles, [tf.norm(gathered_roles, 'euclidean', axis=-1)],
+                                      #"PB weights norm", summarize=200)
+            pass
           derived_roles = tf.add(gathered_roles, vn_embeddings)
-          derived_roles = tf.Print(derived_roles, [tf.norm(derived_roles, 'euclidean')], "Combined norm", summarize=200)
+          if dataset.name == 'Trainset':
+            #derived_roles = tf.Print(derived_roles, [tf.norm(derived_roles, 'euclidean', axis=-1)], "Combined norm",
+                                     #summarize=200)
+            pass
         else:
           derived_roles = gathered_roles
 
@@ -675,7 +693,7 @@ class Parser(BaseParser):
         'correct':  tf.constant(0.),
         'count':  tf.constant(1.)
       }
-      vn_output, vn_embeddings = compute_vn(vn_targets, num_vn_classes)
+      vn_output = compute_vn(vn_targets, num_vn_classes)
     elif self.srl_simple_tagging:
       srl_output = compute_srl_simple(srl_targets)
     else:
