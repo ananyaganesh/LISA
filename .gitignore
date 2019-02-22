@@ -1,5 +1,8 @@
 *.pyc
 saves
 data
+logs
+align_conll12_semlink
+*.txt
 lib-old
 .idea
