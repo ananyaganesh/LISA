@@ -83,21 +83,14 @@ class Parser(BaseParser):
     vn_nolabel_idx = vocabs[6]['NoLabel'][0]
     print(vn_nolabel_idx)
 
-    if self.use_elmo:
-      print("using elmo w/ reuse = ", reuse)
-      with tf.variable_scope(tf.get_variable_scope(), reuse=reuse):
-        # # with tf.variable_scope('elmo', reuse=reuse):
-        #   from lib.models.bilm import ElmoLSTMEncoder
-        #   elmo_encoder = ElmoLSTMEncoder(dataset)
-        word_inputs = dataset.elmo_encoder.embed_text()
+
+    if self.add_to_pretrained:
+      word_inputs, pret_inputs = vocabs[0].embedding_lookup(inputs[:, :, 0], inputs[:, :, 1],
+                                                            moving_params=self.moving_params)
+      word_inputs += pret_inputs
     else:
-      if self.add_to_pretrained:
-        word_inputs, pret_inputs = vocabs[0].embedding_lookup(inputs[:, :, 0], inputs[:, :, 1],
-                                                              moving_params=self.moving_params)
-        word_inputs += pret_inputs
-      else:
-        word_inputs = vocabs[0].embedding_lookup(inputs[:, :, 1], moving_params=self.moving_params)
-        #print('Word inputs: ', word_inputs.shape)
+      word_inputs = vocabs[0].embedding_lookup(inputs[:, :, 1], moving_params=self.moving_params)
+      #print('Word inputs: ', word_inputs.shape)
     if self.word_l2_reg > 0:
       unk_mask = tf.expand_dims(tf.to_float(tf.greater(inputs[:,:,1], vocabs[0].UNK)), 2)
       word_loss = self.word_l2_reg*tf.nn.l2_loss((word_inputs - pret_inputs) * unk_mask)
