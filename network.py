@@ -601,6 +601,7 @@ class Network(Configurable):
       forward_start = time.time()
       probs, n_cycles, len_2_cycles, srl_probs, srl_preds, srl_logits, srl_correct, srl_count, srl_predicates, srl_predicate_targets, vn_probs, vn_preds, vn_logits, vn_correct, vn_count, vn_targets, transition_params, attn_weights, attn_correct, pos_correct, pos_preds, preds_to_keep = sess.run(op, feed_dict=feed_dict)
       forward_total_time += time.time() - forward_start
+      #vn_preds = tf.Print(vn_preds, [vn_logits[0]], "preds, logits, targets")
       preds, parse_time, roots_lt, roots_gt, cycles_2, cycles_n, non_trees, non_tree_preds, n_tokens_batch = self.model.validate(mb_inputs, mb_targets, annotated, probs, n_cycles, len_2_cycles, srl_preds, srl_logits, srl_predicates, srl_predicate_targets, pos_preds, vn_preds, vn_logits, vn_targets, preds_to_keep, transition_params if viterbi else None)
       n_tokens += n_tokens_batch
       for k, v in attn_weights.iteritems():
@@ -779,7 +780,7 @@ class Network(Configurable):
             # gold_pred = word if np.any(["(V*" in p for p in gold_pred]) else '-'
             pred_pred = word if np.any(["(V*" in p for p in orig_pred]) else '-'
             # fields = (domain,) + (word_str,) + (tag0_str,) + (tag1_str,) + (tag2_str,) + (gold_pred,) + (pred_pred,) + tuple(bio_pred) + tuple(orig_pred)
-            fields = (docid,) + (sentid,) + (word_str,) + (tag0_str,) + (tag1_str,) + (tag2_str,) + (pred_pred,) + tuple(bio_pred) + tuple(orig_pred)
+            fields = (docid,) + (sentid,) + (word_str,) + (pred_pred,) + tuple(bio_pred) + tuple(orig_pred)
             owpl_str = '\t'.join(fields)
             f.write(owpl_str + "\n")
           f.write('\n')
@@ -840,6 +841,55 @@ class Network(Configurable):
           print("Call to eval failed: ", e)
 
     if True:
+      vn_sanity_fname = os.path.join(self.save_dir, 'vn_sanity.tsv')
+      with open(vn_sanity_fname, 'w') as f, open(filename, 'r') as orig_f:
+        for p_idx, (bkt_idx, idx) in enumerate(data_indices):
+          # for each word, if predicate print word, otherwise -
+          # then all the SRL labels
+          data = dataset._metabucket[bkt_idx].data[idx]
+          preds = all_predictions[p_idx] if self.one_example_per_predicate else all_predictions[bkt_idx][idx]
+          # if len(preds.shape) < 2:
+          #   preds = np.reshape(preds, [1, preds.shape[0]])
+          words = all_sents[bkt_idx][idx]
+          num_gold_srls = preds[0, 13]
+          num_pred_srls = preds[0, 14]
+          srl_preds = preds[:, 16 + num_pred_srls + num_gold_srls:16 + 2 * num_pred_srls + num_gold_srls]
+          vn_preds = preds[:, 16 + 3 * num_gold_srls + 2 * num_pred_srls:]
+          vn_preds_str = map(list, zip(*[self.convert_bilou(j, 'verbnet') for j in np.transpose(vn_preds)]))
+          srl_golds = preds[:, 16 + num_pred_srls:16 + num_gold_srls + num_pred_srls]
+          #print(vn_preds)
+          vn_preds_bio = map(lambda p: self._vocabs[6][p], vn_preds)
+          srl_preds_str = map(list, zip(*[self.convert_bilou(j, 'propbank') for j in np.transpose(srl_preds)]))
+          # todo if you want golds in here get it from the props file
+          # srl_golds_str = map(list, zip(*[self.convert_bilou(j) for j in np.transpose(srl_golds)]))
+          # print(srl_golds_str)
+          # print(srl_preds_str)
+          for i, (datum, word, pred) in enumerate(zip(data, words, preds)):
+            orig_line = orig_f.readline().strip()
+            while not orig_line:
+              orig_line = orig_f.readline().strip()
+            orig_split_line = orig_line.split()
+            docid = orig_split_line[0]
+            sentid = orig_split_line[2]
+            annot = orig_split_line[1]
+            if annot == 'True':
+              domain = self._vocabs[5][pred[5]]
+              orig_pred = vn_preds_str[i] if vn_preds_str else []
+              # gold_pred = srl_golds_str[i] if srl_golds_str else []
+              bio_pred = vn_preds_bio[i] if vn_preds_bio else []
+              word_str = word
+              tag0_str = self.tags[pred[7]]  # gold tag
+              tag1_str = self.tags[pred[3]]  # auto tag
+              tag2_str = self.tags[pred[12]]  # predicted tag
+              # gold_pred = word if np.any(["(V*" in p for p in gold_pred]) else '-'
+              pred_pred = word if np.any(["(V*" in p for p in orig_pred]) else '-'
+              # fields = (domain,) + (word_str,) + (tag0_str,) + (tag1_str,) + (tag2_str,) + (gold_pred,) + (pred_pred,) + tuple(bio_pred) + tuple(orig_pred)
+              fields = (docid,) + (sentid,) + (word_str,) + (pred_pred,) + tuple(bio_pred) + tuple(orig_pred)
+              owpl_str = '\t'.join(fields)
+              f.write(owpl_str + "\n")
+          f.write('\n')
+
+
       vn_gold_fname = self.gold_dev_vn_props_file if validate else self.gold_test_vn_props_file
       vn_preds_fname = os.path.join(self.save_dir, 'vn_preds.tsv')
       #print(annotated.shape, len(data_indices))

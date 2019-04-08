@@ -215,8 +215,8 @@ class Vocab(Configurable):
                           actual = 'V'
                         # elif split_word[0] == 'B-ARGA' or split_word[0] == 'I-ARGA':
                         #   actual = 'ARGA'
-                        elif split_word[0].startswith(('B-ARGM', 'I-ARGM', 'B-R-ARGM', 'B-C-ARGM', 'I-R-ARGM', 'I-C-ARGM')):
-                          actual = '-'.join(split_word[0].split('-')[-2:])
+                        # elif split_word[0].startswith(('B-ARGM', 'I-ARGM', 'B-R-ARGM', 'B-C-ARGM', 'I-R-ARGM', 'I-C-ARGM')):
+                        #   actual = '-'.join(split_word[0].split('-')[-2:])
                           #print(split_word[0], actual)
                         else:
                           actual = 'NoLabel'
