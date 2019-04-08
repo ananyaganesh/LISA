@@ -178,8 +178,9 @@ class Dataset(Configurable):
               vn_fields.append('V')
             # elif srl_str[0] == 'B-ARGA' or srl_str[0] == 'I-ARGA':
             #   vn_fields.append('ARGA')
-            # elif srl_str[0].startswith(('B-ARGM', 'I-ARGM', 'B-R-ARGM', 'B-C-ARGM', 'I-R-ARGM', 'I-C-ARGM')):
-            #   vn_fields.append('-'.join(srl_str[0].split('-')[-2:]))
+            elif srl_str[0].startswith(('B-ARGM', 'I-ARGM', 'B-R-ARGM', 'B-C-ARGM', 'I-R-ARGM', 'I-C-ARGM')):
+              #vn_fields.append('-'.join(srl_str[0].split('-')[-2:]))
+              vn_fields.append('Noncore')
             else:
               vn_fields.append('NoLabel')
 
