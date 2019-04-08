@@ -1288,7 +1288,7 @@ class NN(Configurable):
 
       if ignore_label_idx is not None:
         preds_to_keep = tf.cast(tf.reduce_all(tf.not_equal(srl_targets, ignore_label_idx), axis=-1, keepdims=True), tf.float32)
-        preds_to_keep = tf.Print(preds_to_keep, [tf.shape(preds_to_keep), tf.shape(annotated3D), tf.shape(mask), tf.shape(srl_targets)])
+        #preds_to_keep = tf.Print(preds_to_keep, [tf.shape(preds_to_keep), tf.shape(annotated3D), tf.shape(mask), tf.shape(srl_targets)])
         mask = tf.multiply(mask, preds_to_keep)
       else:
         preds_to_keep = tf.ones_like(tf.reduce_max(srl_targets, axis=-1))
