@@ -986,7 +986,7 @@ class NN(Configurable):
     inputs2 = tf.concat(axis=2, values=[inputs2, tf.ones(tf.stack([batch_size2, bucket_size2, 1]))])
     inputs2.set_shape(input_shape_to_set2)
 
-    bilin = linalg.bilinear_noreshape(inputs1, inputs2,
+    bilin, lin = linalg.bilinear_noreshape(inputs1, inputs2,
                             n_classes,
                             combine=combine,
                             combined_weights=combined_weights,
@@ -996,7 +996,7 @@ class NN(Configurable):
                             moving_params=self.moving_params)
     # weighted_bilin = tf.matmul(bilin, tf.expand_dims(probs, 3))
 
-    return bilin
+    return bilin, lin
   
   #=============================================================
   def output(self, logits3D, targets3D, num_classes=1):

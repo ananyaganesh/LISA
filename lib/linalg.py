@@ -206,6 +206,7 @@ def bilinear_noreshape(inputs1, inputs2, output_size, combine, combined_weights,
     # output_shape.append(inputs2_bucket_size)
     # output_shape = tf.stack(output_shape)
     inputs1 = tf.reshape(inputs1, tf.stack([batch_size1, inputs1_bucket_size, inputs1_size]))
+    num_triggers = inputs1.get_shape().as_list()[0]
     inputs2 = tf.reshape(inputs2, tf.stack([batch_size2, inputs2_bucket_size, inputs2_size]))
     if add_bias1:
       inputs1 = tf.concat(axis=2, values=[inputs1, tf.ones(tf.stack([batch_size1, inputs1_bucket_size, 1]))])
@@ -223,23 +224,21 @@ def bilinear_noreshape(inputs1, inputs2, output_size, combine, combined_weights,
     weights = tf.get_variable('Weights', [inputs1_size + add_bias1, output_size, inputs2_size + add_bias2],
                               initializer=initializer)
 
-    if combine:
-      print('Using combined weights')
-      weights = combined_weights
-
     if moving_params is not None:
       weights = moving_params.average(weights)
     else:
       tf.add_to_collection('Weights', weights)
-
     #print('Weights shape: ', weights)
     # inputs1: num_triggers_in_batch x 1 x self.trigger_mlp_size
     # inputs2: batch x seq_len x self.role_mlp_size
 
     # Do the multiplications
     # (bn x d) (d x rd) -> (bn x rd)
+    #print('inputs 1 size: ', inputs1_size, 'batch size 1: ', batch_size1, 'output size: ', output_size)
+    #lin = tf.get_variable('Lin', [inputs1_size, (inputs1_size + add_bias1) * output_size], initializer=initializer)
     lin = tf.matmul(tf.reshape(inputs1, [-1, inputs1_size + add_bias1]), tf.reshape(weights, [inputs1_size + add_bias1, -1]))
-    # (b x nr x d) (b x n x d)T -> (b x nr x n)
+    #lin = tf.Print(lin, [tf.shape(lin), tf.shape(inputs1), tf.shape(weights)], "lin, inputs1, weights")
+	# (b x nr x d) (b x n x d)T -> (b x nr x n)
     lin_reshape = tf.reshape(lin, tf.stack([batch_size1, inputs1_bucket_size * output_size, inputs2_size + add_bias2]))
     bilin = tf.matmul(lin_reshape, inputs2, adjoint_b=True)
     # (bn x r x n)
@@ -255,7 +254,7 @@ def bilinear_noreshape(inputs1, inputs2, output_size, combine, combined_weights,
         bias = moving_params.average(bias)
       bilin += tf.expand_dims(bias, 1)
 
-    return bilin
+    return bilin, lin
 
 #===============================================================
 def diagonal_bilinear(inputs1, inputs2, output_size, add_bias2=True, add_bias1=True, add_bias=False, initializer=None, scope=None, moving_params=None):
