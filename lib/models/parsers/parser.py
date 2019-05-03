@@ -706,6 +706,7 @@ class Parser(BaseParser):
       else:
         num_triggers = tf.reduce_sum(predicate_targets_binary)
         bucket_size = tf.shape(vn_targets)[1]
+        vn_weights = tf.zeros([num_triggers, num_vn_classes*202])
         vn_output = {
           'loss': tf.constant(0.),
           'probabilities': tf.zeros([num_triggers, bucket_size, num_vn_classes]),

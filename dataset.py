@@ -184,6 +184,8 @@ class Dataset(Configurable):
             else:
               vn_fields.append('NoLabel')
 
+          #print('indices: ', has_vn_anno, 'vn fields len: ', vn_fields)
+
           #vn_fields = [srl_str[0] if len(srl_str) > 1 else 'NoLabel' if srl_str[0] is not 'O' else 'O' for srl_str in srl_vn_labels]
           #print('VN fields: ', vn_fields, len(vn_fields))
 
@@ -211,6 +213,8 @@ class Dataset(Configurable):
       for srl_idx, has_vn in enumerate(has_vn_anno):
         if not has_vn:
           buff[i][-1] = buff[i][j][:11+len(has_vn_anno)+srl_idx] + (vnroles['NoLabel'][0],) + buff[i][j][11+len(has_vn_anno)+srl_idx+1:]
+          #print(buff[i][-1])
+
 
       # Expand sentences into one example per predicate
       if self.one_example_per_predicate:
@@ -370,7 +374,7 @@ class Dataset(Configurable):
       annot = feed_dict[self.annotated]
       inp = feed_dict[self.inputs]
       # print('Annotation shape: ', annot.shape, 'Input shape: ', inp.shape)
-      # print('Annotation: ', annot[0], 'Input: ', inp[0])
+      #print('Annotation: ', annot[0], 'Input: ', inp[0])
       yield feed_dict, sents
   
   #=============================================================
